@@ -1,0 +1,31 @@
+/* Custom CSS (Optional)
+ * SimpleCSS handles most styling, but you can add customizations here
+ */
+
+/* Example: Custom header styling */
+header {
+    text-align: center;
+}
+
+/* Example: Add spacing between sections */
+section {
+    margin-top: 3rem;
+}
+
+/* Example: Style project articles */
+article {
+    border-left: 3px solid var(--accent);
+    padding-left: 1rem;
+    margin-bottom: 2rem;
+}
+
+/* Example: Custom link spacing in contact section */
+#contact form {
+    margin: 2rem 0;
+}
+
+/* Example: Footer styling */
+footer {
+    text-align: center;
+    margin-top: 4rem;
+}

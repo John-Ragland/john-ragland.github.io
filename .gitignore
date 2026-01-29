@@ -1,0 +1,23 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Dependencies (if you add build tools later)
+node_modules/
+
+# Environment variables and secrets
+.env
+.env.local
+config.yaml
+
+# CV outputs (auto-generated)
+cv/rendercv_output/
+cv/John_Ragland_CV.yaml
+John_Ragland_CV.pdf
