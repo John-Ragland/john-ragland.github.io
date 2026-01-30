@@ -8,7 +8,7 @@ on:
   # Allow manual trigger
   workflow_dispatch:
   
-  # Run on push to main
+  # Run on push to main (but not if commit message contains [skip-cv-update])
   push:
     branches: [ main ]
 
@@ -17,6 +17,8 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+    # Skip if the commit message contains [skip-cv-update]
+    if: "!contains(github.event.head_commit.message, '[skip-cv-update]')"
     
     steps:
     - name: Checkout repository
@@ -52,7 +54,7 @@ jobs:
       if: steps.check_changes.outputs.changes == 'true'
       run: |
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
-        git config --local user.name "github-actions[bot]"
+        git config --local user.name "github-actions[bot]"-cv-update
         git add cv/John_Ragland_CV.yaml cv/rendercv_output/ cv.html John_Ragland_CV.pdf
         git commit -m "chore: Auto-update CV from Zotero [skip ci]"
         git push
