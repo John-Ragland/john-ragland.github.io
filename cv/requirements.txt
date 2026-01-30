@@ -1,4 +1,4 @@
 pyzotero
 pyyaml
 python-dotenv
-rendercv
+rendercv[full]
