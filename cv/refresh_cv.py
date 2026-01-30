@@ -2,6 +2,7 @@ from pyzotero import zotero
 import yaml
 import re
 import os
+from datetime import date
 from dotenv import load_dotenv, find_dotenv
 
 load_dotenv(find_dotenv())
@@ -201,6 +202,18 @@ if __name__ == "__main__":
 
     # Reorder the sections
     reorder_cv_sections('John_Ragland_CV.yaml', desired_section_order)
+
+    # Update the last updated date to today
+    with open('John_Ragland_CV.yaml', 'r') as f:
+        cv_data = yaml.safe_load(f)
+    
+    if 'rendercv_settings' not in cv_data:
+        cv_data['rendercv_settings'] = {}
+    
+    cv_data['rendercv_settings']['date'] = date.today().strftime('%Y-%m-%d')
+    
+    with open('John_Ragland_CV.yaml', 'w') as f:
+        yaml.dump(cv_data, f, sort_keys=False, default_flow_style=False, allow_unicode=True)
 
     # render cv
     os.system('rendercv render "John_Ragland_CV.yaml"')
