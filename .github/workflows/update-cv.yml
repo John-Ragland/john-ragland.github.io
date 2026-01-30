@@ -8,9 +8,9 @@ on:
   # Allow manual trigger
   workflow_dispatch:
   
-  # Optional: run on push to main if you want to test
-  # push:
-  #   branches: [ main ]
+  # Run on push to main
+  push:
+    branches: [ main ]
 
 jobs:
   update-cv:
