@@ -623,8 +623,6 @@
 #one-col-entry(content: [#bullet-entry[#emph[An overview of ambient sound using Ocean Observatories Initiative hydrophones] #link("https://doi.org/10.1121/10.0009836")[10.1121\/10.0009836] - #strong[Ragland], Schwock, Munson, Abadi \(2022\)]])
 #v(design-entries-vertical-space-between-entries)
 #one-col-entry(content: [#bullet-entry[#emph[Long-term noise interferometry analysis in the northeast Pacific Ocean] #link("https://doi.org/10.1121/10.0009232")[10.1121\/10.0009232] - #strong[Ragland], Abadi, Sabra \(2022\)]])
-#v(design-entries-vertical-space-between-entries)
-#one-col-entry(content: [#bullet-entry[#emph[Test Article] #link("https://doi.org/test")[test] - Newton \(0\)]])
 
 
 == Invited Talks
