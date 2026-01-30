@@ -75,6 +75,7 @@ cv:
     - bullet: '*Long-term noise interferometry analysis in the northeast Pacific Ocean*
         [10.1121/10.0009232](https://doi.org/10.1121/10.0009232) - **Ragland**, Abadi,
         Sabra (2022)'
+    - bullet: '*Test Article* [test](https://doi.org/test) - Newton (0)'
     Invited Talks:
     - bullet: MG&G Group, University of Washington, Seattle WA (2024)
     - bullet: Navy Research Laboratory, Ocean Sciences Division, Stennis MS (2023)
@@ -311,6 +312,6 @@ locale:
   - November
   - December
 rendercv_settings:
-  date: '2025-08-25'
+  date: '2026-01-30'
   render_command: null
   bold_keywords: []

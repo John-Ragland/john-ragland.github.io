@@ -3,10 +3,9 @@
 
 #let name = "John Ragland"
 #let locale-catalog-page-numbering-style = context { "John Ragland - Page " + str(here().page()) + " of " + str(counter(page).final().first()) + "" }
-#let locale-catalog-last-updated-date-style = "Last updated in Aug 2025"
+#let locale-catalog-last-updated-date-style = "Last updated in Jan 2026"
 #let locale-catalog-language = "en"
 #let design-page-size = "us-letter"
-#let design-section-titles-font-size = 1.4em
 #let design-colors-text = rgb(0, 0, 0)
 #let design-colors-section-titles = rgb(0, 79, 144)
 #let design-colors-last-updated-date-and-page-numbering = rgb(128, 128, 128)
@@ -17,7 +16,7 @@
 #let design-section-titles-bold = true
 #let design-section-titles-line-thickness = 0.5pt
 #let design-section-titles-font-size = 1.4em
-#let design-section-titles-type = "with-parial-line"
+#let design-section-titles-type = "with-partial-line"
 #let design-section-titles-vertical-space-above = 0.5cm
 #let design-section-titles-vertical-space-below = 0.3cm
 #let design-section-titles-small-caps = false
@@ -32,6 +31,7 @@
 #let design-header-name-font-family = "Source Sans 3"
 #let design-header-name-font-size = 30pt
 #let design-header-name-bold = true
+#let design-header-small-caps-for-name = false
 #let design-header-connections-font-family = "Source Sans 3"
 #let design-header-vertical-space-between-name-and-connections = 0.7cm
 #let design-header-vertical-space-between-connections-and-first-section = 0.7cm
@@ -41,6 +41,7 @@
 #let design-header-alignment = center
 #let design-highlights-summary-left-margin = 0cm
 #let design-highlights-bullet = "•"
+#let design-highlights-nested-bullet = "-"
 #let design-highlights-top-margin = 0.25cm
 #let design-highlights-left-margin = 0.4cm
 #let design-highlights-vertical-space-between-highlights = 0.25cm
@@ -125,13 +126,22 @@
   )
 }
 #show list: set list(
-  marker: design-highlights-bullet,
-  spacing: 0pt,
+  marker: design-highlights-nested-bullet,
+  spacing: design-highlights-vertical-space-between-highlights,
   indent: 0pt,
   body-indent: design-highlights-horizontal-space-between-bullet-and-highlights,
 )
 
 // Entry utilities:
+#let bullet-entry(..content) = {
+  list(
+    ..content,
+    marker: design-highlights-bullet,
+    spacing: 0pt,
+    indent: 0pt,
+    body-indent: design-highlights-horizontal-space-between-bullet-and-highlights,
+  )
+}
 #let three-col(
   left-column-width: 1fr,
   middle-column-width: 1fr,
@@ -192,7 +202,11 @@
     size: design-header-name-font-size,
     fill: design-colors-name,
   )
-  #it.body
+  #if design-header-small-caps-for-name [
+    #smallcaps(it.body)
+  ] else [
+    #it.body
+  ]
   // Vertical space after the name
   #v(design-header-vertical-space-between-name-and-connections)
 ]
@@ -243,7 +257,7 @@
         #box(
           [
             #section-title
-            #if design-section-titles-type == "with-parial-line" [
+            #if design-section-titles-type == "with-partial-line" [
               #box(width: 1fr, height: design-section-titles-line-thickness, fill: design-colors-section-titles)
             ] else if design-section-titles-type == "with-full-line" [
 
@@ -596,192 +610,112 @@
 == Peer Reviewed Publications
 
 
-#one-col-entry(
-  content: [- #emph[How Do Tides Affect Underwater Acoustic Propagation: A collaborative approach to improve internal wave modelling at basin to global scales] #link("https://doi.org/10.5670/oceanog.2025.308")[10.5670\/oceanog.2025.308] - Schönau, Hiron, #strong[Ragland], Raja, Skitka, Solano, Xu, Arbic, Buijsman, Chassignet, Coelho, Helber, Shriver, Summers, Verlinden, Wallcraft \(2025\)],
-)
+#one-col-entry(content: [#bullet-entry[#emph[How Do Tides Affect Underwater Acoustic Propagation: A collaborative approach to improve internal wave modelling at basin to global scales] #link("https://doi.org/10.5670/oceanog.2025.308")[10.5670\/oceanog.2025.308] - Schönau, Hiron, #strong[Ragland], Raja, Skitka, Solano, Xu, Arbic, Buijsman, Chassignet, Coelho, Helber, Shriver, Summers, Verlinden, Wallcraft \(2025\)]])
 #v(design-entries-vertical-space-between-entries)
-#one-col-entry(
-  content: [- #emph[Characterizing wind-dependent low-frequency ambient sound with ocean observatories initiative hydrophones] #link("https://doi.org/10.1121/10.0039811")[10.1121\/10.0039811] - #strong[Ragland], Abadi \(2025\)],
-)
+#one-col-entry(content: [#bullet-entry[#emph[Characterizing wind-dependent low-frequency ambient sound with ocean observatories initiative hydrophones] #link("https://doi.org/10.1121/10.0039811")[10.1121\/10.0039811] - #strong[Ragland], Abadi \(2025\)]])
 #v(design-entries-vertical-space-between-entries)
-#one-col-entry(
-  content: [- #emph[Receptions of Kauai Beacon transmissions by ocean observatories initiative hydrophones] #link("https://doi.org/10.1121/10.0038971")[10.1121\/10.0038971] - #strong[Ragland], Abadi, Durofchalk, Dall'Osto, Gemba \(2025\)],
-)
+#one-col-entry(content: [#bullet-entry[#emph[Receptions of Kauai Beacon transmissions by ocean observatories initiative hydrophones] #link("https://doi.org/10.1121/10.0038971")[10.1121\/10.0038971] - #strong[Ragland], Abadi, Durofchalk, Dall'Osto, Gemba \(2025\)]])
 #v(design-entries-vertical-space-between-entries)
-#one-col-entry(
-  content: [- #emph[Using Ocean Ambient Sound to Measure Local Integrated Deep Ocean Temperature] #link("https://doi.org/10.1029/2024GL108943")[10.1029\/2024GL108943] - #strong[Ragland], Abadi, Sabra \(2024\)],
-)
+#one-col-entry(content: [#bullet-entry[#emph[Using Ocean Ambient Sound to Measure Local Integrated Deep Ocean Temperature] #link("https://doi.org/10.1029/2024GL108943")[10.1029\/2024GL108943] - #strong[Ragland], Abadi, Sabra \(2024\)]])
 #v(design-entries-vertical-space-between-entries)
-#one-col-entry(
-  content: [- #emph[Exploring surface source contributions to ocean ambient noise interferometry with airgun shots] #link("https://doi.org/10.1121/10.0015231")[10.1121\/10.0015231] - #strong[Ragland], Abadi \(2022\)],
-)
+#one-col-entry(content: [#bullet-entry[#emph[Exploring surface source contributions to ocean ambient noise interferometry with airgun shots] #link("https://doi.org/10.1121/10.0015231")[10.1121\/10.0015231] - #strong[Ragland], Abadi \(2022\)]])
 #v(design-entries-vertical-space-between-entries)
-#one-col-entry(
-  content: [- #emph[An overview of ambient sound using Ocean Observatories Initiative hydrophones] #link("https://doi.org/10.1121/10.0009836")[10.1121\/10.0009836] - #strong[Ragland], Schwock, Munson, Abadi \(2022\)],
-)
+#one-col-entry(content: [#bullet-entry[#emph[An overview of ambient sound using Ocean Observatories Initiative hydrophones] #link("https://doi.org/10.1121/10.0009836")[10.1121\/10.0009836] - #strong[Ragland], Schwock, Munson, Abadi \(2022\)]])
 #v(design-entries-vertical-space-between-entries)
-#one-col-entry(
-  content: [- #emph[Long-term noise interferometry analysis in the northeast Pacific Ocean] #link("https://doi.org/10.1121/10.0009232")[10.1121\/10.0009232] - #strong[Ragland], Abadi, Sabra \(2022\)],
-)
+#one-col-entry(content: [#bullet-entry[#emph[Long-term noise interferometry analysis in the northeast Pacific Ocean] #link("https://doi.org/10.1121/10.0009232")[10.1121\/10.0009232] - #strong[Ragland], Abadi, Sabra \(2022\)]])
+#v(design-entries-vertical-space-between-entries)
+#one-col-entry(content: [#bullet-entry[#emph[Test Article] #link("https://doi.org/test")[test] - Newton \(0\)]])
 
 
 == Invited Talks
 
 
-#one-col-entry(
-  content: [- MG&G Group, University of Washington, Seattle WA \(2024\)],
-)
+#one-col-entry(content: [#bullet-entry[MG&G Group, University of Washington, Seattle WA \(2024\)]])
 #v(design-entries-vertical-space-between-entries)
-#one-col-entry(
-  content: [- Navy Research Laboratory, Ocean Sciences Division, Stennis MS \(2023\)],
-)
+#one-col-entry(content: [#bullet-entry[Navy Research Laboratory, Ocean Sciences Division, Stennis MS \(2023\)]])
 #v(design-entries-vertical-space-between-entries)
-#one-col-entry(
-  content: [- MG&G Group, University of Washington, Seattle WA \(2023\)],
-)
+#one-col-entry(content: [#bullet-entry[MG&G Group, University of Washington, Seattle WA \(2023\)]])
 #v(design-entries-vertical-space-between-entries)
-#one-col-entry(
-  content: [- Applied Research Laboratory - UW, Seattle WA \(2022\)],
-)
+#one-col-entry(content: [#bullet-entry[Applied Research Laboratory - UW, Seattle WA \(2022\)]])
 
 
 == Awards
 
 
-#one-col-entry(
-  content: [- #strong[eScience postdoctoral fellowship] \(Sept 2024\) - University of Washington, eScience Institute: Fellowship awarded to interdisciplinary researchers who are actively involved in developing and\/or utilizing advanced data science tools and techniques in their research at the UW],
-)
+#one-col-entry(content: [#bullet-entry[#strong[eScience postdoctoral fellowship] \(Sept 2024\) - University of Washington, eScience Institute: Fellowship awarded to interdisciplinary researchers who are actively involved in developing and\/or utilizing advanced data science tools and techniques in their research at the UW]])
 #v(design-entries-vertical-space-between-entries)
-#one-col-entry(
-  content: [- #strong[The Daoma and Murray Strasberg Memorial Scholarship] \(May 2023\) - Acoustical Society of America: Awarded to exceptional graduate students in ocean acoustics with research relevant to naval applications to ocean acoustics],
-)
+#one-col-entry(content: [#bullet-entry[#strong[The Daoma and Murray Strasberg Memorial Scholarship] \(May 2023\) - Acoustical Society of America: Awarded to exceptional graduate students in ocean acoustics with research relevant to naval applications to ocean acoustics]])
 #v(design-entries-vertical-space-between-entries)
-#one-col-entry(
-  content: [- #strong[ASA best student paper] \(Dec 2022\) - Acoustical Society of America: Second place at the ASA Nashville in underwater acoustics technical committee],
-)
+#one-col-entry(content: [#bullet-entry[#strong[ASA best student paper] \(Dec 2022\) - Acoustical Society of America: Second place at the ASA Nashville in underwater acoustics technical committee]])
 
 
 == Conference Presentations
 
 
-#one-col-entry(
-  content: [- #emph[Comparing Kauai Beacon receptions to simulated acoustic propagation] \(#link("https://doi.org/10.1121/10.0037361")[10.1121\/10.0037361]\) - #strong[Ragland], Durofchalk, Dall'Osto, Abadi, Gemba \(2025\) - 188th Meeting of the Acoustical Society of America],
-)
+#one-col-entry(content: [#bullet-entry[#emph[Comparing Kauai Beacon receptions to simulated acoustic propagation] \(#link("https://doi.org/10.1121/10.0037361")[10.1121\/10.0037361]\) - #strong[Ragland], Durofchalk, Dall'Osto, Abadi, Gemba \(2025\) - 188th Meeting of the Acoustical Society of America]])
 #v(design-entries-vertical-space-between-entries)
-#one-col-entry(
-  content: [- #emph[Analysis of very low frequency wind driven noise at Ocean Observatories Initiative hydrophones] \(#link("https://doi.org/10.1121/10.0037493")[10.1121\/10.0037493]\) - #strong[Ragland], Phan, Abadi \(2025\) - 188th Meeting of the Acoustical Society of America],
-)
+#one-col-entry(content: [#bullet-entry[#emph[Analysis of very low frequency wind driven noise at Ocean Observatories Initiative hydrophones] \(#link("https://doi.org/10.1121/10.0037493")[10.1121\/10.0037493]\) - #strong[Ragland], Phan, Abadi \(2025\) - 188th Meeting of the Acoustical Society of America]])
 #v(design-entries-vertical-space-between-entries)
-#one-col-entry(
-  content: [- #emph[Kauai Beacon receptions and analysis with open-access hydrophones in the North Pacific Ocean] \(#link("https://doi.org/10.1121/10.0026938")[10.1121\/10.0026938]\) - #strong[Ragland], Durofchalk, Gemba, Dall'Osto, Abadi \(2024\) - 186th Meeting of the Acoustical Society of America],
-)
+#one-col-entry(content: [#bullet-entry[#emph[Kauai Beacon receptions and analysis with open-access hydrophones in the North Pacific Ocean] \(#link("https://doi.org/10.1121/10.0026938")[10.1121\/10.0026938]\) - #strong[Ragland], Durofchalk, Gemba, Dall'Osto, Abadi \(2024\) - 186th Meeting of the Acoustical Society of America]])
 #v(design-entries-vertical-space-between-entries)
-#one-col-entry(
-  content: [- #emph[Towards acoustic observations of ocean basin temperatures using the Kauai beacon and Ocean Observatories Initiative Hydrophones] - #strong[Ragland], Durofchalk, Abadi, Dall'Osto, Gemba \(2024\) - Ocean Sciences Meeting 2024],
-)
+#one-col-entry(content: [#bullet-entry[#emph[Towards acoustic observations of ocean basin temperatures using the Kauai beacon and Ocean Observatories Initiative Hydrophones] - #strong[Ragland], Durofchalk, Abadi, Dall'Osto, Gemba \(2024\) - Ocean Sciences Meeting 2024]])
 #v(design-entries-vertical-space-between-entries)
-#one-col-entry(
-  content: [- #emph[Detecting the Kauai source beacon with ocean observatories innitiative hydrophones] \(#link("https://doi.org/10.1121/10.0023175")[10.1121\/10.0023175]\) - #strong[Ragland], Durofchalk, Gemba, Abadi \(2023\) - 185th Meeting of the Acoustical Society of America],
-)
+#one-col-entry(content: [#bullet-entry[#emph[Detecting the Kauai source beacon with ocean observatories innitiative hydrophones] \(#link("https://doi.org/10.1121/10.0023175")[10.1121\/10.0023175]\) - #strong[Ragland], Durofchalk, Gemba, Abadi \(2023\) - 185th Meeting of the Acoustical Society of America]])
 #v(design-entries-vertical-space-between-entries)
-#one-col-entry(
-  content: [- #emph[Using ocean ambient sound to sense arrival time fluctuations due to temperature] \(#link("https://doi.org/10.1121/10.0023334")[10.1121\/10.0023334]\) - #strong[Ragland], Abadi \(2023\) - 185th Meeting of the Acoustical Society of America],
-)
+#one-col-entry(content: [#bullet-entry[#emph[Using ocean ambient sound to sense arrival time fluctuations due to temperature] \(#link("https://doi.org/10.1121/10.0023334")[10.1121\/10.0023334]\) - #strong[Ragland], Abadi \(2023\) - 185th Meeting of the Acoustical Society of America]])
 #v(design-entries-vertical-space-between-entries)
-#one-col-entry(
-  content: [- #emph[Using distributed acoustic sensing for ocean ambient sound analysis] \(#link("https://doi.org/10.1121/10.0018176")[10.1121\/10.0018176]\) - #strong[Ragland], Douglass, Abadi \(2023\) - 184th Meeting of the Acoustical Society of America],
-)
+#one-col-entry(content: [#bullet-entry[#emph[Using distributed acoustic sensing for ocean ambient sound analysis] \(#link("https://doi.org/10.1121/10.0018176")[10.1121\/10.0018176]\) - #strong[Ragland], Douglass, Abadi \(2023\) - 184th Meeting of the Acoustical Society of America]])
 #v(design-entries-vertical-space-between-entries)
-#one-col-entry(
-  content: [- #emph[Towards estimating water column properties using ambient noise interferometry in the deep ocean] - #strong[Ragland], Abadi \(2023\) - Underwater Acoustics Conference and Exposition],
-)
+#one-col-entry(content: [#bullet-entry[#emph[Towards estimating water column properties using ambient noise interferometry in the deep ocean] - #strong[Ragland], Abadi \(2023\) - Underwater Acoustics Conference and Exposition]])
 #v(design-entries-vertical-space-between-entries)
-#one-col-entry(
-  content: [- #emph[Overview of distributed acoustic sensing technology and recently acquired data sets] \(#link("https://doi.org/10.1121/10.0018174")[10.1121\/10.0018174]\) - Douglass, #strong[Ragland], Abadi \(2023\) - 184th Meeting of the Acoustical Society of America],
-)
+#one-col-entry(content: [#bullet-entry[#emph[Overview of distributed acoustic sensing technology and recently acquired data sets] \(#link("https://doi.org/10.1121/10.0018174")[10.1121\/10.0018174]\) - Douglass, #strong[Ragland], Abadi \(2023\) - 184th Meeting of the Acoustical Society of America]])
 #v(design-entries-vertical-space-between-entries)
-#one-col-entry(
-  content: [- #emph[Comparing distributed acoustic sensing data with hydrophone recordings] \(#link("https://doi.org/10.1121/10.0018175")[10.1121\/10.0018175]\) - Abadi, Douglass, #strong[Ragland] \(2023\) - 184th Meeting of the Acoustical Society of America],
-)
+#one-col-entry(content: [#bullet-entry[#emph[Comparing distributed acoustic sensing data with hydrophone recordings] \(#link("https://doi.org/10.1121/10.0018175")[10.1121\/10.0018175]\) - Abadi, Douglass, #strong[Ragland] \(2023\) - 184th Meeting of the Acoustical Society of America]])
 #v(design-entries-vertical-space-between-entries)
-#one-col-entry(
-  content: [- #emph[Long-term ambient noise interferometry in the NE Pacific deep ocean] - #strong[Ragland], Abadi \(2022\) - Ocean Sciences Meeting 2022],
-)
+#one-col-entry(content: [#bullet-entry[#emph[Long-term ambient noise interferometry in the NE Pacific deep ocean] - #strong[Ragland], Abadi \(2022\) - Ocean Sciences Meeting 2022]])
 #v(design-entries-vertical-space-between-entries)
-#one-col-entry(
-  content: [- #emph[Overview of ambient noise research and outreach with OOI hydrophones] - #strong[Ragland], Schwock, Liu, Abadi \(2022\) - AGU Fall Meeting 2022],
-)
+#one-col-entry(content: [#bullet-entry[#emph[Overview of ambient noise research and outreach with OOI hydrophones] - #strong[Ragland], Schwock, Liu, Abadi \(2022\) - AGU Fall Meeting 2022]])
 #v(design-entries-vertical-space-between-entries)
-#one-col-entry(
-  content: [- #emph[Overview of ocean ambient noise interferometry – Theory and simulation] \(#link("https://doi.org/10.1121/10.0016311")[10.1121\/10.0016311]\) - #strong[Ragland], Abadi \(2022\) - 183th Meeting of the Acoustical Society of America],
-)
+#one-col-entry(content: [#bullet-entry[#emph[Overview of ocean ambient noise interferometry – Theory and simulation] \(#link("https://doi.org/10.1121/10.0016311")[10.1121\/10.0016311]\) - #strong[Ragland], Abadi \(2022\) - 183th Meeting of the Acoustical Society of America]])
 #v(design-entries-vertical-space-between-entries)
-#one-col-entry(
-  content: [- #emph[Exploring surface source distributions for ocean ambient noise interferometry with airgun shots] \(#link("https://doi.org/10.1121/10.0011063")[10.1121\/10.0011063]\) - #strong[Ragland], Abadi \(2022\) - 182th Meeting of the Acoustical Society of America],
-)
+#one-col-entry(content: [#bullet-entry[#emph[Exploring surface source distributions for ocean ambient noise interferometry with airgun shots] \(#link("https://doi.org/10.1121/10.0011063")[10.1121\/10.0011063]\) - #strong[Ragland], Abadi \(2022\) - 182th Meeting of the Acoustical Society of America]])
 #v(design-entries-vertical-space-between-entries)
-#one-col-entry(
-  content: [- #emph[OOIPy: A Python toolbox for accessing and analyzing sata from the Ocean Observatories Initiative] \(#link("https://doi.org/10.1121/10.0007845")[10.1121\/10.0007845]\) - Schwock, #strong[Ragland], Abadi \(2021\) - 180th Meeting of the Acoustical Society of America],
-)
+#one-col-entry(content: [#bullet-entry[#emph[OOIPy: A Python toolbox for accessing and analyzing sata from the Ocean Observatories Initiative] \(#link("https://doi.org/10.1121/10.0007845")[10.1121\/10.0007845]\) - Schwock, #strong[Ragland], Abadi \(2021\) - 180th Meeting of the Acoustical Society of America]])
 #v(design-entries-vertical-space-between-entries)
-#one-col-entry(
-  content: [- #emph[An overview of ambient sound using OOI hydrophone network] \(#link("https://doi.org/10.1121/10.0007594")[10.1121\/10.0007594]\) - #strong[Ragland], Schwock, Munson, Abadi \(2021\) - 180th Meeting of the Acoustical Society of America],
-)
+#one-col-entry(content: [#bullet-entry[#emph[An overview of ambient sound using OOI hydrophone network] \(#link("https://doi.org/10.1121/10.0007594")[10.1121\/10.0007594]\) - #strong[Ragland], Schwock, Munson, Abadi \(2021\) - 180th Meeting of the Acoustical Society of America]])
 #v(design-entries-vertical-space-between-entries)
-#one-col-entry(
-  content: [- #emph[Long-term noise interferometry analysis in the northeast Pacific Ocean] \(#link("https://doi.org/10.1121/10.0004609")[10.1121\/10.0004609]\) - #strong[Ragland], Abadi \(2021\) - 179th Meeting of the Acoustical Society of America],
-)
+#one-col-entry(content: [#bullet-entry[#emph[Long-term noise interferometry analysis in the northeast Pacific Ocean] \(#link("https://doi.org/10.1121/10.0004609")[10.1121\/10.0004609]\) - #strong[Ragland], Abadi \(2021\) - 179th Meeting of the Acoustical Society of America]])
 #v(design-entries-vertical-space-between-entries)
-#one-col-entry(
-  content: [- #emph[Estimating ocean variables using ambient noise interferometry] \(#link("https://doi.org/10.1121/10.0007697")[10.1121\/10.0007697]\) - #strong[Ragland], Abadi \(2021\) - 180th Meeting of the Acoustical Society of America],
-)
+#one-col-entry(content: [#bullet-entry[#emph[Estimating ocean variables using ambient noise interferometry] \(#link("https://doi.org/10.1121/10.0007697")[10.1121\/10.0007697]\) - #strong[Ragland], Abadi \(2021\) - 180th Meeting of the Acoustical Society of America]])
 #v(design-entries-vertical-space-between-entries)
-#one-col-entry(
-  content: [- #emph[Ship detection from passive underwater acoustic recordings using machine learning] \(#link("https://doi.org/10.1121/10.0007848")[10.1121\/10.0007848]\) - Alvaro, Schwock, #strong[Ragland], Abadi \(2021\) - 180th Meeting of the Acoustical Society of America],
-)
+#one-col-entry(content: [#bullet-entry[#emph[Ship detection from passive underwater acoustic recordings using machine learning] \(#link("https://doi.org/10.1121/10.0007848")[10.1121\/10.0007848]\) - Alvaro, Schwock, #strong[Ragland], Abadi \(2021\) - 180th Meeting of the Acoustical Society of America]])
 
 
 == Media Coverage
 
 
-#one-col-entry(
-  content: [- #link("https://web.archive.org/web/20230731211310/https://www.ece.uw.edu/spotlight/listening-to-the-ocean-climate-change/")[Listening to the ocean to measure the impact of climate change]],
-)
+#one-col-entry(content: [#bullet-entry[#link("https://web.archive.org/web/20230731211310/https://www.ece.uw.edu/spotlight/listening-to-the-ocean-climate-change/")[Listening to the ocean to measure the impact of climate change]]])
 #v(design-entries-vertical-space-between-entries)
-#one-col-entry(
-  content: [- OOI Science Highlights: #link("https://web.archive.org/web/20230731211602/https://oceanobservatories.org/2022/11/an-overview-of-ambient-sound-using-ooi-hydrophones/")[An Overview of Ambient Sound Using OOI Hydrophones]],
-)
+#one-col-entry(content: [#bullet-entry[OOI Science Highlights: #link("https://web.archive.org/web/20230731211602/https://oceanobservatories.org/2022/11/an-overview-of-ambient-sound-using-ooi-hydrophones/")[An Overview of Ambient Sound Using OOI Hydrophones]]])
 
 
 == Cruise Experience
 
 
-#one-col-entry(
-  content: [- RC0090, 2022, 2 days - deployed mooring with two hydrophones that was recovered one week later. The goal of this deployment was to acoustically measure methane seeps in the Puget Sound.],
-)
+#one-col-entry(content: [#bullet-entry[RC0090, 2022, 2 days - deployed mooring with two hydrophones that was recovered one week later. The goal of this deployment was to acoustically measure methane seeps in the Puget Sound.]])
 #v(design-entries-vertical-space-between-entries)
-#one-col-entry(
-  content: [- RR2411, 2024, 21 days - joint operation to measure deep scattering layer, and low-frequency acoustic propagation around seamounts in the North Atlantic.],
-)
+#one-col-entry(content: [#bullet-entry[RR2411, 2024, 21 days - joint operation to measure deep scattering layer, and low-frequency acoustic propagation around seamounts in the North Atlantic.]])
 #v(design-entries-vertical-space-between-entries)
-#one-col-entry(
-  content: [- AR90, 2025, 21 days - recovered NESMA acoustic moorings in North Atlantic],
-)
+#one-col-entry(content: [#bullet-entry[AR90, 2025, 21 days - recovered NESMA acoustic moorings in North Atlantic]])
 
 
 == Open Source Software Contributions
 
 
-#one-col-entry(
-  content: [- #strong[OOIPy] - python package for accessing OOI hydrophone data #link("https://github.com/Ocean-Data-Lab/ooipy")[GitHub]#link("https://pypi.org/project/ooipy/")[PyPI]#link("https://doi.org/10.5281/zenodo.4276861")[DOI]],
-)
+#one-col-entry(content: [#bullet-entry[#strong[OOIPy] - python package for accessing OOI hydrophone data #link("https://github.com/Ocean-Data-Lab/ooipy")[GitHub]#link("https://pypi.org/project/ooipy/")[PyPI]#link("https://doi.org/10.5281/zenodo.4276861")[DOI]]])
 #v(design-entries-vertical-space-between-entries)
-#one-col-entry(
-  content: [- #strong[xrsignal] - python package that ports functionality from scipy.signal to xarray and is compatible with distributed computing #link("https://github.com/John-Ragland/xrsignal")[GitHub] #link("https://pypi.org/project/xrsignal/")[PypI]],
-)
+#one-col-entry(content: [#bullet-entry[#strong[xrsignal] - python package that ports functionality from scipy.signal to xarray and is compatible with distributed computing #link("https://github.com/John-Ragland/xrsignal")[GitHub] #link("https://pypi.org/project/xrsignal/")[PypI]]])
 #v(design-entries-vertical-space-between-entries)
-#one-col-entry(
-  content: [- #strong[pygenray] - native python ray tracing code #link("https://github.com/John-Ragland/pygenray")[GitHub] #link("https://pypi.org/project/pygenray/")[PyPI] #link("https://doi.org/10.5281/zenodo.15783848")[DOI]],
-)
+#one-col-entry(content: [#bullet-entry[#strong[pygenray] - native python ray tracing code #link("https://github.com/John-Ragland/pygenray")[GitHub] #link("https://pypi.org/project/pygenray/")[PyPI] #link("https://doi.org/10.5281/zenodo.15783848")[DOI]]])
 
 
