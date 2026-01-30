@@ -15,9 +15,9 @@ node_modules/
 # Environment variables and secrets
 .env
 .env.local
+.env.github
+.secrets
 config.yaml
 
-# CV outputs (auto-generated)
-cv/rendercv_output/
-cv/John_Ragland_CV.yaml
-John_Ragland_CV.pdf
+# Python cache files
+*.pyc

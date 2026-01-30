@@ -1,0 +1,56 @@
+name: Update CV from Zotero
+
+on:
+  # Run weekly on Sundays at 2 AM UTC
+  schedule:
+    - cron: '0 2 * * 0'
+  
+  # Allow manual trigger
+  workflow_dispatch:
+  
+  # Run on push to main
+  push:
+    branches: [ main ]
+
+jobs:
+  update-cv:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+    
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+        cache: 'pip'
+    
+    - name: Install dependencies
+      run: |
+        pip install -r cv/requirements.txt
+    
+    - name: Run CV refresh script
+      env:
+        ZOTERO_LIBRARY_ID: ${{ secrets.ZOTERO_LIBRARY_ID }}
+        ZOTERO_API_KEY: ${{ secrets.ZOTERO_API_KEY }}
+        ZOTERO_PUBLICATIONS_COLLECTION: ${{ secrets.ZOTERO_PUBLICATIONS_COLLECTION }}
+        ZOTERO_CONFERENCE_COLLECTION: ${{ secrets.ZOTERO_CONFERENCE_COLLECTION }}
+      working-directory: ./cv
+      run: python refresh_cv.py
+    
+    - name: Check for changes
+      id: check_changes
+      run: |
+        git diff --quiet cv/ John_Ragland_CV.pdf cv.html || echo "changes=true" >> $GITHUB_OUTPUT
+    
+    - name: Commit and push if changes
+      if: steps.check_changes.outputs.changes == 'true'
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git add cv/John_Ragland_CV.yaml cv/rendercv_output/ cv.html John_Ragland_CV.pdf
+        git commit -m "chore: Auto-update CV from Zotero [skip ci]"
+        git push
