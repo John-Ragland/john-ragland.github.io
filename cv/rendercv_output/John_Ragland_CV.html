@@ -1,108 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <titlFont Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- e>CV - John Ragland</title>
-    <meta name="description" content="Curriculum Vitae">
-    
-    <!-- SimpleCSS -->
-    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
-    
-    <!-- Custom CV Styles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>
+        John Ragland's CV
+    </title>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.5.1/github-markdown-light.min.css"
+        integrity="sha512-Pmhg2i/F7+5+7SsdoUqKeH7UAZoVMYb1sxGOoJ0jWXAEHP0XV2H4CITyK267eHWp2jpj7rtqWNkmEOw1tNyYpg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.12/dist/katex.min.css" integrity="sha384-PDbUeNCuE6bOPudPOgFyIUEy3UJawJVwr3XlGO90FIuf5qNIoTLSgOJo/dC2ZXV/" crossorigin="anonymous">
+
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.12/dist/katex.min.js" integrity="sha384-VkqWq8xtm5YQk1BBXczQ8/Sx+DlCzF8cuS43bZwmtVXzRFtyLTqTCdP7MKmKo+KN" crossorigin="anonymous"></script>
+
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.12/dist/contrib/auto-render.min.js" integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh" crossorigin="anonymous"
+        onload="renderMathInElement(document.body, {delimiters: [{ left: '$$',  right: '$$',  display: false }]});"></script>
     <style>
-        /* CV-specific styling to match PDF layout */
-        .cv-section {
-            margin-top: 2rem;
+        .markdown-body {
+            box-sizing: border-box;
+            min-width: 200px;
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 45px;
         }
-        
-        .cv-section h1 {
-            color: rgb(0, 79, 144);
-            border-bottom: 2px solid rgb(0, 79, 144);
-            padding-bottom: 0.3rem;
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .cv-section h2 {
-            font-size: 1.1rem;
-            margin-top: 1.2rem;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-        }
-        
-        .cv-section ul {
-            margin-left: 1.5rem;
-            margin-bottom: 1rem;
-            line-height: 1.6;
-        }
-        
-        .cv-section a {
-            color: rgb(0, 79, 144);
-            text-decoration: none;
-        }
-        
-        .cv-section a:hover {
-            text-decoration: underline;
-        }
-        
-        /* Better spacing for lists */
-        .c
-        
-        /* Icon spacing */
-        .cv-section i {
-            margin-right: 0.5em;
-            color: rgb(0, 79, 144);
-            width: 1.2em;
-            text-align: center;
-        }v-section li {
-            margin-bottom: 0.3rem;
-        }
-        
-        /* Contact info at top */
-        .cv-section > ul:first-of-type {
-            list-style: none;
-            margin-left: 0;
-            padding-left: 0;
+
+        @media (max-width: 767px) {
+            .markdown-body {
+                padding: 15px;
+            }
         }
     </style>
-    
-    <!-- Custom CSS (optional) -->
-    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header>
-        <h1><a href="index.html" style="text-decoration: none; color: inherit;">John Ragland</a></h1>
-        <p>
-            Postdoctoral Fellow - Woods Hole Oceanographic Institution</br>
-            Developing tools for observing the ocean with sound
-        </p>
-        <nav>
-            <a href="index.html#research">Research</a>
-            <a href="projects.html">Project Highlights</a>
-            <a href="cv.html">CV</a>
-        </nav>
-    </header>
-
-    <main>
-        <section>
-            <p>
-                <a href="John_Ragland_CV.pdf" style="text-decoration: none; color: inherit;" download>[ pdf ]</a>
-            </p>
-        </section>
-
-        <section class="cv-section">
-
-    
+    <article class="markdown-body">
         <h1>John Ragland's CV</h1>
         <ul>
-        <li><i class="fas fa-envelope"></i> Email: <a href="mailto:john.ragland@whoi.edu">john.ragland@whoi.edu</a></li>
-        <li><i class="fas fa-map-marker-alt"></i> Location: Falmouth, MA</li>
-        <li><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://linkedin.com/in/john-ragland">john-ragland</a></li>
-        <li><i class="fab fa-github"></i> GitHub: <a href="https://github.com/john-ragland">john-ragland</a></li>
+        <li>Email: <a href="mailto:john.ragland@whoi.edu">john.ragland@whoi.edu</a></li>
+        <li>Location: Falmouth, MA</li>
+        <li>LinkedIn: <a href="https://linkedin.com/in/john-ragland">john-ragland</a></li>
+        <li>GitHub: <a href="https://github.com/john-ragland">john-ragland</a></li>
         </ul>
         <h1>Education</h1>
         <h2>Auburn University, BS in Electrical Engineering</h2>
@@ -207,15 +149,7 @@
         <li><strong>xrsignal</strong> - python package that ports functionality from scipy.signal to xarray and is compatible with distributed computing <a href="https://github.com/John-Ragland/xrsignal">GitHub</a> <a href="https://pypi.org/project/xrsignal/">PypI</a></li>
         <li><strong>pygenray</strong> - native python ray tracing code <a href="https://github.com/John-Ragland/pygenray">GitHub</a> <a href="https://pypi.org/project/pygenray/">PyPI</a> <a href="https://doi.org/10.5281/zenodo.15783848">DOI</a></li>
         </ul>
-    
-
-        </section>
-    </main>
-
-    <footer>
-        <p>
-            &copy; 2026 John Ragland. Built with <a href="https://simplecss.org/">SimpleCSS</a>.
-        </p>
-    </footer>
+    </article>
 </body>
+
 </html>

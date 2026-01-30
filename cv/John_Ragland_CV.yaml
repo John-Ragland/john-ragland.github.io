@@ -1,0 +1,316 @@
+cv:
+  name: John Ragland
+  location: Falmouth, MA
+  email: john.ragland@whoi.edu
+  website: null
+  social_networks:
+  - network: LinkedIn
+    username: john-ragland
+  - network: GitHub
+    username: john-ragland
+  sections:
+    education:
+    - institution: Auburn University
+      area: Electrical Engineering
+      degree: BS
+      date: 2019
+      highlights:
+      - Graduated **Summa Cum Laude**
+    - institution: Auburn University
+      area: Electrical Engineering
+      degree: MS
+      date: 2020
+      highlights:
+      - '**Thesis**: Digital Simulation and Recreation of a Vacuum Tube Guitar Amp
+        [url](https://etd.auburn.edu//handle/10415/7112)'
+      - '**Advisor**: Thaddeus Roppel'
+      - '**Emphasis** Digital Signal Processing, Real-time Audio Processing, Physical
+        Modeling'
+    - institution: University of Washington
+      area: Electrical Engineering
+      degree: PhD
+      date: 2024
+      highlights:
+      - '**Thesis**: Using coherent ambient sound to probe the ocean [url](https://hdl.handle.net/1773/51959)'
+      - '**Advisor**: Shima Abadi'
+      - '**Emphasis**: Acoustic Oceanography: Ambient noise interferometry and ocean
+        acoustic tomography'
+    experience:
+    - company: Woods Hole Oceanographic Institution
+      position: Postdoctoral Fellow
+      location: Woods Hole, MA
+      date: 2025 - present
+    - company: University of Washington
+      position: Postdoctoral Scholar
+      location: Seattle, WA
+      date: 2024 - 2025
+    - company: University of Washington
+      position: Graduate researcher
+      location: Seattle, WA
+      date: 2020 - 2024
+    - company: Applied Research in acoustics
+      position: Graduate summer researcher
+      location: Seattle, WA
+      date: 2022
+    Peer Reviewed Publications:
+    - bullet: '*How Do Tides Affect Underwater Acoustic Propagation: A collaborative
+        approach to improve internal wave modelling at basin to global scales* [10.5670/oceanog.2025.308](https://doi.org/10.5670/oceanog.2025.308)
+        - Schönau, Hiron, **Ragland**, Raja, Skitka, Solano, Xu, Arbic, Buijsman,
+        Chassignet, Coelho, Helber, Shriver, Summers, Verlinden, Wallcraft (2025)'
+    - bullet: '*Characterizing wind-dependent low-frequency ambient sound with ocean
+        observatories initiative hydrophones* [10.1121/10.0039811](https://doi.org/10.1121/10.0039811)
+        - **Ragland**, Abadi (2025)'
+    - bullet: '*Receptions of Kauai Beacon transmissions by ocean observatories initiative
+        hydrophones* [10.1121/10.0038971](https://doi.org/10.1121/10.0038971) - **Ragland**,
+        Abadi, Durofchalk, Dall''Osto, Gemba (2025)'
+    - bullet: '*Using Ocean Ambient Sound to Measure Local Integrated Deep Ocean Temperature*
+        [10.1029/2024GL108943](https://doi.org/10.1029/2024GL108943) - **Ragland**,
+        Abadi, Sabra (2024)'
+    - bullet: '*Exploring surface source contributions to ocean ambient noise interferometry
+        with airgun shots* [10.1121/10.0015231](https://doi.org/10.1121/10.0015231)
+        - **Ragland**, Abadi (2022)'
+    - bullet: '*An overview of ambient sound using Ocean Observatories Initiative
+        hydrophones* [10.1121/10.0009836](https://doi.org/10.1121/10.0009836) - **Ragland**,
+        Schwock, Munson, Abadi (2022)'
+    - bullet: '*Long-term noise interferometry analysis in the northeast Pacific Ocean*
+        [10.1121/10.0009232](https://doi.org/10.1121/10.0009232) - **Ragland**, Abadi,
+        Sabra (2022)'
+    Invited Talks:
+    - bullet: MG&G Group, University of Washington, Seattle WA (2024)
+    - bullet: Navy Research Laboratory, Ocean Sciences Division, Stennis MS (2023)
+    - bullet: MG&G Group, University of Washington, Seattle WA (2023)
+    - bullet: Applied Research Laboratory - UW, Seattle WA (2022)
+    awards:
+    - bullet: '**eScience postdoctoral fellowship** (Sept 2024) - University of Washington,
+        eScience Institute: Fellowship awarded to interdisciplinary researchers who
+        are actively involved in developing and/or utilizing advanced data science
+        tools and techniques in their research at the UW'
+    - bullet: '**The Daoma and Murray Strasberg Memorial Scholarship** (May 2023)
+        - Acoustical Society of America: Awarded to exceptional graduate students
+        in ocean acoustics with research relevant to naval applications to ocean acoustics'
+    - bullet: '**ASA best student paper** (Dec 2022) - Acoustical Society of America:
+        Second place at the ASA Nashville in underwater acoustics technical committee'
+    Conference Presentations:
+    - bullet: '*Comparing Kauai Beacon receptions to simulated acoustic propagation*
+        ([10.1121/10.0037361](https://doi.org/10.1121/10.0037361)) - **Ragland**,
+        Durofchalk, Dall''Osto, Abadi, Gemba (2025) - 188th Meeting of the Acoustical
+        Society of America'
+    - bullet: '*Analysis of very low frequency wind driven noise at Ocean Observatories
+        Initiative hydrophones* ([10.1121/10.0037493](https://doi.org/10.1121/10.0037493))
+        - **Ragland**, Phan, Abadi (2025) - 188th Meeting of the Acoustical Society
+        of America'
+    - bullet: '*Kauai Beacon receptions and analysis with open-access hydrophones
+        in the North Pacific Ocean* ([10.1121/10.0026938](https://doi.org/10.1121/10.0026938))
+        - **Ragland**, Durofchalk, Gemba, Dall''Osto, Abadi (2024) - 186th Meeting
+        of the Acoustical Society of America'
+    - bullet: '*Towards acoustic observations of ocean basin temperatures using the
+        Kauai beacon and Ocean Observatories Initiative Hydrophones* - **Ragland**,
+        Durofchalk, Abadi, Dall''Osto, Gemba (2024) - Ocean Sciences Meeting 2024'
+    - bullet: '*Detecting the Kauai source beacon with ocean observatories innitiative
+        hydrophones* ([10.1121/10.0023175](https://doi.org/10.1121/10.0023175)) -
+        **Ragland**, Durofchalk, Gemba, Abadi (2023) - 185th Meeting of the Acoustical
+        Society of America'
+    - bullet: '*Using ocean ambient sound to sense arrival time fluctuations due to
+        temperature* ([10.1121/10.0023334](https://doi.org/10.1121/10.0023334)) -
+        **Ragland**, Abadi (2023) - 185th Meeting of the Acoustical Society of America'
+    - bullet: '*Using distributed acoustic sensing for ocean ambient sound analysis*
+        ([10.1121/10.0018176](https://doi.org/10.1121/10.0018176)) - **Ragland**,
+        Douglass, Abadi (2023) - 184th Meeting of the Acoustical Society of America'
+    - bullet: '*Towards estimating water column properties using ambient noise interferometry
+        in the deep ocean* - **Ragland**, Abadi (2023) - Underwater Acoustics Conference
+        and Exposition'
+    - bullet: '*Overview of distributed acoustic sensing technology and recently acquired
+        data sets* ([10.1121/10.0018174](https://doi.org/10.1121/10.0018174)) - Douglass,
+        **Ragland**, Abadi (2023) - 184th Meeting of the Acoustical Society of America'
+    - bullet: '*Comparing distributed acoustic sensing data with hydrophone recordings*
+        ([10.1121/10.0018175](https://doi.org/10.1121/10.0018175)) - Abadi, Douglass,
+        **Ragland** (2023) - 184th Meeting of the Acoustical Society of America'
+    - bullet: '*Long-term ambient noise interferometry in the NE Pacific deep ocean*
+        - **Ragland**, Abadi (2022) - Ocean Sciences Meeting 2022'
+    - bullet: '*Overview of ambient noise research and outreach with OOI hydrophones*
+        - **Ragland**, Schwock, Liu, Abadi (2022) - AGU Fall Meeting 2022'
+    - bullet: '*Overview of ocean ambient noise interferometry – Theory and simulation*
+        ([10.1121/10.0016311](https://doi.org/10.1121/10.0016311)) - **Ragland**,
+        Abadi (2022) - 183th Meeting of the Acoustical Society of America'
+    - bullet: '*Exploring surface source distributions for ocean ambient noise interferometry
+        with airgun shots* ([10.1121/10.0011063](https://doi.org/10.1121/10.0011063))
+        - **Ragland**, Abadi (2022) - 182th Meeting of the Acoustical Society of America'
+    - bullet: '*OOIPy: A Python toolbox for accessing and analyzing sata from the
+        Ocean Observatories Initiative* ([10.1121/10.0007845](https://doi.org/10.1121/10.0007845))
+        - Schwock, **Ragland**, Abadi (2021) - 180th Meeting of the Acoustical Society
+        of America'
+    - bullet: '*An overview of ambient sound using OOI hydrophone network* ([10.1121/10.0007594](https://doi.org/10.1121/10.0007594))
+        - **Ragland**, Schwock, Munson, Abadi (2021) - 180th Meeting of the Acoustical
+        Society of America'
+    - bullet: '*Long-term noise interferometry analysis in the northeast Pacific Ocean*
+        ([10.1121/10.0004609](https://doi.org/10.1121/10.0004609)) - **Ragland**,
+        Abadi (2021) - 179th Meeting of the Acoustical Society of America'
+    - bullet: '*Estimating ocean variables using ambient noise interferometry* ([10.1121/10.0007697](https://doi.org/10.1121/10.0007697))
+        - **Ragland**, Abadi (2021) - 180th Meeting of the Acoustical Society of America'
+    - bullet: '*Ship detection from passive underwater acoustic recordings using machine
+        learning* ([10.1121/10.0007848](https://doi.org/10.1121/10.0007848)) - Alvaro,
+        Schwock, **Ragland**, Abadi (2021) - 180th Meeting of the Acoustical Society
+        of America'
+    Media Coverage:
+    - bullet: '[Listening to the ocean to measure the impact of climate change](https://web.archive.org/web/20230731211310/https://www.ece.uw.edu/spotlight/listening-to-the-ocean-climate-change/)'
+    - bullet: 'OOI Science Highlights: [An Overview of Ambient Sound Using OOI Hydrophones](https://web.archive.org/web/20230731211602/https://oceanobservatories.org/2022/11/an-overview-of-ambient-sound-using-ooi-hydrophones/)'
+    Cruise Experience:
+    - bullet: RC0090, 2022, 2 days - deployed mooring with two hydrophones that was
+        recovered one week later. The goal of this deployment was to acoustically
+        measure methane seeps in the Puget Sound.
+    - bullet: RR2411, 2024, 21 days - joint operation to measure deep scattering layer,
+        and low-frequency acoustic propagation around seamounts in the North Atlantic.
+    - bullet: AR90, 2025, 21 days - recovered NESMA acoustic moorings in North Atlantic
+    Open Source Software Contributions:
+    - bullet: '**OOIPy** - python package for accessing OOI hydrophone data [GitHub](https://github.com/Ocean-Data-Lab/ooipy)[PyPI](https://pypi.org/project/ooipy/)[DOI](https://doi.org/10.5281/zenodo.4276861)'
+    - bullet: '**xrsignal** - python package that ports functionality from scipy.signal
+        to xarray and is compatible with distributed computing [GitHub](https://github.com/John-Ragland/xrsignal)
+        [PypI](https://pypi.org/project/xrsignal/)'
+    - bullet: '**pygenray** - native python ray tracing code [GitHub](https://github.com/John-Ragland/pygenray)
+        [PyPI](https://pypi.org/project/pygenray/) [DOI](https://doi.org/10.5281/zenodo.15783848)'
+design:
+  theme: classic
+  page:
+    size: us-letter
+    top_margin: 2cm
+    bottom_margin: 2cm
+    left_margin: 2cm
+    right_margin: 2cm
+    show_page_numbering: true
+    show_last_updated_date: true
+  colors:
+    text: rgb(0, 0, 0)
+    name: rgb(0, 79, 144)
+    connections: rgb(0, 79, 144)
+    section_titles: rgb(0, 79, 144)
+    links: rgb(0, 79, 144)
+    last_updated_date_and_page_numbering: rgb(128, 128, 128)
+  text:
+    font_family: Source Sans 3
+    font_size: 10pt
+    leading: 0.6em
+    alignment: justified
+    date_and_location_column_alignment: right
+  links:
+    underline: false
+    use_external_link_icon: true
+  header:
+    name_font_family: Source Sans 3
+    name_font_size: 30pt
+    name_bold: true
+    photo_width: 3.5cm
+    vertical_space_between_name_and_connections: 0.7cm
+    vertical_space_between_connections_and_first_section: 0.7cm
+    horizontal_space_between_connections: 0.5cm
+    connections_font_family: Source Sans 3
+    separator_between_connections: ''
+    use_icons_for_connections: true
+    alignment: center
+  section_titles:
+    type: with-parial-line
+    font_family: Source Sans 3
+    font_size: 1.4em
+    bold: true
+    small_caps: false
+    line_thickness: 0.5pt
+    vertical_space_above: 0.5cm
+    vertical_space_below: 0.3cm
+  entries:
+    date_and_location_width: 4.15cm
+    left_and_right_margin: 0.2cm
+    horizontal_space_between_columns: 0.1cm
+    vertical_space_between_entries: 1.2em
+    allow_page_break_in_sections: true
+    allow_page_break_in_entries: true
+    short_second_row: false
+    show_time_spans_in: []
+  highlights:
+    bullet: •
+    top_margin: 0.25cm
+    left_margin: 0.4cm
+    vertical_space_between_highlights: 0.25cm
+    horizontal_space_between_bullet_and_highlight: 0.5em
+    summary_left_margin: 0cm
+  entry_types:
+    one_line_entry:
+      template: '**LABEL:** DETAILS'
+    education_entry:
+      main_column_first_row_template: '**INSTITUTION**, AREA'
+      degree_column_template: '**DEGREE**'
+      degree_column_width: 1cm
+      main_column_second_row_template: 'SUMMARY
+
+        HIGHLIGHTS'
+      date_and_location_column_template: 'LOCATION
+
+        DATE'
+    normal_entry:
+      main_column_first_row_template: '**NAME**'
+      main_column_second_row_template: 'SUMMARY
+
+        HIGHLIGHTS'
+      date_and_location_column_template: 'LOCATION
+
+        DATE'
+    experience_entry:
+      main_column_first_row_template: '**COMPANY**, POSITION'
+      main_column_second_row_template: 'SUMMARY
+
+        HIGHLIGHTS'
+      date_and_location_column_template: 'LOCATION
+
+        DATE'
+    publication_entry:
+      main_column_first_row_template: '**TITLE**'
+      main_column_second_row_template: 'AUTHORS
+
+        URL (JOURNAL)'
+      main_column_second_row_without_journal_template: 'AUTHORS
+
+        URL'
+      main_column_second_row_without_url_template: 'AUTHORS
+
+        JOURNAL'
+      date_and_location_column_template: DATE
+locale:
+  language: en
+  phone_number_format: national
+  page_numbering_template: NAME - Page PAGE_NUMBER of TOTAL_PAGES
+  last_updated_date_template: Last updated in TODAY
+  date_template: MONTH_ABBREVIATION YEAR
+  month: month
+  months: months
+  year: year
+  years: years
+  present: present
+  to: –
+  abbreviations_for_months:
+  - Jan
+  - Feb
+  - Mar
+  - Apr
+  - May
+  - June
+  - July
+  - Aug
+  - Sept
+  - Oct
+  - Nov
+  - Dec
+  full_names_of_months:
+  - January
+  - February
+  - March
+  - April
+  - May
+  - June
+  - July
+  - August
+  - September
+  - October
+  - November
+  - December
+rendercv_settings:
+  date: '2025-08-25'
+  render_command: null
+  bold_keywords: []

@@ -1,0 +1,4 @@
+pyzotero
+pyyaml
+python-dotenv
+rendercv

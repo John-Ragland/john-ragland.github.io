@@ -101,6 +101,7 @@ if __name__ == "__main__":
         zotero_yaml['Peer Reviewed Publications'].append(pub)
 
     items = zot.collection_items(conference_presentations)
+    conference_list = []  # Temporary list to collect and sort
 
     for item in items:
         if item['data']['itemType'] == 'conferencePaper':
@@ -112,21 +113,25 @@ if __name__ == "__main__":
             date_str = item['data']['date']
             year_int = extract_year_int(date_str)
 
-            conference_entry = {
-                'title': item['data']['title'],
-                'authors': authors,
-                'journal': item['data']['proceedingsTitle'],
-                'date': year_int,
-            }
+            # Format as bullet items (like publications)
+            title = item['data']['title']
+            authors_str = ', '.join(authors)
+            conference = item['data']['proceedingsTitle']
+            doi = item['data'].get('DOI', '')
+            doi_link = f" ([{doi}](https://doi.org/{doi}))" if doi else ""
             
-            # Only add DOI if it exists
-            if item['data'].get('DOI'):
-                conference_entry['doi'] = item['data']['DOI']
-                
-            zotero_yaml['Conference Presentations'].append(conference_entry)
+            conference_list.append({
+                'bullet': f"*{title}*{doi_link} - {authors_str} ({year_int}) - {conference}",
+                '_sort_year': year_int
+            })
 
     # Sort conference presentations by year (newest first)
-    zotero_yaml['Conference Presentations'].sort(key=lambda x: x['date'], reverse=True)
+    conference_list.sort(key=lambda x: x['_sort_year'], reverse=True)
+    
+    # Remove the temporary sort field and add to final list
+    for conf in conference_list:
+        del conf['_sort_year']
+        zotero_yaml['Conference Presentations'].append(conf)
 
     # Update John_Ragland_CV.yaml with zotero publications
     with open('John_Ragland_CV_base.yaml', 'r') as f:
