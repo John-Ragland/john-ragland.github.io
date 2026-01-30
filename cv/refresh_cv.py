@@ -4,6 +4,7 @@ import re
 import os
 from datetime import date
 from dotenv import load_dotenv, find_dotenv
+import subprocess
 
 load_dotenv(find_dotenv())
 
@@ -216,8 +217,11 @@ if __name__ == "__main__":
         yaml.dump(cv_data, f, sort_keys=False, default_flow_style=False, allow_unicode=True)
 
     # render cv
-    os.system('rendercv render "John_Ragland_CV.yaml"')
+    #os.system('rendercv render "John_Ragland_CV.yaml"')
+    subprocess.run(['rendercv', 'render', 'John_Ragland_CV.yaml'], check=True)
     
     # Post-process the HTML to add custom header and PDF link
+    #os.system('python post_process_cv.py')
     print("\nPost-processing CV HTML...")
-    os.system('python post_process_cv.py')
+    subprocess.run(['python', 'post_process_cv.py'], check=True)
+    
