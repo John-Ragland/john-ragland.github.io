@@ -311,6 +311,6 @@ locale:
   - November
   - December
 rendercv_settings:
-  date: '2026-01-30'
+  date: '2026-02-01'
   render_command: null
   bold_keywords: []

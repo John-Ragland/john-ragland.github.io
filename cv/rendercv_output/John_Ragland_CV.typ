@@ -3,7 +3,7 @@
 
 #let name = "John Ragland"
 #let locale-catalog-page-numbering-style = context { "John Ragland - Page " + str(here().page()) + " of " + str(counter(page).final().first()) + "" }
-#let locale-catalog-last-updated-date-style = "Last updated in Jan 2026"
+#let locale-catalog-last-updated-date-style = "Last updated in Feb 2026"
 #let locale-catalog-language = "en"
 #let design-page-size = "us-letter"
 #let design-colors-text = rgb(0, 0, 0)
