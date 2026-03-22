@@ -610,6 +610,10 @@
 == Peer Reviewed Publications
 
 
+#one-col-entry(content: [#bullet-entry[#emph[Long range, low frequency source localization across the Gulf Stream front using multiple bottom\/surface bounce paths observed on a large aperture vertical array]  - \(in prep\) Hoekstra, Colosi, #strong[Ragland], Bonnel, Park, Dzieciuch, Alford, Bellerjeau, Voet \(2026\)]])
+#v(design-entries-vertical-space-between-entries)
+#one-col-entry(content: [#bullet-entry[#emph[Analysis of acoustic fluctuations for 150-km, low frequency transmissions across the Gulf Stream in the vicinity of the New England Seamount chain]  - \(in prep\) Ragland, Colosi, Hoekstra, Dzieciuch, Alford, Bellerjeau, Gunnar \(2026\)]])
+#v(design-entries-vertical-space-between-entries)
 #one-col-entry(content: [#bullet-entry[#emph[How Do Tides Affect Underwater Acoustic Propagation: A collaborative approach to improve internal wave modelling at basin to global scales] #link("https://doi.org/10.5670/oceanog.2025.308")[10.5670\/oceanog.2025.308] - Schönau, Hiron, #strong[Ragland], Raja, Skitka, Solano, Xu, Arbic, Buijsman, Chassignet, Coelho, Helber, Shriver, Summers, Verlinden, Wallcraft \(2025\)]])
 #v(design-entries-vertical-space-between-entries)
 #one-col-entry(content: [#bullet-entry[#emph[Characterizing wind-dependent low-frequency ambient sound with ocean observatories initiative hydrophones] #link("https://doi.org/10.1121/10.0039811")[10.1121\/10.0039811] - #strong[Ragland], Abadi \(2025\)]])
