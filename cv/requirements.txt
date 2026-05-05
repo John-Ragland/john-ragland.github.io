@@ -1,4 +1,0 @@
-pyzotero
-pyyaml
-python-dotenv
-rendercv[full]

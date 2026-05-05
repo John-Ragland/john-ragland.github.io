@@ -26,16 +26,11 @@ jobs:
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
     
-    - name: Set up Python
-      uses: actions/setup-python@v5
+    - name: Set up uv
+      uses: astral-sh/setup-uv@v4
       with:
         python-version: '3.11'
-        cache: 'pip'
-    
-    - name: Install dependencies
-      run: |
-        pip install -r cv/requirements.txt
-    
+
     - name: Run CV refresh script
       env:
         ZOTERO_LIBRARY_ID: ${{ secrets.ZOTERO_LIBRARY_ID }}
@@ -43,7 +38,7 @@ jobs:
         ZOTERO_PUBLICATIONS_COLLECTION: ${{ secrets.ZOTERO_PUBLICATIONS_COLLECTION }}
         ZOTERO_CONFERENCE_COLLECTION: ${{ secrets.ZOTERO_CONFERENCE_COLLECTION }}
       working-directory: ./cv
-      run: python refresh_cv.py
+      run: uv run python refresh_cv.py
     
     - name: Check for changes
       id: check_changes

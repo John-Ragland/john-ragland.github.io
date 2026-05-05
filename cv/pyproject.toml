@@ -1,0 +1,10 @@
+[project]
+name = "cv-pipeline"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+    "pyzotero",
+    "pyyaml",
+    "python-dotenv",
+    "rendercv[full]<=2.3",
+]
