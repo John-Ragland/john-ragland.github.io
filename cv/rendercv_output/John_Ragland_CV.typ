@@ -224,11 +224,11 @@
 
 == Peer Reviewed Publications
 
-- #emph[Simultaneous ocean acoustic inversion and source localization for transmission across the Gulf Stream]  - (in prep) Ragland, Colosi, Dzieciuch (2026)
+- #emph[Simultaneous ocean acoustic inversion and source localization for transmission across the Gulf Stream]  - (in prep) #strong[Ragland], Colosi, Dzieciuch (2026)
 
 - #emph[Long range, low frequency source localization across the Gulf Stream front using multiple bottom\/surface bounce paths observed on a large aperture vertical array]  - (in prep) Hoekstra, Colosi, #strong[Ragland], Bonnel, Park, Dzieciuch, Alford, Bellerjeau, Voet (2026)
 
-- #emph[Analysis of acoustic fluctuations for 150-km, low frequency transmissions across the Gulf Stream in the vicinity of the New England Seamount chain]  - (in prep) Ragland, Colosi, Hoekstra, Dzieciuch, Alford, Bellerjeau, Gunnar (2026)
+- #emph[Analysis of acoustic fluctuations for 150-km, low frequency transmissions across the Gulf Stream in the vicinity of the New England Seamount chain]  - (in prep) #strong[Ragland], Colosi, Hoekstra, Dzieciuch, Alford, Bellerjeau, Gunnar (2026)
 
 - #emph[How Do Tides Affect Underwater Acoustic Propagation: A collaborative approach to improve internal wave modelling at basin to global scales] #link("https://doi.org/10.5670/oceanog.2025.308")[10.5670\/oceanog.2025.308] - Schönau, Hiron, #strong[Ragland], Raja, Skitka, Solano, Xu, Arbic, Buijsman, Chassignet, Coelho, Helber, Shriver, Summers, Verlinden, Wallcraft (2025)
 

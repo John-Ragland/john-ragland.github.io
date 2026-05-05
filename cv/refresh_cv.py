@@ -56,12 +56,12 @@ if __name__ == "__main__":
         if item['data']['itemType'] == 'journalArticle':
             authors = [creator['lastName'] for creator in item['data']['creators'] if creator['creatorType'] == 'author']
             # Bold any appearances of 'Ragland'
-            authors = ['**' + author + '**' if author == 'Ragland' else author for author in authors]
-            
+            authors = [re.sub(r'\bRagland\b', '**Ragland**', author) for author in authors]
+
             # Extract year from date as integer
             date_str = item['data']['date']
             year_int = extract_year_int(date_str)
-            
+
             # Format as bullet items
             title = item['data']['title']
             authors_str = ', '.join(authors)
@@ -76,12 +76,12 @@ if __name__ == "__main__":
         elif item['data']['itemType'] == 'preprint':
             authors = [creator['lastName'] for creator in item['data']['creators'] if creator['creatorType'] == 'author']
             # Bold any appearances of 'Ragland'
-            authors = ['**' + author + '**' if author == 'Ragland' else author for author in authors]
-            
+            authors = [re.sub(r'\bRagland\b', '**Ragland**', author) for author in authors]
+
             # Extract year from date as integer
             date_str = item['data']['date']
             year_int = extract_year_int(date_str)
-            
+
             # Format as bullet items (same as journalArticle)
             title = '(in review) ' + item['data']['title']
             authors_str = ', '.join(authors)
@@ -109,7 +109,7 @@ if __name__ == "__main__":
         if item['data']['itemType'] == 'conferencePaper':
             authors = [creator['lastName'] for creator in item['data']['creators'] if creator['creatorType'] == 'author']
             # Bold any appearances of 'Ragland'
-            authors = ['**' + author + '**' if author == 'Ragland' else author for author in authors]
+            authors = [re.sub(r'\bRagland\b', '**Ragland**', author) for author in authors]
 
             # Extract year from date as integer
             date_str = item['data']['date']
