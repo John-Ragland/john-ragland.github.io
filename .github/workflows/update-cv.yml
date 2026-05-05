@@ -43,7 +43,13 @@ jobs:
     - name: Check for changes
       id: check_changes
       run: |
-        git diff --quiet cv/ John_Ragland_CV.pdf cv.html || echo "changes=true" >> $GITHUB_OUTPUT
+        # Check YAML for changes beyond just the date field
+        YAML_DIFF=$(git diff cv/John_Ragland_CV.yaml | grep "^[+-]" | grep -v "^[+-][+-][+-]" | grep -v "^\(+\|-\)  *date:" | wc -l | tr -d ' ')
+        # Check HTML for any changes
+        HTML_DIFF=$(git diff --quiet cv.html || echo "1")
+        if [ "$YAML_DIFF" -gt 0 ] || [ "$HTML_DIFF" = "1" ]; then
+          echo "changes=true" >> $GITHUB_OUTPUT
+        fi
     
     - name: Commit and push if changes
       if: steps.check_changes.outputs.changes == 'true'
