@@ -610,6 +610,8 @@
 == Peer Reviewed Publications
 
 
+#one-col-entry(content: [#bullet-entry[#emph[Simultaneous ocean acoustic inversion and source localization for transmission across the Gulf Stream]  - \(in prep\) Ragland, Colosi, Dzieciuch \(2026\)]])
+#v(design-entries-vertical-space-between-entries)
 #one-col-entry(content: [#bullet-entry[#emph[Long range, low frequency source localization across the Gulf Stream front using multiple bottom\/surface bounce paths observed on a large aperture vertical array]  - \(in prep\) Hoekstra, Colosi, #strong[Ragland], Bonnel, Park, Dzieciuch, Alford, Bellerjeau, Voet \(2026\)]])
 #v(design-entries-vertical-space-between-entries)
 #one-col-entry(content: [#bullet-entry[#emph[Analysis of acoustic fluctuations for 150-km, low frequency transmissions across the Gulf Stream in the vicinity of the New England Seamount chain]  - \(in prep\) Ragland, Colosi, Hoekstra, Dzieciuch, Alford, Bellerjeau, Gunnar \(2026\)]])
@@ -644,6 +646,8 @@
 == Awards
 
 
+#one-col-entry(content: [#bullet-entry[#strong[ONR Postdoctoral fellowship in Acoustics] \(2025\) - Office of Naval Research: Fellowship awarded to exceptional early-career researchers who wish to continue research in ocean acoustics or the related disciplines of undersea signal processing, marine structural acoustics and transducer materials science]])
+#v(design-entries-vertical-space-between-entries)
 #one-col-entry(content: [#bullet-entry[#strong[eScience postdoctoral fellowship] \(Sept 2024\) - University of Washington, eScience Institute: Fellowship awarded to interdisciplinary researchers who are actively involved in developing and\/or utilizing advanced data science tools and techniques in their research at the UW]])
 #v(design-entries-vertical-space-between-entries)
 #one-col-entry(content: [#bullet-entry[#strong[The Daoma and Murray Strasberg Memorial Scholarship] \(May 2023\) - Acoustical Society of America: Awarded to exceptional graduate students in ocean acoustics with research relevant to naval applications to ocean acoustics]])
