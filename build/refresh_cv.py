@@ -2,21 +2,24 @@ from pyzotero import zotero
 import yaml
 import re
 import os
+from pathlib import Path
 from datetime import date
 from dotenv import load_dotenv, find_dotenv
 import subprocess
 
 load_dotenv(find_dotenv())
 
+CV_DIR = Path(__file__).parent.parent / "cv"
+
 if __name__ == "__main__":
     # Load credentials from environment variables
     library_id = os.environ.get('ZOTERO_LIBRARY_ID')
     library_type = 'user'
     api_key = os.environ.get('ZOTERO_API_KEY')
-    
+
     if not library_id or not api_key:
         raise ValueError("Please set ZOTERO_LIBRARY_ID and ZOTERO_API_KEY environment variables")
-    
+
     zot = zotero.Zotero(library_id, library_type, api_key)
 
     publications = os.environ.get('ZOTERO_PUBLICATIONS_COLLECTION', '8QEDMTRG')
@@ -30,19 +33,19 @@ if __name__ == "__main__":
         """Extract year from various date formats and return as integer"""
         if not date_str:
             return 0
-        
+
         # Try to find a 4-digit year in the string
         year_match = re.search(r'\b(20\d{2})\b', str(date_str))
         if year_match:
             return int(year_match.group(1))
-        
+
         # Fallback: if it starts with a year (YYYY-MM-DD format)
         if '-' in str(date_str):
             try:
                 return int(str(date_str).split('-')[0])
             except ValueError:
                 pass
-        
+
         # Try to extract any 4-digit number that looks like a year
         try:
             return int(str(date_str)[:4]) if str(date_str)[:4].isdigit() else 0
@@ -51,7 +54,7 @@ if __name__ == "__main__":
 
     items = zot.collection_items(publications)
     publications_list = []  # Temporary list to collect and sort
-    
+
     for item in items:
         if item['data']['itemType'] == 'journalArticle':
             authors = [creator['lastName'] for creator in item['data']['creators'] if creator['creatorType'] == 'author']
@@ -72,7 +75,7 @@ if __name__ == "__main__":
                 'bullet': f"*{title}* {doi_link} - {authors_str} ({year_int})",
                 '_sort_year': year_int
             })
-            
+
         elif item['data']['itemType'] == 'preprint':
             authors = [creator['lastName'] for creator in item['data']['creators'] if creator['creatorType'] == 'author']
             # Bold any appearances of 'Ragland'
@@ -87,7 +90,7 @@ if __name__ == "__main__":
             authors_str = ', '.join(authors)
             doi = item['data'].get('DOI', '')
             doi_link = f"[{doi}](https://doi.org/{doi})" if doi else ""
-            
+
             publications_list.append({
                 'bullet': f"*{title}* {doi_link} - {authors_str} ({year_int})",
                 '_sort_year': year_int
@@ -121,7 +124,7 @@ if __name__ == "__main__":
             conference = item['data']['proceedingsTitle']
             doi = item['data'].get('DOI', '')
             doi_link = f" ([{doi}](https://doi.org/{doi}))" if doi else ""
-            
+
             conference_list.append({
                 'bullet': f"*{title}*{doi_link} - {authors_str} ({year_int}) - {conference}",
                 '_sort_year': year_int
@@ -129,14 +132,14 @@ if __name__ == "__main__":
 
     # Sort conference presentations by year (newest first)
     conference_list.sort(key=lambda x: x['_sort_year'], reverse=True)
-    
+
     # Remove the temporary sort field and add to final list
     for conf in conference_list:
         del conf['_sort_year']
         zotero_yaml['Conference Presentations'].append(conf)
 
     # Update John_Ragland_CV.yaml with zotero publications
-    with open('John_Ragland_CV_base.yaml', 'r') as f:
+    with open(CV_DIR / 'John_Ragland_CV_base.yaml', 'r') as f:
         cv_data = yaml.safe_load(f)
 
     # Update the publications sections within cv.sections
@@ -144,14 +147,14 @@ if __name__ == "__main__":
     cv_data['cv']['sections']['Conference Presentations'] = zotero_yaml['Conference Presentations']
 
     # Write the updated CV data back to the file with cleaner formatting
-    with open('John_Ragland_CV.yaml', 'w') as f:
+    with open(CV_DIR / 'John_Ragland_CV.yaml', 'w') as f:
         yaml.dump(cv_data, f, sort_keys=False, default_flow_style=False, allow_unicode=True)
 
     # Reorder YAML sections according to specified heading order
     def reorder_cv_sections(yaml_file, desired_order):
         """
         Reorder CV sections according to the desired order list
-        
+
         Args:
             yaml_file (str): Path to the YAML file
             desired_order (list): List of section names in desired order
@@ -159,30 +162,30 @@ if __name__ == "__main__":
         # Read the current CV data
         with open(yaml_file, 'r') as f:
             cv_data = yaml.safe_load(f)
-        
+
         # Get current sections
         current_sections = cv_data['cv']['sections']
-        
+
         # Create new ordered sections dictionary
         ordered_sections = {}
-        
+
         # Add sections in desired order
         for section_name in desired_order:
             if section_name in current_sections:
                 ordered_sections[section_name] = current_sections[section_name]
-        
+
         # Add any remaining sections not in the desired order (at the end)
         for section_name, section_data in current_sections.items():
             if section_name not in ordered_sections:
                 ordered_sections[section_name] = section_data
-        
+
         # Update the CV data with reordered sections
         cv_data['cv']['sections'] = ordered_sections
-        
+
         # Write back to file
         with open(yaml_file, 'w') as f:
             yaml.dump(cv_data, f, sort_keys=False, default_flow_style=False, allow_unicode=True)
-        
+
         print(f"Reordered sections in {yaml_file}")
         print("New section order:")
         for i, section in enumerate(ordered_sections.keys(), 1):
@@ -202,26 +205,26 @@ if __name__ == "__main__":
     ]
 
     # Reorder the sections
-    reorder_cv_sections('John_Ragland_CV.yaml', desired_section_order)
+    reorder_cv_sections(CV_DIR / 'John_Ragland_CV.yaml', desired_section_order)
 
     # Update the last updated date to today
-    with open('John_Ragland_CV.yaml', 'r') as f:
+    with open(CV_DIR / 'John_Ragland_CV.yaml', 'r') as f:
         cv_data = yaml.safe_load(f)
-    
+
     if 'settings' not in cv_data:
         cv_data['settings'] = {}
 
     cv_data['settings']['current_date'] = date.today().strftime('%Y-%m-%d')
-    
-    with open('John_Ragland_CV.yaml', 'w') as f:
+
+    with open(CV_DIR / 'John_Ragland_CV.yaml', 'w') as f:
         yaml.dump(cv_data, f, sort_keys=False, default_flow_style=False, allow_unicode=True)
 
     # render cv
-    #os.system('rendercv render "John_Ragland_CV.yaml"')
-    subprocess.run(['rendercv', 'render', 'John_Ragland_CV.yaml'], check=True)
-    
+    subprocess.run(['rendercv', 'render', 'John_Ragland_CV.yaml'], check=True, cwd=CV_DIR)
+
     # Post-process the HTML to add custom header and PDF link
-    #os.system('python post_process_cv.py')
     print("\nPost-processing CV HTML...")
-    subprocess.run(['python', 'post_process_cv.py'], check=True)
-    
+    subprocess.run(
+        ['uv', 'run', 'python', str(Path(__file__).parent / 'post_process_cv.py')],
+        check=True
+    )
