@@ -162,65 +162,13 @@
 
 == Experience
 
-#regular-entry(
-  [
-    #strong[Woods Hole Oceanographic Institution], Postdoctoral Fellow
+- #strong[Postdoctoral Fellow], Woods Hole Oceanographic Institution, Woods Hole, MA (2025 - present)
 
-  ],
-  [
-    Woods Hole, MA
+- #strong[Postdoctoral Scholar], University of Washington, Seattle, WA (2024 - 2025)
 
-    2025 - present
+- #strong[Graduate Researcher], University of Washington, Seattle, WA (2020 - 2024)
 
-  ],
-  main-column-second-row: [
-  ],
-)
-
-#regular-entry(
-  [
-    #strong[University of Washington], Postdoctoral Scholar
-
-  ],
-  [
-    Seattle, WA
-
-    2024 - 2025
-
-  ],
-  main-column-second-row: [
-  ],
-)
-
-#regular-entry(
-  [
-    #strong[University of Washington], Graduate researcher
-
-  ],
-  [
-    Seattle, WA
-
-    2020 - 2024
-
-  ],
-  main-column-second-row: [
-  ],
-)
-
-#regular-entry(
-  [
-    #strong[Applied Research in acoustics], Graduate summer researcher
-
-  ],
-  [
-    Seattle, WA
-
-    2022
-
-  ],
-  main-column-second-row: [
-  ],
-)
+- #strong[Graduate Summer Researcher], Applied Research in Acoustics, Seattle, WA (2022)
 
 == Peer Reviewed Publications
 

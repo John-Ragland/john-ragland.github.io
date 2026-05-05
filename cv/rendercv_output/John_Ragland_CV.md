@@ -49,37 +49,13 @@
 
 
 # Experience
-## **Woods Hole Oceanographic Institution**, Postdoctoral Fellow
+- **Postdoctoral Fellow**, Woods Hole Oceanographic Institution, Woods Hole, MA (2025 - present)
 
-Woods Hole, MA
+- **Postdoctoral Scholar**, University of Washington, Seattle, WA (2024 - 2025)
 
-2025 - present
+- **Graduate Researcher**, University of Washington, Seattle, WA (2020 - 2024)
 
-
-
-## **University of Washington**, Postdoctoral Scholar
-
-Seattle, WA
-
-2024 - 2025
-
-
-
-## **University of Washington**, Graduate researcher
-
-Seattle, WA
-
-2020 - 2024
-
-
-
-## **Applied Research in acoustics**, Graduate summer researcher
-
-Seattle, WA
-
-2022
-
-
+- **Graduate Summer Researcher**, Applied Research in Acoustics, Seattle, WA (2022)
 
 # Peer Reviewed Publications
 - *Simultaneous ocean acoustic inversion and source localization for transmission across the Gulf Stream*  - (in prep) **Ragland**, Colosi, Dzieciuch (2026)

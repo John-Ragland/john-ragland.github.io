@@ -36,22 +36,10 @@ cv:
       - '**Emphasis**: Acoustic Oceanography: Ambient noise interferometry and ocean
         acoustic tomography'
     experience:
-    - company: Woods Hole Oceanographic Institution
-      position: Postdoctoral Fellow
-      location: Woods Hole, MA
-      date: 2025 - present
-    - company: University of Washington
-      position: Postdoctoral Scholar
-      location: Seattle, WA
-      date: 2024 - 2025
-    - company: University of Washington
-      position: Graduate researcher
-      location: Seattle, WA
-      date: 2020 - 2024
-    - company: Applied Research in acoustics
-      position: Graduate summer researcher
-      location: Seattle, WA
-      date: 2022
+    - bullet: '**Postdoctoral Fellow**, Woods Hole Oceanographic Institution, Woods Hole, MA (2025 - present)'
+    - bullet: '**Postdoctoral Scholar**, University of Washington, Seattle, WA (2024 - 2025)'
+    - bullet: '**Graduate Researcher**, University of Washington, Seattle, WA (2020 - 2024)'
+    - bullet: '**Graduate Summer Researcher**, Applied Research in Acoustics, Seattle, WA (2022)'
     Peer Reviewed Publications:
     - bullet: '*Simultaneous ocean acoustic inversion and source localization for
         transmission across the Gulf Stream*  - (in prep) **Ragland**, Colosi, Dzieciuch
