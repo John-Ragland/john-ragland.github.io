@@ -1,6 +1,10 @@
 version = 1
 revision = 3
 requires-python = ">=3.11"
+resolution-markers = [
+    "python_full_version >= '3.12'",
+    "python_full_version < '3.12'",
+]
 
 [[package]]
 name = "annotated-doc"
@@ -80,7 +84,8 @@ dependencies = [
     { name = "python-dotenv" },
     { name = "pyyaml" },
     { name = "pyzotero" },
-    { name = "rendercv", extra = ["full"] },
+    { name = "rendercv", version = "2.3", source = { registry = "https://pypi.org/simple" }, extra = ["full"], marker = "python_full_version < '3.12'" },
+    { name = "rendercv", version = "2.8", source = { registry = "https://pypi.org/simple" }, extra = ["full"], marker = "python_full_version >= '3.12'" },
 ]
 
 [package.metadata]
@@ -88,7 +93,7 @@ requires-dist = [
     { name = "python-dotenv" },
     { name = "pyyaml" },
     { name = "pyzotero" },
-    { name = "rendercv", extras = ["full"], specifier = "<=2.3" },
+    { name = "rendercv", extras = ["full"] },
 ]
 
 [[package]]
@@ -329,6 +334,11 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/f3/0a/fd7d723f8f8153418fb40cf9c940e82004fce7e987026b08a68a36dd3fe7/pydantic-2.13.3-py3-none-any.whl", hash = "sha256:6db14ac8dfc9a1e57f87ea2c0de670c251240f43cb0c30a5130e9720dc612927", size = 471981, upload-time = "2026-04-20T14:46:41.402Z" },
 ]
 
+[package.optional-dependencies]
+email = [
+    { name = "email-validator", marker = "python_full_version >= '3.12'" },
+]
+
 [[package]]
 name = "pydantic-core"
 version = "2.46.3"
@@ -545,14 +555,17 @@ wheels = [
 name = "rendercv"
 version = "2.3"
 source = { registry = "https://pypi.org/simple" }
+resolution-markers = [
+    "python_full_version < '3.12'",
+]
 dependencies = [
-    { name = "email-validator" },
-    { name = "jinja2" },
-    { name = "phonenumbers" },
-    { name = "pycountry" },
-    { name = "pydantic" },
-    { name = "pydantic-extra-types" },
-    { name = "ruamel-yaml" },
+    { name = "email-validator", marker = "python_full_version < '3.12'" },
+    { name = "jinja2", marker = "python_full_version < '3.12'" },
+    { name = "phonenumbers", marker = "python_full_version < '3.12'" },
+    { name = "pycountry", marker = "python_full_version < '3.12'" },
+    { name = "pydantic", marker = "python_full_version < '3.12'" },
+    { name = "pydantic-extra-types", marker = "python_full_version < '3.12'" },
+    { name = "ruamel-yaml", marker = "python_full_version < '3.12'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/c1/0c/18148adeb4bb265b069de7cb6859abec3defb748ff1d305ad8079c335ad3/rendercv-2.3.tar.gz", hash = "sha256:3fb0df97f5c75fdebf2d982c9b46914abea1ced8edd61719232847ee09ce5b80", size = 86042, upload-time = "2025-10-28T15:45:10.76Z" }
 wheels = [
@@ -561,12 +574,41 @@ wheels = [
 
 [package.optional-dependencies]
 full = [
-    { name = "markdown" },
-    { name = "packaging" },
-    { name = "rendercv-fonts" },
-    { name = "typer" },
-    { name = "typst" },
-    { name = "watchdog" },
+    { name = "markdown", marker = "python_full_version < '3.12'" },
+    { name = "packaging", marker = "python_full_version < '3.12'" },
+    { name = "rendercv-fonts", marker = "python_full_version < '3.12'" },
+    { name = "typer", marker = "python_full_version < '3.12'" },
+    { name = "typst", marker = "python_full_version < '3.12'" },
+    { name = "watchdog", marker = "python_full_version < '3.12'" },
+]
+
+[[package]]
+name = "rendercv"
+version = "2.8"
+source = { registry = "https://pypi.org/simple" }
+resolution-markers = [
+    "python_full_version >= '3.12'",
+]
+dependencies = [
+    { name = "jinja2", marker = "python_full_version >= '3.12'" },
+    { name = "markdown", marker = "python_full_version >= '3.12'" },
+    { name = "phonenumbers", marker = "python_full_version >= '3.12'" },
+    { name = "pydantic", extra = ["email"], marker = "python_full_version >= '3.12'" },
+    { name = "pydantic-extra-types", marker = "python_full_version >= '3.12'" },
+    { name = "ruamel-yaml", marker = "python_full_version >= '3.12'" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/b0/1e/b265ab4f54037e5e0cc7bd7a2f3c732357c17b6e7a9f36aa3c458a610e97/rendercv-2.8.tar.gz", hash = "sha256:e51b2e96654f8eeac612c9f2ba08c703e1a59e4d3433140a3d13fdbdb7192f73", size = 511752, upload-time = "2026-03-21T00:22:07.353Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/67/88/9123cdc74e2c93ffcbc2e55039568fbce3ec5527df2b639b6471ceaac270/rendercv-2.8-py3-none-any.whl", hash = "sha256:38c8192931f1bb11958a9935a7b2698460829d4cf37543629be715a520376024", size = 146038, upload-time = "2026-03-21T00:22:05.776Z" },
+]
+
+[package.optional-dependencies]
+full = [
+    { name = "packaging", marker = "python_full_version >= '3.12'" },
+    { name = "rendercv-fonts", marker = "python_full_version >= '3.12'" },
+    { name = "typer", marker = "python_full_version >= '3.12'" },
+    { name = "typst", marker = "python_full_version >= '3.12'" },
+    { name = "watchdog", marker = "python_full_version >= '3.12'" },
 ]
 
 [[package]]

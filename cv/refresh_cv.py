@@ -208,10 +208,10 @@ if __name__ == "__main__":
     with open('John_Ragland_CV.yaml', 'r') as f:
         cv_data = yaml.safe_load(f)
     
-    if 'rendercv_settings' not in cv_data:
-        cv_data['rendercv_settings'] = {}
-    
-    cv_data['rendercv_settings']['date'] = date.today().strftime('%Y-%m-%d')
+    if 'settings' not in cv_data:
+        cv_data['settings'] = {}
+
+    cv_data['settings']['current_date'] = date.today().strftime('%Y-%m-%d')
     
     with open('John_Ragland_CV.yaml', 'w') as f:
         yaml.dump(cv_data, f, sort_keys=False, default_flow_style=False, allow_unicode=True)
