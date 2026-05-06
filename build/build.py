@@ -40,6 +40,13 @@ def add_backlinks(html: str) -> str:
             right.append(" ")
             right.append(link)
 
+    # Pandoc emits the reference-section-title as h1; demote it to h2
+    refs_div = soup.find(id="refs")
+    if refs_div:
+        h1 = refs_div.find_previous_sibling("h1")
+        if h1:
+            h1.name = "h2"
+
     return str(soup)
 
 
