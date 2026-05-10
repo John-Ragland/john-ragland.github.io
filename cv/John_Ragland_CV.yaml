@@ -53,6 +53,9 @@ cv:
       location: Seattle, WA
       date: 2022
     Peer Reviewed Publications:
+    - bullet: '*Simultaneous ocean acoustic inversion and source localization for
+        transmission across the Gulf Stream*  - (in prep) Ragland, Colosi, Dzieciuch
+        (2026)'
     - bullet: '*Long range, low frequency source localization across the Gulf Stream
         front using multiple bottom/surface bounce paths observed on a large aperture
         vertical array*  - (in prep) Hoekstra, Colosi, **Ragland**, Bonnel, Park,
@@ -319,6 +322,6 @@ locale:
   - November
   - December
 rendercv_settings:
-  date: '2026-05-03'
+  date: '2026-05-10'
   render_command: null
   bold_keywords: []

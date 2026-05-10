@@ -610,6 +610,8 @@
 == Peer Reviewed Publications
 
 
+#one-col-entry(content: [#bullet-entry[#emph[Simultaneous ocean acoustic inversion and source localization for transmission across the Gulf Stream]  - \(in prep\) Ragland, Colosi, Dzieciuch \(2026\)]])
+#v(design-entries-vertical-space-between-entries)
 #one-col-entry(content: [#bullet-entry[#emph[Long range, low frequency source localization across the Gulf Stream front using multiple bottom\/surface bounce paths observed on a large aperture vertical array]  - \(in prep\) Hoekstra, Colosi, #strong[Ragland], Bonnel, Park, Dzieciuch, Alford, Bellerjeau, Voet \(2026\)]])
 #v(design-entries-vertical-space-between-entries)
 #one-col-entry(content: [#bullet-entry[#emph[Analysis of acoustic fluctuations for 150-km, low frequency transmissions across the Gulf Stream in the vicinity of the New England Seamount chain]  - \(in prep\) Ragland, Colosi, Hoekstra, Dzieciuch, Alford, Bellerjeau, Gunnar \(2026\)]])
