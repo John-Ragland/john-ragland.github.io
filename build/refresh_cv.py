@@ -96,6 +96,26 @@ if __name__ == "__main__":
                 '_sort_year': year_int
             })
 
+        elif item['data']['itemType'] == 'manuscript':
+            authors = [creator['lastName'] for creator in item['data']['creators'] if creator['creatorType'] == 'author']
+            # Bold any appearances of 'Ragland'
+            authors = [re.sub(r'\bRagland\b', '**Ragland**', author) for author in authors]
+
+            # Extract year from date as integer
+            date_str = item['data']['date']
+            year_int = extract_year_int(date_str)
+
+            # Format as bullet items (same as journalArticle)
+            title = '(in prep) ' + item['data']['title']
+            authors_str = ', '.join(authors)
+            doi = item['data'].get('DOI', '')
+            doi_link = f"[{doi}](https://doi.org/{doi})" if doi else ""
+
+            publications_list.append({
+                'bullet': f"*{title}* {doi_link} - {authors_str} ({year_int})",
+                '_sort_year': year_int
+            })
+
     # Sort by year (newest first)
     publications_list.sort(key=lambda x: x['_sort_year'], reverse=True)
 
@@ -195,6 +215,7 @@ if __name__ == "__main__":
     desired_section_order = [
         'education',
         'experience',
+        'Professional Service',
         'Peer Reviewed Publications',
         'Invited Talks',
         'awards',

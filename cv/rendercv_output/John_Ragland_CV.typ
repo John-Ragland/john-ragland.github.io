@@ -6,7 +6,7 @@
   name: "John Ragland",
   title: "John Ragland - CV",
   footer: context { [#emph[John Ragland -- #str(here().page())\/#str(counter(page).final().first())]] },
-  top-note: [ #emph[Last updated in May 2026] ],
+  top-note: [ #emph[Last updated in July 2026] ],
   locale-catalog-language: "en",
   text-direction: ltr,
   page-size: "us-letter",
@@ -80,8 +80,8 @@
   entries-highlights-space-between-bullet-and-text: 0.5em,
   date: datetime(
     year: 2026,
-    month: 5,
-    day: 5,
+    month: 7,
+    day: 22,
   ),
 )
 
@@ -170,13 +170,17 @@
 
 - #strong[Graduate Summer Researcher], Applied Research in Acoustics, Seattle, WA (2022)
 
+== Professional Service
+
+- #strong[Associate Editor] - #link("https://pubs.aip.org/asa/poma")[Proceedings of Meetings on Acoustics], AIP
+
 == Peer Reviewed Publications
 
-- #emph[Simultaneous ocean acoustic inversion and source localization for transmission across the Gulf Stream]  - (in prep) #strong[Ragland], Colosi, Dzieciuch (2026)
+- #emph[(in prep) Long range, low frequency source localization across the Gulf Stream front using multiple bottom\/surface bounce paths observed on a large aperture vertical array]  - Hoekstra, Colosi, #strong[Ragland], Bonnel, Park, Dzieciuch, Alford, Bellerjeau, Voet (2026)
 
-- #emph[Long range, low frequency source localization across the Gulf Stream front using multiple bottom\/surface bounce paths observed on a large aperture vertical array]  - (in prep) Hoekstra, Colosi, #strong[Ragland], Bonnel, Park, Dzieciuch, Alford, Bellerjeau, Voet (2026)
+- #emph[(in prep) Simultaneous ocean acoustic inversion and source localization for transmission across the Gulf Stream]  - #strong[Ragland], Colosi, Dzieciuch (2026)
 
-- #emph[Analysis of acoustic fluctuations for 150-km, low frequency transmissions across the Gulf Stream in the vicinity of the New England Seamount chain]  - (in prep) #strong[Ragland], Colosi, Hoekstra, Dzieciuch, Alford, Bellerjeau, Gunnar (2026)
+- #emph[(in review) Analysis of acoustic fluctuations for 150-km, low frequency transmissions across the Gulf Stream in the vicinity of the New England Seamount chain] #link("https://doi.org/10.22541/essoar.15006016/v1")[10.22541\/essoar.15006016\/v1] - #strong[Ragland], Colosi, Hoekstra, Dzieciuch, Alford, Bellerjeau (2026)
 
 - #emph[How Do Tides Affect Underwater Acoustic Propagation: A collaborative approach to improve internal wave modelling at basin to global scales] #link("https://doi.org/10.5670/oceanog.2025.308")[10.5670\/oceanog.2025.308] - Schönau, Hiron, #strong[Ragland], Raja, Skitka, Solano, Xu, Arbic, Buijsman, Chassignet, Coelho, Helber, Shriver, Summers, Verlinden, Wallcraft (2025)
 

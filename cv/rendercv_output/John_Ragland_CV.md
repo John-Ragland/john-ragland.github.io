@@ -57,12 +57,15 @@
 
 - **Graduate Summer Researcher**, Applied Research in Acoustics, Seattle, WA (2022)
 
+# Professional Service
+- **Associate Editor** - [Proceedings of Meetings on Acoustics](https://pubs.aip.org/asa/poma), AIP
+
 # Peer Reviewed Publications
-- *Simultaneous ocean acoustic inversion and source localization for transmission across the Gulf Stream*  - (in prep) **Ragland**, Colosi, Dzieciuch (2026)
+- *(in prep) Long range, low frequency source localization across the Gulf Stream front using multiple bottom/surface bounce paths observed on a large aperture vertical array*  - Hoekstra, Colosi, **Ragland**, Bonnel, Park, Dzieciuch, Alford, Bellerjeau, Voet (2026)
 
-- *Long range, low frequency source localization across the Gulf Stream front using multiple bottom/surface bounce paths observed on a large aperture vertical array*  - (in prep) Hoekstra, Colosi, **Ragland**, Bonnel, Park, Dzieciuch, Alford, Bellerjeau, Voet (2026)
+- *(in prep) Simultaneous ocean acoustic inversion and source localization for transmission across the Gulf Stream*  - **Ragland**, Colosi, Dzieciuch (2026)
 
-- *Analysis of acoustic fluctuations for 150-km, low frequency transmissions across the Gulf Stream in the vicinity of the New England Seamount chain*  - (in prep) **Ragland**, Colosi, Hoekstra, Dzieciuch, Alford, Bellerjeau, Gunnar (2026)
+- *(in review) Analysis of acoustic fluctuations for 150-km, low frequency transmissions across the Gulf Stream in the vicinity of the New England Seamount chain* [10.22541/essoar.15006016/v1](https://doi.org/10.22541/essoar.15006016/v1) - **Ragland**, Colosi, Hoekstra, Dzieciuch, Alford, Bellerjeau (2026)
 
 - *How Do Tides Affect Underwater Acoustic Propagation: A collaborative approach to improve internal wave modelling at basin to global scales* [10.5670/oceanog.2025.308](https://doi.org/10.5670/oceanog.2025.308) - Schönau, Hiron, **Ragland**, Raja, Skitka, Solano, Xu, Arbic, Buijsman, Chassignet, Coelho, Helber, Shriver, Summers, Verlinden, Wallcraft (2025)
 
