@@ -26,35 +26,41 @@ jobs:
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
     
-    - name: Set up Python
-      uses: actions/setup-python@v5
+    - name: Set up uv
+      uses: astral-sh/setup-uv@v4
       with:
         python-version: '3.11'
-        cache: 'pip'
-    
-    - name: Install dependencies
-      run: |
-        pip install -r cv/requirements.txt
-    
+
+    - name: Install pandoc
+      run: sudo apt-get install -y pandoc
+
     - name: Run CV refresh script
       env:
         ZOTERO_LIBRARY_ID: ${{ secrets.ZOTERO_LIBRARY_ID }}
         ZOTERO_API_KEY: ${{ secrets.ZOTERO_API_KEY }}
         ZOTERO_PUBLICATIONS_COLLECTION: ${{ secrets.ZOTERO_PUBLICATIONS_COLLECTION }}
         ZOTERO_CONFERENCE_COLLECTION: ${{ secrets.ZOTERO_CONFERENCE_COLLECTION }}
-      working-directory: ./cv
-      run: python refresh_cv.py
-    
+      run: uv run python build/refresh_cv.py
+
+    - name: Build pages
+      run: uv run python build/build.py
+
     - name: Check for changes
       id: check_changes
       run: |
-        git diff --quiet cv/ John_Ragland_CV.pdf cv.html || echo "changes=true" >> $GITHUB_OUTPUT
-    
+        # Check YAML for changes beyond just the date field
+        YAML_DIFF=$(git diff cv/John_Ragland_CV.yaml | grep "^[+-]" | grep -v "^[+-][+-][+-]" | grep -v "^\(+\|-\)  *date:" | wc -l | tr -d ' ')
+        # Check HTML for any changes
+        HTML_DIFF=$(git diff --quiet cv.html index.html projects.html || echo "1")
+        if [ "$YAML_DIFF" -gt 0 ] || [ "$HTML_DIFF" = "1" ]; then
+          echo "changes=true" >> $GITHUB_OUTPUT
+        fi
+
     - name: Commit and push if changes
       if: steps.check_changes.outputs.changes == 'true'
       run: |
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"-cv-update
-        git add cv/John_Ragland_CV.yaml cv/rendercv_output/ cv.html John_Ragland_CV.pdf
+        git add cv/John_Ragland_CV.yaml cv/rendercv_output/ cv.html John_Ragland_CV.pdf index.html projects.html
         git commit -m "chore: Auto-update CV from Zotero [skip ci]"
         git push

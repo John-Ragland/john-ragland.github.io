@@ -2,6 +2,12 @@
  * SimpleCSS handles most styling, but you can add customizations here
  */
 
+/* Heading sizes (Simple.css defaults: h1=3rem, h2=2.6rem, h3=2rem, h4=1.44rem) */
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.3rem; }
+h4 { font-size: 1.1rem; }
+
 /* Example: Custom header styling */
 header {
     text-align: center;
@@ -28,4 +34,35 @@ article {
 footer {
     text-align: center;
     margin-top: 4rem;
+}
+
+/* Always show nav buttons with border */
+header nav a {
+    display: inline-block;
+    border: 1px solid var(--border);
+    padding: 0.4em 0.8em;
+    border-radius: var(--standard-border-radius, 4px);
+    text-decoration: none;
+}
+
+/* Inline reference number with text (no line break) */
+.csl-left-margin {
+    display: inline;
+}
+.csl-right-inline {
+    display: inline;
+}
+
+/* Stack buttons vertically on narrow screens */
+@media (max-width: 480px) {
+    header nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    header nav a {
+        width: 80%;
+        text-align: center;
+    }
 }
