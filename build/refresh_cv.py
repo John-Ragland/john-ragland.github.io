@@ -215,7 +215,7 @@ if __name__ == "__main__":
     desired_section_order = [
         'education',
         'experience',
-        'Professional Service',
+        'Community Service',
         'Peer Reviewed Publications',
         'Invited Talks',
         'awards',
