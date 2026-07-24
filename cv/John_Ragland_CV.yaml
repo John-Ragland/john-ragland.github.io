@@ -1,6 +1,6 @@
 cv:
   name: John Ragland
-  location: Falmouth, MA
+  location: Woods Hole, MA
   email: john.ragland@whoi.edu
   website: null
   social_networks:
@@ -44,9 +44,11 @@ cv:
         - 2024)'
     - bullet: '**Graduate Summer Researcher**, Applied Research in Acoustics, Seattle,
         WA (2022)'
-    Professional Service:
+    Community Service:
     - bullet: '**Associate Editor** - [Proceedings of Meetings on Acoustics](https://pubs.aip.org/asa/poma),
         AIP'
+    - bullet: '**AOPE department representative** - [WHOI postdoctoral association](https://www2.whoi.edu/site/pda/),
+        elected position'
     Peer Reviewed Publications:
     - bullet: '*(in prep) Long range, low frequency source localization across the
         Gulf Stream front using multiple bottom/surface bounce paths observed on a
@@ -211,5 +213,5 @@ design:
 locale:
   language: english
 settings:
-  current_date: '2026-07-22'
+  current_date: '2026-07-24'
   bold_keywords: []

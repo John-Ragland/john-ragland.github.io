@@ -12,32 +12,67 @@
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+    <!-- Google Font to match the PDF (Source Sans 3) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
     <!-- Custom CV Styles -->
     <style>
-        /* CV-specific styling to match PDF layout */
+        /* CV-specific styling to match the PDF (typst "classic" theme) layout */
+        main {
+            max-width: 820px;
+        }
+
         .cv-section {
-            margin-top: 2rem;
+            font-family: "Source Sans 3", sans-serif;
+            color: rgb(0, 0, 0);
+            text-align: justify;
+            padding: 1rem 0;
         }
 
         .cv-section h1 {
             color: rgb(0, 79, 144);
             border-bottom: 2px solid rgb(0, 79, 144);
             padding-bottom: 0.3rem;
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-top: 1.8rem;
+            margin-bottom: 0.8rem;
         }
 
-        .cv-section h2 {
-            font-size: 1.1rem;
-            margin-top: 1.2rem;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
+        /* education entry header row: degree | institution, area | date */
+        .cv-entry-header {
+            display: flex;
+            align-items: baseline;
+            gap: 0.75rem;
+            margin-top: 0.9rem;
+        }
+
+        .cv-entry-header .cv-degree {
+            flex: 0 0 2.5rem;
+            font-weight: 700;
+        }
+
+        .cv-entry-header .cv-title {
+            flex: 1 1 auto;
+            font-weight: 700;
+        }
+
+        .cv-entry-header .cv-date {
+            flex: 0 0 auto;
+            color: #555;
         }
 
         .cv-section ul {
             margin-left: 1.5rem;
-            margin-bottom: 1rem;
-            line-height: 1.6;
+            margin-top: 0.3em;
+            margin-bottom: 0.3em;
+            line-height: 1.5;
+        }
+
+        .cv-section li {
+            margin-bottom: 0.3em;
         }
 
         .cv-section a {
@@ -49,17 +84,25 @@
             text-decoration: underline;
         }
 
-        /* Better spacing for lists */
-        .c
-
         /* Icon spacing */
         .cv-section i {
             margin-right: 0.5em;
             color: rgb(0, 79, 144);
             width: 1.2em;
             text-align: center;
-        }v-section li {
-            margin-bottom: 0.3rem;
+        }
+
+        /* PDF download link section - drop SimpleCSS's default section
+           border/spacing so it doesn't render as a divider line */
+        .cv-pdf-link {
+            border: none !important;
+            margin: 0 !important;
+            padding: 0 0 1rem !important;
+        }
+
+        .cv-pdf-link .button {
+            font-size: 0.85rem;
+            padding: 0.35em 0.9em;
         }
 
         /* Contact info at top */
@@ -67,6 +110,8 @@
             list-style: none;
             margin-left: 0;
             padding-left: 0;
+            text-align: left;
+            margin-bottom: 1.5rem;
         }
     </style>
 
@@ -88,231 +133,113 @@
     </header>
 
     <main>
-        <section>
-            <p>
-                <a href="John_Ragland_CV.pdf" style="text-decoration: none; color: inherit;" download>[ pdf ]</a>
-            </p>
+        <section class="cv-pdf-link">
+            <a href="John_Ragland_CV.pdf" class="button" download>Download</a>
         </section>
 
         <section class="cv-section">
 
     
-        <h1>John Ragland's CV</h1>
         <ul>
         <li><i class="fas fa-envelope"></i> Email: <a href="mailto:john.ragland@whoi.edu">john.ragland@whoi.edu</a></li>
-        <li><i class="fas fa-map-marker-alt"></i> Location: Falmouth, MA</li>
+        <li><i class="fas fa-map-marker-alt"></i> Location: Woods Hole, MA</li>
         <li><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://linkedin.com/in/john-ragland">john-ragland</a></li>
         <li><i class="fab fa-github"></i> GitHub: <a href="https://github.com/john-ragland">john-ragland</a></li>
         </ul>
         <h1>Education</h1>
-        <h2><strong>Auburn University</strong>, Electrical Engineering</h2>
-        <p><strong>BS</strong></p>
-        <p>2019</p>
+        <div class="cv-entry-header"><span class="cv-degree">BS</span><span class="cv-title"><strong>Auburn University</strong>, Electrical Engineering</span><span class="cv-date">2019</span></div>
         <ul>
         <li>Graduated <strong>Summa Cum Laude</strong></li>
         </ul>
-        <h2><strong>Auburn University</strong>, Electrical Engineering</h2>
-        <p><strong>MS</strong></p>
-        <p>2020</p>
+        <div class="cv-entry-header"><span class="cv-degree">MS</span><span class="cv-title"><strong>Auburn University</strong>, Electrical Engineering</span><span class="cv-date">2020</span></div>
         <ul>
-        <li>
-        <p><strong>Thesis</strong>: Digital Simulation and Recreation of a Vacuum Tube Guitar Amp <a href="https://etd.auburn.edu//handle/10415/7112">url</a></p>
-        </li>
-        <li>
-        <p><strong>Advisor</strong>: Thaddeus Roppel</p>
-        </li>
-        <li>
-        <p><strong>Emphasis</strong> Digital Signal Processing, Real-time Audio Processing, Physical Modeling</p>
-        </li>
+        <li><strong>Thesis</strong>: Digital Simulation and Recreation of a Vacuum Tube Guitar Amp <a href="https://etd.auburn.edu//handle/10415/7112">url</a></li>
+        <li><strong>Advisor</strong>: Thaddeus Roppel</li>
+        <li><strong>Emphasis</strong> Digital Signal Processing, Real-time Audio Processing, Physical Modeling</li>
         </ul>
-        <h2><strong>University of Washington</strong>, Electrical Engineering</h2>
-        <p><strong>PhD</strong></p>
-        <p>2024</p>
+        <div class="cv-entry-header"><span class="cv-degree">PhD</span><span class="cv-title"><strong>University of Washington</strong>, Electrical Engineering</span><span class="cv-date">2024</span></div>
         <ul>
-        <li>
-        <p><strong>Thesis</strong>: Using coherent ambient sound to probe the ocean <a href="https://hdl.handle.net/1773/51959">url</a></p>
-        </li>
-        <li>
-        <p><strong>Advisor</strong>: Shima Abadi</p>
-        </li>
-        <li>
-        <p><strong>Emphasis</strong>: Acoustic Oceanography: Ambient noise interferometry and ocean acoustic tomography</p>
-        </li>
+        <li><strong>Thesis</strong>: Using coherent ambient sound to probe the ocean <a href="https://hdl.handle.net/1773/51959">url</a></li>
+        <li><strong>Advisor</strong>: Shima Abadi</li>
+        <li><strong>Emphasis</strong>: Acoustic Oceanography: Ambient noise interferometry and ocean acoustic tomography</li>
         </ul>
         <h1>Experience</h1>
         <ul>
-        <li>
-        <p><strong>Postdoctoral Fellow</strong>, Woods Hole Oceanographic Institution, Woods Hole, MA (2025 - present)</p>
-        </li>
-        <li>
-        <p><strong>Postdoctoral Scholar</strong>, University of Washington, Seattle, WA (2024 - 2025)</p>
-        </li>
-        <li>
-        <p><strong>Graduate Researcher</strong>, University of Washington, Seattle, WA (2020 - 2024)</p>
-        </li>
-        <li>
-        <p><strong>Graduate Summer Researcher</strong>, Applied Research in Acoustics, Seattle, WA (2022)</p>
-        </li>
+        <li><strong>Postdoctoral Fellow</strong>, Woods Hole Oceanographic Institution, Woods Hole, MA (2025 - present)</li>
+        <li><strong>Postdoctoral Scholar</strong>, University of Washington, Seattle, WA (2024 - 2025)</li>
+        <li><strong>Graduate Researcher</strong>, University of Washington, Seattle, WA (2020 - 2024)</li>
+        <li><strong>Graduate Summer Researcher</strong>, Applied Research in Acoustics, Seattle, WA (2022)</li>
         </ul>
-        <h1>Professional Service</h1>
+        <h1>Community Service</h1>
         <ul>
         <li><strong>Associate Editor</strong> - <a href="https://pubs.aip.org/asa/poma">Proceedings of Meetings on Acoustics</a>, AIP</li>
+        <li><strong>AOPE department representative</strong> - <a href="https://www2.whoi.edu/site/pda/">WHOI postdoctoral association</a>, elected position</li>
         </ul>
         <h1>Peer Reviewed Publications</h1>
         <ul>
-        <li>
-        <p><em>(in prep) Long range, low frequency source localization across the Gulf Stream front using multiple bottom/surface bounce paths observed on a large aperture vertical array</em>  - Hoekstra, Colosi, <strong>Ragland</strong>, Bonnel, Park, Dzieciuch, Alford, Bellerjeau, Voet (2026)</p>
-        </li>
-        <li>
-        <p><em>(in prep) Simultaneous ocean acoustic inversion and source localization for transmission across the Gulf Stream</em>  - <strong>Ragland</strong>, Colosi, Dzieciuch (2026)</p>
-        </li>
-        <li>
-        <p><em>(in review) Analysis of acoustic fluctuations for 150-km, low frequency transmissions across the Gulf Stream in the vicinity of the New England Seamount chain</em> <a href="https://doi.org/10.22541/essoar.15006016/v1">10.22541/essoar.15006016/v1</a> - <strong>Ragland</strong>, Colosi, Hoekstra, Dzieciuch, Alford, Bellerjeau (2026)</p>
-        </li>
-        <li>
-        <p><em>How Do Tides Affect Underwater Acoustic Propagation: A collaborative approach to improve internal wave modelling at basin to global scales</em> <a href="https://doi.org/10.5670/oceanog.2025.308">10.5670/oceanog.2025.308</a> - Schönau, Hiron, <strong>Ragland</strong>, Raja, Skitka, Solano, Xu, Arbic, Buijsman, Chassignet, Coelho, Helber, Shriver, Summers, Verlinden, Wallcraft (2025)</p>
-        </li>
-        <li>
-        <p><em>Characterizing wind-dependent low-frequency ambient sound with ocean observatories initiative hydrophones</em> <a href="https://doi.org/10.1121/10.0039811">10.1121/10.0039811</a> - <strong>Ragland</strong>, Abadi (2025)</p>
-        </li>
-        <li>
-        <p><em>Receptions of Kauai Beacon transmissions by ocean observatories initiative hydrophones</em> <a href="https://doi.org/10.1121/10.0038971">10.1121/10.0038971</a> - <strong>Ragland</strong>, Abadi, Durofchalk, Dall'Osto, Gemba (2025)</p>
-        </li>
-        <li>
-        <p><em>Using Ocean Ambient Sound to Measure Local Integrated Deep Ocean Temperature</em> <a href="https://doi.org/10.1029/2024GL108943">10.1029/2024GL108943</a> - <strong>Ragland</strong>, Abadi, Sabra (2024)</p>
-        </li>
-        <li>
-        <p><em>Exploring surface source contributions to ocean ambient noise interferometry with airgun shots</em> <a href="https://doi.org/10.1121/10.0015231">10.1121/10.0015231</a> - <strong>Ragland</strong>, Abadi (2022)</p>
-        </li>
-        <li>
-        <p><em>An overview of ambient sound using Ocean Observatories Initiative hydrophones</em> <a href="https://doi.org/10.1121/10.0009836">10.1121/10.0009836</a> - <strong>Ragland</strong>, Schwock, Munson, Abadi (2022)</p>
-        </li>
-        <li>
-        <p><em>Long-term noise interferometry analysis in the northeast Pacific Ocean</em> <a href="https://doi.org/10.1121/10.0009232">10.1121/10.0009232</a> - <strong>Ragland</strong>, Abadi, Sabra (2022)</p>
-        </li>
+        <li><em>(in prep) Long range, low frequency source localization across the Gulf Stream front using multiple bottom/surface bounce paths observed on a large aperture vertical array</em>  - Hoekstra, Colosi, <strong>Ragland</strong>, Bonnel, Park, Dzieciuch, Alford, Bellerjeau, Voet (2026)</li>
+        <li><em>(in prep) Simultaneous ocean acoustic inversion and source localization for transmission across the Gulf Stream</em>  - <strong>Ragland</strong>, Colosi, Dzieciuch (2026)</li>
+        <li><em>(in review) Analysis of acoustic fluctuations for 150-km, low frequency transmissions across the Gulf Stream in the vicinity of the New England Seamount chain</em> <a href="https://doi.org/10.22541/essoar.15006016/v1">10.22541/essoar.15006016/v1</a> - <strong>Ragland</strong>, Colosi, Hoekstra, Dzieciuch, Alford, Bellerjeau (2026)</li>
+        <li><em>How Do Tides Affect Underwater Acoustic Propagation: A collaborative approach to improve internal wave modelling at basin to global scales</em> <a href="https://doi.org/10.5670/oceanog.2025.308">10.5670/oceanog.2025.308</a> - Schönau, Hiron, <strong>Ragland</strong>, Raja, Skitka, Solano, Xu, Arbic, Buijsman, Chassignet, Coelho, Helber, Shriver, Summers, Verlinden, Wallcraft (2025)</li>
+        <li><em>Characterizing wind-dependent low-frequency ambient sound with ocean observatories initiative hydrophones</em> <a href="https://doi.org/10.1121/10.0039811">10.1121/10.0039811</a> - <strong>Ragland</strong>, Abadi (2025)</li>
+        <li><em>Receptions of Kauai Beacon transmissions by ocean observatories initiative hydrophones</em> <a href="https://doi.org/10.1121/10.0038971">10.1121/10.0038971</a> - <strong>Ragland</strong>, Abadi, Durofchalk, Dall'Osto, Gemba (2025)</li>
+        <li><em>Using Ocean Ambient Sound to Measure Local Integrated Deep Ocean Temperature</em> <a href="https://doi.org/10.1029/2024GL108943">10.1029/2024GL108943</a> - <strong>Ragland</strong>, Abadi, Sabra (2024)</li>
+        <li><em>Exploring surface source contributions to ocean ambient noise interferometry with airgun shots</em> <a href="https://doi.org/10.1121/10.0015231">10.1121/10.0015231</a> - <strong>Ragland</strong>, Abadi (2022)</li>
+        <li><em>An overview of ambient sound using Ocean Observatories Initiative hydrophones</em> <a href="https://doi.org/10.1121/10.0009836">10.1121/10.0009836</a> - <strong>Ragland</strong>, Schwock, Munson, Abadi (2022)</li>
+        <li><em>Long-term noise interferometry analysis in the northeast Pacific Ocean</em> <a href="https://doi.org/10.1121/10.0009232">10.1121/10.0009232</a> - <strong>Ragland</strong>, Abadi, Sabra (2022)</li>
         </ul>
         <h1>Invited Talks</h1>
         <ul>
-        <li>
-        <p>MG&amp;G Group, University of Washington, Seattle WA (2024)</p>
-        </li>
-        <li>
-        <p>Navy Research Laboratory, Ocean Sciences Division, Stennis MS (2023)</p>
-        </li>
-        <li>
-        <p>MG&amp;G Group, University of Washington, Seattle WA (2023)</p>
-        </li>
-        <li>
-        <p>Applied Research Laboratory - UW, Seattle WA (2022)</p>
-        </li>
+        <li>MG&amp;G Group, University of Washington, Seattle WA (2024)</li>
+        <li>Navy Research Laboratory, Ocean Sciences Division, Stennis MS (2023)</li>
+        <li>MG&amp;G Group, University of Washington, Seattle WA (2023)</li>
+        <li>Applied Research Laboratory - UW, Seattle WA (2022)</li>
         </ul>
         <h1>Awards</h1>
         <ul>
-        <li>
-        <p><strong>ONR Postdoctoral fellowship in Acoustics</strong> (2025) - Office of Naval Research: Fellowship awarded to exceptional early-career researchers who wish to continue research in ocean acoustics or the related disciplines of undersea signal processing, marine structural acoustics and transducer materials science</p>
-        </li>
-        <li>
-        <p><strong>eScience postdoctoral fellowship</strong> (Sept 2024) - University of Washington, eScience Institute: Fellowship awarded to interdisciplinary researchers who are actively involved in developing and/or utilizing advanced data science tools and techniques in their research at the UW</p>
-        </li>
-        <li>
-        <p><strong>The Daoma and Murray Strasberg Memorial Scholarship</strong> (May 2023) - Acoustical Society of America: Awarded to exceptional graduate students in ocean acoustics with research relevant to naval applications to ocean acoustics</p>
-        </li>
-        <li>
-        <p><strong>ASA best student paper</strong> (Dec 2022) - Acoustical Society of America: Second place at the ASA Nashville in underwater acoustics technical committee</p>
-        </li>
+        <li><strong>ONR Postdoctoral fellowship in Acoustics</strong> (2025) - Office of Naval Research: Fellowship awarded to exceptional early-career researchers who wish to continue research in ocean acoustics or the related disciplines of undersea signal processing, marine structural acoustics and transducer materials science</li>
+        <li><strong>eScience postdoctoral fellowship</strong> (Sept 2024) - University of Washington, eScience Institute: Fellowship awarded to interdisciplinary researchers who are actively involved in developing and/or utilizing advanced data science tools and techniques in their research at the UW</li>
+        <li><strong>The Daoma and Murray Strasberg Memorial Scholarship</strong> (May 2023) - Acoustical Society of America: Awarded to exceptional graduate students in ocean acoustics with research relevant to naval applications to ocean acoustics</li>
+        <li><strong>ASA best student paper</strong> (Dec 2022) - Acoustical Society of America: Second place at the ASA Nashville in underwater acoustics technical committee</li>
         </ul>
         <h1>Conference Presentations</h1>
         <ul>
-        <li>
-        <p><em>Comparing Kauai Beacon receptions to simulated acoustic propagation</em> (<a href="https://doi.org/10.1121/10.0037361">10.1121/10.0037361</a>) - <strong>Ragland</strong>, Durofchalk, Dall'Osto, Abadi, Gemba (2025) - 188th Meeting of the Acoustical Society of America</p>
-        </li>
-        <li>
-        <p><em>Analysis of very low frequency wind driven noise at Ocean Observatories Initiative hydrophones</em> (<a href="https://doi.org/10.1121/10.0037493">10.1121/10.0037493</a>) - <strong>Ragland</strong>, Phan, Abadi (2025) - 188th Meeting of the Acoustical Society of America</p>
-        </li>
-        <li>
-        <p><em>Kauai Beacon receptions and analysis with open-access hydrophones in the North Pacific Ocean</em> (<a href="https://doi.org/10.1121/10.0026938">10.1121/10.0026938</a>) - <strong>Ragland</strong>, Durofchalk, Gemba, Dall'Osto, Abadi (2024) - 186th Meeting of the Acoustical Society of America</p>
-        </li>
-        <li>
-        <p><em>Towards acoustic observations of ocean basin temperatures using the Kauai beacon and Ocean Observatories Initiative Hydrophones</em> - <strong>Ragland</strong>, Durofchalk, Abadi, Dall'Osto, Gemba (2024) - Ocean Sciences Meeting 2024</p>
-        </li>
-        <li>
-        <p><em>Detecting the Kauai source beacon with ocean observatories innitiative hydrophones</em> (<a href="https://doi.org/10.1121/10.0023175">10.1121/10.0023175</a>) - <strong>Ragland</strong>, Durofchalk, Gemba, Abadi (2023) - 185th Meeting of the Acoustical Society of America</p>
-        </li>
-        <li>
-        <p><em>Using ocean ambient sound to sense arrival time fluctuations due to temperature</em> (<a href="https://doi.org/10.1121/10.0023334">10.1121/10.0023334</a>) - <strong>Ragland</strong>, Abadi (2023) - 185th Meeting of the Acoustical Society of America</p>
-        </li>
-        <li>
-        <p><em>Using distributed acoustic sensing for ocean ambient sound analysis</em> (<a href="https://doi.org/10.1121/10.0018176">10.1121/10.0018176</a>) - <strong>Ragland</strong>, Douglass, Abadi (2023) - 184th Meeting of the Acoustical Society of America</p>
-        </li>
-        <li>
-        <p><em>Towards estimating water column properties using ambient noise interferometry in the deep ocean</em> - <strong>Ragland</strong>, Abadi (2023) - Underwater Acoustics Conference and Exposition</p>
-        </li>
-        <li>
-        <p><em>Overview of distributed acoustic sensing technology and recently acquired data sets</em> (<a href="https://doi.org/10.1121/10.0018174">10.1121/10.0018174</a>) - Douglass, <strong>Ragland</strong>, Abadi (2023) - 184th Meeting of the Acoustical Society of America</p>
-        </li>
-        <li>
-        <p><em>Comparing distributed acoustic sensing data with hydrophone recordings</em> (<a href="https://doi.org/10.1121/10.0018175">10.1121/10.0018175</a>) - Abadi, Douglass, <strong>Ragland</strong> (2023) - 184th Meeting of the Acoustical Society of America</p>
-        </li>
-        <li>
-        <p><em>Long-term ambient noise interferometry in the NE Pacific deep ocean</em> - <strong>Ragland</strong>, Abadi (2022) - Ocean Sciences Meeting 2022</p>
-        </li>
-        <li>
-        <p><em>Overview of ambient noise research and outreach with OOI hydrophones</em> - <strong>Ragland</strong>, Schwock, Liu, Abadi (2022) - AGU Fall Meeting 2022</p>
-        </li>
-        <li>
-        <p><em>Overview of ocean ambient noise interferometry – Theory and simulation</em> (<a href="https://doi.org/10.1121/10.0016311">10.1121/10.0016311</a>) - <strong>Ragland</strong>, Abadi (2022) - 183th Meeting of the Acoustical Society of America</p>
-        </li>
-        <li>
-        <p><em>Exploring surface source distributions for ocean ambient noise interferometry with airgun shots</em> (<a href="https://doi.org/10.1121/10.0011063">10.1121/10.0011063</a>) - <strong>Ragland</strong>, Abadi (2022) - 182th Meeting of the Acoustical Society of America</p>
-        </li>
-        <li>
-        <p><em>OOIPy: A Python toolbox for accessing and analyzing sata from the Ocean Observatories Initiative</em> (<a href="https://doi.org/10.1121/10.0007845">10.1121/10.0007845</a>) - Schwock, <strong>Ragland</strong>, Abadi (2021) - 180th Meeting of the Acoustical Society of America</p>
-        </li>
-        <li>
-        <p><em>An overview of ambient sound using OOI hydrophone network</em> (<a href="https://doi.org/10.1121/10.0007594">10.1121/10.0007594</a>) - <strong>Ragland</strong>, Schwock, Munson, Abadi (2021) - 180th Meeting of the Acoustical Society of America</p>
-        </li>
-        <li>
-        <p><em>Long-term noise interferometry analysis in the northeast Pacific Ocean</em> (<a href="https://doi.org/10.1121/10.0004609">10.1121/10.0004609</a>) - <strong>Ragland</strong>, Abadi (2021) - 179th Meeting of the Acoustical Society of America</p>
-        </li>
-        <li>
-        <p><em>Estimating ocean variables using ambient noise interferometry</em> (<a href="https://doi.org/10.1121/10.0007697">10.1121/10.0007697</a>) - <strong>Ragland</strong>, Abadi (2021) - 180th Meeting of the Acoustical Society of America</p>
-        </li>
-        <li>
-        <p><em>Ship detection from passive underwater acoustic recordings using machine learning</em> (<a href="https://doi.org/10.1121/10.0007848">10.1121/10.0007848</a>) - Alvaro, Schwock, <strong>Ragland</strong>, Abadi (2021) - 180th Meeting of the Acoustical Society of America</p>
-        </li>
+        <li><em>Comparing Kauai Beacon receptions to simulated acoustic propagation</em> (<a href="https://doi.org/10.1121/10.0037361">10.1121/10.0037361</a>) - <strong>Ragland</strong>, Durofchalk, Dall'Osto, Abadi, Gemba (2025) - 188th Meeting of the Acoustical Society of America</li>
+        <li><em>Analysis of very low frequency wind driven noise at Ocean Observatories Initiative hydrophones</em> (<a href="https://doi.org/10.1121/10.0037493">10.1121/10.0037493</a>) - <strong>Ragland</strong>, Phan, Abadi (2025) - 188th Meeting of the Acoustical Society of America</li>
+        <li><em>Kauai Beacon receptions and analysis with open-access hydrophones in the North Pacific Ocean</em> (<a href="https://doi.org/10.1121/10.0026938">10.1121/10.0026938</a>) - <strong>Ragland</strong>, Durofchalk, Gemba, Dall'Osto, Abadi (2024) - 186th Meeting of the Acoustical Society of America</li>
+        <li><em>Towards acoustic observations of ocean basin temperatures using the Kauai beacon and Ocean Observatories Initiative Hydrophones</em> - <strong>Ragland</strong>, Durofchalk, Abadi, Dall'Osto, Gemba (2024) - Ocean Sciences Meeting 2024</li>
+        <li><em>Detecting the Kauai source beacon with ocean observatories innitiative hydrophones</em> (<a href="https://doi.org/10.1121/10.0023175">10.1121/10.0023175</a>) - <strong>Ragland</strong>, Durofchalk, Gemba, Abadi (2023) - 185th Meeting of the Acoustical Society of America</li>
+        <li><em>Using ocean ambient sound to sense arrival time fluctuations due to temperature</em> (<a href="https://doi.org/10.1121/10.0023334">10.1121/10.0023334</a>) - <strong>Ragland</strong>, Abadi (2023) - 185th Meeting of the Acoustical Society of America</li>
+        <li><em>Using distributed acoustic sensing for ocean ambient sound analysis</em> (<a href="https://doi.org/10.1121/10.0018176">10.1121/10.0018176</a>) - <strong>Ragland</strong>, Douglass, Abadi (2023) - 184th Meeting of the Acoustical Society of America</li>
+        <li><em>Towards estimating water column properties using ambient noise interferometry in the deep ocean</em> - <strong>Ragland</strong>, Abadi (2023) - Underwater Acoustics Conference and Exposition</li>
+        <li><em>Overview of distributed acoustic sensing technology and recently acquired data sets</em> (<a href="https://doi.org/10.1121/10.0018174">10.1121/10.0018174</a>) - Douglass, <strong>Ragland</strong>, Abadi (2023) - 184th Meeting of the Acoustical Society of America</li>
+        <li><em>Comparing distributed acoustic sensing data with hydrophone recordings</em> (<a href="https://doi.org/10.1121/10.0018175">10.1121/10.0018175</a>) - Abadi, Douglass, <strong>Ragland</strong> (2023) - 184th Meeting of the Acoustical Society of America</li>
+        <li><em>Long-term ambient noise interferometry in the NE Pacific deep ocean</em> - <strong>Ragland</strong>, Abadi (2022) - Ocean Sciences Meeting 2022</li>
+        <li><em>Overview of ambient noise research and outreach with OOI hydrophones</em> - <strong>Ragland</strong>, Schwock, Liu, Abadi (2022) - AGU Fall Meeting 2022</li>
+        <li><em>Overview of ocean ambient noise interferometry – Theory and simulation</em> (<a href="https://doi.org/10.1121/10.0016311">10.1121/10.0016311</a>) - <strong>Ragland</strong>, Abadi (2022) - 183th Meeting of the Acoustical Society of America</li>
+        <li><em>Exploring surface source distributions for ocean ambient noise interferometry with airgun shots</em> (<a href="https://doi.org/10.1121/10.0011063">10.1121/10.0011063</a>) - <strong>Ragland</strong>, Abadi (2022) - 182th Meeting of the Acoustical Society of America</li>
+        <li><em>OOIPy: A Python toolbox for accessing and analyzing sata from the Ocean Observatories Initiative</em> (<a href="https://doi.org/10.1121/10.0007845">10.1121/10.0007845</a>) - Schwock, <strong>Ragland</strong>, Abadi (2021) - 180th Meeting of the Acoustical Society of America</li>
+        <li><em>An overview of ambient sound using OOI hydrophone network</em> (<a href="https://doi.org/10.1121/10.0007594">10.1121/10.0007594</a>) - <strong>Ragland</strong>, Schwock, Munson, Abadi (2021) - 180th Meeting of the Acoustical Society of America</li>
+        <li><em>Long-term noise interferometry analysis in the northeast Pacific Ocean</em> (<a href="https://doi.org/10.1121/10.0004609">10.1121/10.0004609</a>) - <strong>Ragland</strong>, Abadi (2021) - 179th Meeting of the Acoustical Society of America</li>
+        <li><em>Estimating ocean variables using ambient noise interferometry</em> (<a href="https://doi.org/10.1121/10.0007697">10.1121/10.0007697</a>) - <strong>Ragland</strong>, Abadi (2021) - 180th Meeting of the Acoustical Society of America</li>
+        <li><em>Ship detection from passive underwater acoustic recordings using machine learning</em> (<a href="https://doi.org/10.1121/10.0007848">10.1121/10.0007848</a>) - Alvaro, Schwock, <strong>Ragland</strong>, Abadi (2021) - 180th Meeting of the Acoustical Society of America</li>
         </ul>
         <h1>Media Coverage</h1>
         <ul>
-        <li>
-        <p><a href="https://web.archive.org/web/20230731211310/https://www.ece.uw.edu/spotlight/listening-to-the-ocean-climate-change/">Listening to the ocean to measure the impact of climate change</a></p>
-        </li>
-        <li>
-        <p>OOI Science Highlights: <a href="https://web.archive.org/web/20230731211602/https://oceanobservatories.org/2022/11/an-overview-of-ambient-sound-using-ooi-hydrophones/">An Overview of Ambient Sound Using OOI Hydrophones</a></p>
-        </li>
+        <li><a href="https://web.archive.org/web/20230731211310/https://www.ece.uw.edu/spotlight/listening-to-the-ocean-climate-change/">Listening to the ocean to measure the impact of climate change</a></li>
+        <li>OOI Science Highlights: <a href="https://web.archive.org/web/20230731211602/https://oceanobservatories.org/2022/11/an-overview-of-ambient-sound-using-ooi-hydrophones/">An Overview of Ambient Sound Using OOI Hydrophones</a></li>
         </ul>
         <h1>Cruise Experience</h1>
         <ul>
-        <li>
-        <p>RC0090, 2022, 2 days - deployed mooring with two hydrophones that was recovered one week later. The goal of this deployment was to acoustically measure methane seeps in the Puget Sound.</p>
-        </li>
-        <li>
-        <p>RR2411, 2024, 21 days - joint operation to measure deep scattering layer, and low-frequency acoustic propagation around seamounts in the North Atlantic.</p>
-        </li>
-        <li>
-        <p>AR90, 2025, 21 days - recovered NESMA acoustic moorings in North Atlantic</p>
-        </li>
+        <li>RC0090, 2022, 2 days - deployed mooring with two hydrophones that was recovered one week later. The goal of this deployment was to acoustically measure methane seeps in the Puget Sound.</li>
+        <li>RR2411, 2024, 21 days - joint operation to measure deep scattering layer, and low-frequency acoustic propagation around seamounts in the North Atlantic.</li>
+        <li>AR90, 2025, 21 days - recovered NESMA acoustic moorings in North Atlantic</li>
         </ul>
         <h1>Open Source Software Contributions</h1>
         <ul>
-        <li>
-        <p><strong>OOIPy</strong> - python package for accessing OOI hydrophone data <a href="https://github.com/Ocean-Data-Lab/ooipy">GitHub</a><a href="https://pypi.org/project/ooipy/">PyPI</a><a href="https://doi.org/10.5281/zenodo.4276861">DOI</a></p>
-        </li>
-        <li>
-        <p><strong>xrsignal</strong> - python package that ports functionality from scipy.signal to xarray and is compatible with distributed computing <a href="https://github.com/John-Ragland/xrsignal">GitHub</a> <a href="https://pypi.org/project/xrsignal/">PypI</a></p>
-        </li>
-        <li>
-        <p><strong>pygenray</strong> - native python ray tracing code <a href="https://github.com/John-Ragland/pygenray">GitHub</a> <a href="https://pypi.org/project/pygenray/">PyPI</a> <a href="https://doi.org/10.5281/zenodo.15783848">DOI</a></p>
-        </li>
+        <li><strong>OOIPy</strong> - python package for accessing OOI hydrophone data <a href="https://github.com/Ocean-Data-Lab/ooipy">GitHub</a><a href="https://pypi.org/project/ooipy/">PyPI</a><a href="https://doi.org/10.5281/zenodo.4276861">DOI</a></li>
+        <li><strong>xrsignal</strong> - python package that ports functionality from scipy.signal to xarray and is compatible with distributed computing <a href="https://github.com/John-Ragland/xrsignal">GitHub</a> <a href="https://pypi.org/project/xrsignal/">PypI</a></li>
+        <li><strong>pygenray</strong> - native python ray tracing code <a href="https://github.com/John-Ragland/pygenray">GitHub</a> <a href="https://pypi.org/project/pygenray/">PyPI</a> <a href="https://doi.org/10.5281/zenodo.15783848">DOI</a></li>
         </ul>
     
 

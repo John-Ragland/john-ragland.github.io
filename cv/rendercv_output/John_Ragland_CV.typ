@@ -1,6 +1,9 @@
 // Import the rendercv function and all the refactored components
 #import "@preview/rendercv:0.3.0": *
 
+// Keep section titles from being orphaned at the bottom of a page
+#show heading.where(level: 2): set block(sticky: true)
+
 // Apply the rendercv template with custom configuration
 #show: rendercv.with(
   name: "John Ragland",
@@ -81,7 +84,7 @@
   date: datetime(
     year: 2026,
     month: 7,
-    day: 22,
+    day: 24,
   ),
 )
 
@@ -89,7 +92,7 @@
 = John Ragland
 
 #connections(
-  [#connection-with-icon("location-dot")[Falmouth, MA]],
+  [#connection-with-icon("location-dot")[Woods Hole, MA]],
   [#link("mailto:john.ragland@whoi.edu", icon: false, if-underline: false, if-color: false)[#connection-with-icon("envelope")[john.ragland\@whoi.edu]]],
   [#link("https://linkedin.com/in/john-ragland", icon: false, if-underline: false, if-color: false)[#connection-with-icon("linkedin")[john-ragland]]],
   [#link("https://github.com/john-ragland", icon: false, if-underline: false, if-color: false)[#connection-with-icon("github")[john-ragland]]],
@@ -170,9 +173,11 @@
 
 - #strong[Graduate Summer Researcher], Applied Research in Acoustics, Seattle, WA (2022)
 
-== Professional Service
+== Community Service
 
 - #strong[Associate Editor] - #link("https://pubs.aip.org/asa/poma")[Proceedings of Meetings on Acoustics], AIP
+
+- #strong[AOPE department representative] - #link("https://www2.whoi.edu/site/pda/")[WHOI postdoctoral association], elected position
 
 == Peer Reviewed Publications
 

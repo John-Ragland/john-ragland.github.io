@@ -28,6 +28,26 @@ def create_simple_cv_content(cv_body):
     cv_body = re.sub(r'<li>LinkedIn:', '<li><i class="fab fa-linkedin"></i> LinkedIn:', cv_body)
     cv_body = re.sub(r'<li>GitHub:', '<li><i class="fab fa-github"></i> GitHub:', cv_body)
 
+    # Drop the auto-generated "<Name>'s CV" title - the site header already shows the name
+    cv_body = re.sub(r'<h1>[^<]*\'s CV</h1>\s*', '', cv_body)
+
+    # Collapse rendercv's li > p wrapper, which otherwise adds a paragraph's
+    # worth of margin around every bullet (rendercv's own stylesheet zeroes
+    # this out, but we don't carry that stylesheet over).
+    cv_body = re.sub(r'<li>\s*<p>(.*?)</p>\s*</li>', r'<li>\1</li>', cv_body, flags=re.DOTALL)
+
+    # Collapse each education entry's "<h2>Institution, Area</h2><p>Degree</p><p>Date</p>"
+    # into a single header row (degree / institution / date), matching the PDF layout.
+    cv_body = re.sub(
+        r'<h2>(.*?)</h2>\s*<p><strong>(.*?)</strong></p>\s*<p>(.*?)</p>',
+        r'<div class="cv-entry-header">'
+        r'<span class="cv-degree">\2</span>'
+        r'<span class="cv-title">\1</span>'
+        r'<span class="cv-date">\3</span>'
+        r'</div>',
+        cv_body,
+    )
+
     return cv_body
 
 def create_cv_html():
@@ -72,32 +92,67 @@ def create_cv_html():
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+    <!-- Google Font to match the PDF (Source Sans 3) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
     <!-- Custom CV Styles -->
     <style>
-        /* CV-specific styling to match PDF layout */
+        /* CV-specific styling to match the PDF (typst "classic" theme) layout */
+        main {{
+            max-width: 820px;
+        }}
+
         .cv-section {{
-            margin-top: 2rem;
+            font-family: "Source Sans 3", sans-serif;
+            color: rgb(0, 0, 0);
+            text-align: justify;
+            padding: 1rem 0;
         }}
 
         .cv-section h1 {{
             color: rgb(0, 79, 144);
             border-bottom: 2px solid rgb(0, 79, 144);
             padding-bottom: 0.3rem;
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-top: 1.8rem;
+            margin-bottom: 0.8rem;
         }}
 
-        .cv-section h2 {{
-            font-size: 1.1rem;
-            margin-top: 1.2rem;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
+        /* education entry header row: degree | institution, area | date */
+        .cv-entry-header {{
+            display: flex;
+            align-items: baseline;
+            gap: 0.75rem;
+            margin-top: 0.9rem;
+        }}
+
+        .cv-entry-header .cv-degree {{
+            flex: 0 0 2.5rem;
+            font-weight: 700;
+        }}
+
+        .cv-entry-header .cv-title {{
+            flex: 1 1 auto;
+            font-weight: 700;
+        }}
+
+        .cv-entry-header .cv-date {{
+            flex: 0 0 auto;
+            color: #555;
         }}
 
         .cv-section ul {{
             margin-left: 1.5rem;
-            margin-bottom: 1rem;
-            line-height: 1.6;
+            margin-top: 0.3em;
+            margin-bottom: 0.3em;
+            line-height: 1.5;
+        }}
+
+        .cv-section li {{
+            margin-bottom: 0.3em;
         }}
 
         .cv-section a {{
@@ -109,17 +164,25 @@ def create_cv_html():
             text-decoration: underline;
         }}
 
-        /* Better spacing for lists */
-        .c
-
         /* Icon spacing */
         .cv-section i {{
             margin-right: 0.5em;
             color: rgb(0, 79, 144);
             width: 1.2em;
             text-align: center;
-        }}v-section li {{
-            margin-bottom: 0.3rem;
+        }}
+
+        /* PDF download link section - drop SimpleCSS's default section
+           border/spacing so it doesn't render as a divider line */
+        .cv-pdf-link {{
+            border: none !important;
+            margin: 0 !important;
+            padding: 0 0 1rem !important;
+        }}
+
+        .cv-pdf-link .button {{
+            font-size: 0.85rem;
+            padding: 0.35em 0.9em;
         }}
 
         /* Contact info at top */
@@ -127,6 +190,8 @@ def create_cv_html():
             list-style: none;
             margin-left: 0;
             padding-left: 0;
+            text-align: left;
+            margin-bottom: 1.5rem;
         }}
     </style>
 
@@ -148,10 +213,8 @@ def create_cv_html():
     </header>
 
     <main>
-        <section>
-            <p>
-                <a href="John_Ragland_CV.pdf" style="text-decoration: none; color: inherit;" download>[ pdf ]</a>
-            </p>
+        <section class="cv-pdf-link">
+            <a href="John_Ragland_CV.pdf" class="button" download>Download</a>
         </section>
 
         <section class="cv-section">

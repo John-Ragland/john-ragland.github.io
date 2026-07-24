@@ -1,7 +1,7 @@
 # John Ragland's CV
 
 - Email: [john.ragland@whoi.edu](mailto:john.ragland@whoi.edu)
-- Location: Falmouth, MA
+- Location: Woods Hole, MA
 - LinkedIn: [john-ragland](https://linkedin.com/in/john-ragland)
 - GitHub: [john-ragland](https://github.com/john-ragland)
 
@@ -57,8 +57,10 @@
 
 - **Graduate Summer Researcher**, Applied Research in Acoustics, Seattle, WA (2022)
 
-# Professional Service
+# Community Service
 - **Associate Editor** - [Proceedings of Meetings on Acoustics](https://pubs.aip.org/asa/poma), AIP
+
+- **AOPE department representative** - [WHOI postdoctoral association](https://www2.whoi.edu/site/pda/), elected position
 
 # Peer Reviewed Publications
 - *(in prep) Long range, low frequency source localization across the Gulf Stream front using multiple bottom/surface bounce paths observed on a large aperture vertical array*  - Hoekstra, Colosi, **Ragland**, Bonnel, Park, Dzieciuch, Alford, Bellerjeau, Voet (2026)
