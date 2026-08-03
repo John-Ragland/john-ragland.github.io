@@ -1,15 +1,12 @@
 // Import the rendercv function and all the refactored components
 #import "@preview/rendercv:0.3.0": *
 
-// Keep section titles from being orphaned at the bottom of a page
-#show heading.where(level: 2): set block(sticky: true)
-
 // Apply the rendercv template with custom configuration
 #show: rendercv.with(
   name: "John Ragland",
   title: "John Ragland - CV",
   footer: context { [#emph[John Ragland -- #str(here().page())\/#str(counter(page).final().first())]] },
-  top-note: [ #emph[Last updated in July 2026] ],
+  top-note: [ #emph[Last updated in Aug 2026] ],
   locale-catalog-language: "en",
   text-direction: ltr,
   page-size: "us-letter",
@@ -83,8 +80,8 @@
   entries-highlights-space-between-bullet-and-text: 0.5em,
   date: datetime(
     year: 2026,
-    month: 7,
-    day: 24,
+    month: 8,
+    day: 3,
   ),
 )
 
