@@ -8,8 +8,9 @@ root: ""
 
 ## Project Highlights
 
-What have I been up to recently?
+👷🏼‍♂️ This page is under construction, for now, checkout my CV for a wholistic picture of the work that I've been up to.
 
+<!-- 
 A few of my projects that I'm most excited about are summarized here, but it doesn't include all the projects that I've gotten to work on - for that, check out my [CV](cv.html).
 
 ### Simultaneous source localization and ocean acoustic inversion
@@ -40,4 +41,6 @@ We show, in general, good agreement with theory and observation. However, we als
 
 ![PLACEHOLDER](imgs/place_holder.png){style="width: 100%; border-radius: 8px;"}
 
+</section>
+This is a simple comment -->
 </section>
