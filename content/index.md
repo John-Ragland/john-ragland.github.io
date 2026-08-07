@@ -27,8 +27,9 @@ I'm working to develop tools to observe the ocean with sound.
 ## Research
 
 Sound contains an *incredible* amount of information about the ocean!
-From listening to things that make sound --- like whales or waves --- to using the way that sound moves in the ocean to measure ocean temperature,
-I am working to make robust acoustic methods that will help us better understand, and thrive on, our ocean planet.
+From listening to things that make sound --- like whales or waves --- to using the way that sound moves in the ocean to measure ocean temperature, I am working to make robust acoustic methods that will help us better understand, and thrive on, our ocean planet.
+
+
 
 <!-- This is a test for inline citations [@munk1995]. -->
 
