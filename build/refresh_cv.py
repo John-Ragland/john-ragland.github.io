@@ -215,14 +215,15 @@ if __name__ == "__main__":
     desired_section_order = [
         'education',
         'experience',
-        'Community Service',
         'Peer Reviewed Publications',
+        'Grants and Fellowships',
+        'Community Service',
         'Invited Talks',
         'awards',
-        'Conference Presentations',
         'Media Coverage',
         'Cruise Experience',
-        'Open Source Software Contributions'
+        'Open Source Software Contributions',
+        'Conference Presentations',
     ]
 
     # Reorder the sections

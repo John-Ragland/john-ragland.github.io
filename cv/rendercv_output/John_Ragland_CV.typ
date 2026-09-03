@@ -6,7 +6,7 @@
   name: "John Ragland",
   title: "John Ragland - CV",
   footer: context { [#emph[John Ragland -- #str(here().page())\/#str(counter(page).final().first())]] },
-  top-note: [ #emph[Last updated in Aug 2026] ],
+  top-note: [ #emph[Last updated in 2026] ],
   locale-catalog-language: "en",
   text-direction: ltr,
   page-size: "us-letter",
@@ -67,7 +67,7 @@
   entries-date-and-location-width: 4.15cm,
   entries-side-space: 0.2cm,
   entries-space-between-columns: 0.1cm,
-  entries-allow-page-break: false,
+  entries-allow-page-break: true,
   entries-short-second-row: false,
   entries-degree-width: 1cm,
   entries-summary-space-left: 0cm,
@@ -80,7 +80,7 @@
   entries-highlights-space-between-bullet-and-text: 0.5em,
   date: datetime(
     year: 2026,
-    month: 8,
+    month: 9,
     day: 3,
   ),
 )
@@ -170,15 +170,9 @@
 
 - #strong[Graduate Summer Researcher], Applied Research in Acoustics, Seattle, WA (2022)
 
-== Community Service
-
-- #strong[Associate Editor] - #link("https://pubs.aip.org/asa/poma")[Proceedings of Meetings on Acoustics], AIP
-
-- #strong[AOPE department representative] - #link("https://www2.whoi.edu/site/pda/")[WHOI postdoctoral association], elected position
-
 == Peer Reviewed Publications
 
-- #emph[(in prep) Long range, low frequency source localization across the Gulf Stream front using multiple bottom\/surface bounce paths observed on a large aperture vertical array]  - Hoekstra, Colosi, #strong[Ragland], Bonnel, Park, Dzieciuch, Alford, Bellerjeau, Voet (2026)
+- #emph[(in prep) Long range, low frequency source localization across the Gulf Stream front using multiple bottom\/surface bounce paths observed on a large aperture vertical array]  - Hoekstra, #strong[Ragland], Colosi, Bonnel, Park, Dzieciuch, Alford, Bellerjeau, Voet (2026)
 
 - #emph[(in prep) Simultaneous ocean acoustic inversion and source localization for transmission across the Gulf Stream]  - #strong[Ragland], Colosi, Dzieciuch (2026)
 
@@ -198,7 +192,80 @@
 
 - #emph[Long-term noise interferometry analysis in the northeast Pacific Ocean] #link("https://doi.org/10.1121/10.0009232")[10.1121\/10.0009232] - #strong[Ragland], Abadi, Sabra (2022)
 
+== Grants and Fellowships
+
+#regular-entry(
+  [
+    #strong[(in review) Collaborative Research: Global ocean model internal wave validation with acoustic propagation]
+
+  ],
+  [
+    NSF
+
+  ],
+  main-column-second-row: [
+    - #emph[Lead PI]: #strong[John Ragland]; Woods Hole Oceanographic Institution
+
+    - #emph[Co-PI]: John Colosi; Woods Hole Oceanographic Institution
+
+    - #emph[Co-PI]: Brian Arbic; University of Michigan
+
+    - #emph[Co-PI]: Yadidya Badarvada; Florida State University
+
+  ],
+)
+
+#regular-entry(
+  [
+    #strong[Analysis and modeling for Task Force Ocean New England Seamounts Experiments]
+
+    - #emph[PI]: John Colosi; Woods Hole Oceanographic Institution
+
+  ],
+  [
+    ONR
+
+    2025 – 2027
+
+  ],
+  main-column-second-row: [
+    - #emph[Co-PI]: #strong[John Ragland]; Woods Hole Oceanographic Institution
+
+  ],
+)
+
+#regular-entry(
+  [
+    #strong[Analysis of Kauai Beacon Receptions]
+
+    #summary[Role: #strong[Collaborator]]
+
+  ],
+  [
+    ONR
+
+    2024 – 2027
+
+  ],
+  main-column-second-row: [
+    - #emph[PI]: Shima Abadi; University of Washington
+
+    - #emph[Collaborator]: #strong[John Ragland]; helped develop project idea and collaborated on the research statement. Grant supported postdoctoral appointment at UW
+
+  ],
+)
+
+== Community Service
+
+- #strong[Associate Editor] - #link("https://pubs.aip.org/asa/poma")[Proceedings of Meetings on Acoustics], AIP, #emph[Acoustic Oceanagraphy]
+
+- #strong[AOPE department representative] - #link("https://www2.whoi.edu/site/pda/")[WHOI postdoctoral association], elected position
+
 == Invited Talks
+
+- Advanced Undersea Systems and Technology Group, Lincoln Laboratory, Lexington MA (2026)
+
+- AOPE department, Woods Hole Oceanographic Institution, Woods Hole MA (2026)
 
 - MG&G Group, University of Washington, Seattle WA (2024)
 
@@ -218,7 +285,41 @@
 
 - #strong[ASA best student paper] (Dec 2022) - Acoustical Society of America: Second place at the ASA Nashville in underwater acoustics technical committee
 
+== Media Coverage
+
+- #link("https://web.archive.org/web/20230731211310/https://www.ece.uw.edu/spotlight/listening-to-the-ocean-climate-change/")[Listening to the ocean to measure the impact of climate change]
+
+- OOI Science Highlights: #link("https://web.archive.org/web/20230731211602/https://oceanobservatories.org/2022/11/an-overview-of-ambient-sound-using-ooi-hydrophones/")[An Overview of Ambient Sound Using OOI Hydrophones]
+
+== Cruise Experience
+
+- RC0090, 2022, 2 days - deployed mooring with two hydrophones that was recovered one week later. The goal of this deployment was to acoustically measure methane seeps in the Puget Sound.
+
+- RR2411, 2024, 21 days - joint operation to measure deep scattering layer, and low-frequency acoustic propagation around seamounts in the North Atlantic.
+
+- AR90, 2025, 21 days - recovered NESMA acoustic moorings in North Atlantic
+
+== Open Source Software Contributions
+
+- #strong[OOIPy] - python package for accessing OOI hydrophone data #link("https://github.com/Ocean-Data-Lab/ooipy")[GitHub]#link("https://pypi.org/project/ooipy/")[PyPI]#link("https://doi.org/10.5281/zenodo.4276861")[DOI]
+
+- #strong[xrsignal] - python package that ports functionality from scipy.signal to xarray and is compatible with distributed computing #link("https://github.com/John-Ragland/xrsignal")[GitHub] #link("https://pypi.org/project/xrsignal/")[PypI]
+
+- #strong[pygenray] - native python ray tracing code #link("https://github.com/John-Ragland/pygenray")[GitHub] #link("https://pypi.org/project/pygenray/")[PyPI] #link("https://doi.org/10.5281/zenodo.15783848")[DOI]
+
 == Conference Presentations
+
+- #emph[A Bayesian approach to long-range source localization in the complex propagation environment across the Gulf Stream front] (#link("https://doi.org/10.1121/10.0045262")[10.1121\/10.0045262]) - Hoekstra, Bonnel, Colosi, Alford, Bellerjeau, Dzieciuch, Park, #strong[Ragland], Voet (2026) - The Journal of the Acoustical Society of America
+
+- #emph[First steps toward simultaneous Bayesian environmental inversion and source localization for acoustic transmissions across the Gulf Stream front] (#link("https://doi.org/10.1121/10.0045264")[10.1121\/10.0045264]) - #strong[Ragland], Colosi, Hoekstra, Dzieciuch, Park, Alford, Bellerjeau (2026) - 190th Meeting of the Acoustical Society of America
+
+- #emph[Observations of sound speed structure on and adjacent to, a seamount in the Gulf Stream extension region of the North Atlantic Ocean] - Colosi, #strong[Ragland], Torres, Devine, Alford, Voet, Bellerjeau, Miller (2026) - American Geophysical Union, Ocean Sciences Meeting
+
+- #emph[Long-range acoustic fluctuations across the gulf stream front] - #strong[Ragland], Colosi, Dzieciuch, Park (2026) - American Geophysical Union, Ocean Sciences Meeting
+
+- #emph[Long range, low frequency source localization across the Gulf Stream front using multiple bottom\/surface bounce paths observed on a large aperture vertical array: A Bayesian approach] (#link("https://doi.org/10.1121/10.0040221")[10.1121\/10.0040221]) - Hoekstra, Bonnel, Colosi, Alford, Bellerjeau, Dzieciuch, Park, #strong[Ragland], Voet (2025) - 189th Meeting of the Acoustical Society of America
+
+- #emph[Observations of acoustic intensity and phase fluctuations for low-frequency acoustic transmissions through the Gulf Stream] (#link("https://doi.org/10.1121/10.0040674")[10.1121\/10.0040674]) - #strong[Ragland], Colosi, Park, Dzieciuch (2025) - 189th Meeting of the Acoustical Society of America
 
 - #emph[Comparing Kauai Beacon receptions to simulated acoustic propagation] (#link("https://doi.org/10.1121/10.0037361")[10.1121\/10.0037361]) - #strong[Ragland], Durofchalk, Dall'Osto, Abadi, Gemba (2025) - 188th Meeting of the Acoustical Society of America
 
@@ -257,25 +358,3 @@
 - #emph[Estimating ocean variables using ambient noise interferometry] (#link("https://doi.org/10.1121/10.0007697")[10.1121\/10.0007697]) - #strong[Ragland], Abadi (2021) - 180th Meeting of the Acoustical Society of America
 
 - #emph[Ship detection from passive underwater acoustic recordings using machine learning] (#link("https://doi.org/10.1121/10.0007848")[10.1121\/10.0007848]) - Alvaro, Schwock, #strong[Ragland], Abadi (2021) - 180th Meeting of the Acoustical Society of America
-
-== Media Coverage
-
-- #link("https://web.archive.org/web/20230731211310/https://www.ece.uw.edu/spotlight/listening-to-the-ocean-climate-change/")[Listening to the ocean to measure the impact of climate change]
-
-- OOI Science Highlights: #link("https://web.archive.org/web/20230731211602/https://oceanobservatories.org/2022/11/an-overview-of-ambient-sound-using-ooi-hydrophones/")[An Overview of Ambient Sound Using OOI Hydrophones]
-
-== Cruise Experience
-
-- RC0090, 2022, 2 days - deployed mooring with two hydrophones that was recovered one week later. The goal of this deployment was to acoustically measure methane seeps in the Puget Sound.
-
-- RR2411, 2024, 21 days - joint operation to measure deep scattering layer, and low-frequency acoustic propagation around seamounts in the North Atlantic.
-
-- AR90, 2025, 21 days - recovered NESMA acoustic moorings in North Atlantic
-
-== Open Source Software Contributions
-
-- #strong[OOIPy] - python package for accessing OOI hydrophone data #link("https://github.com/Ocean-Data-Lab/ooipy")[GitHub]#link("https://pypi.org/project/ooipy/")[PyPI]#link("https://doi.org/10.5281/zenodo.4276861")[DOI]
-
-- #strong[xrsignal] - python package that ports functionality from scipy.signal to xarray and is compatible with distributed computing #link("https://github.com/John-Ragland/xrsignal")[GitHub] #link("https://pypi.org/project/xrsignal/")[PypI]
-
-- #strong[pygenray] - native python ray tracing code #link("https://github.com/John-Ragland/pygenray")[GitHub] #link("https://pypi.org/project/pygenray/")[PyPI] #link("https://doi.org/10.5281/zenodo.15783848")[DOI]

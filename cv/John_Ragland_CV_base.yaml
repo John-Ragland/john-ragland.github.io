@@ -40,10 +40,36 @@ cv:
     - bullet: '**Postdoctoral Scholar**, University of Washington, Seattle, WA (2024 - 2025)'
     - bullet: '**Graduate Researcher**, University of Washington, Seattle, WA (2020 - 2024)'
     - bullet: '**Graduate Summer Researcher**, Applied Research in Acoustics, Seattle, WA (2022)'
+    Grants and Fellowships:
+    - name: '(in review) Collaborative Research: Global ocean model internal wave validation with acoustic propagation'
+      location: 'NSF'
+      highlights:
+      - '*Lead PI*: **John Ragland**; Woods Hole Oceanographic Institution'
+      - '*Co-PI*: John Colosi; Woods Hole Oceanographic Institution'
+      - '*Co-PI*: Brian Arbic; University of Michigan'
+      - '*Co-PI*: Yadidya Badarvada; Florida State University'
+    - name: 'Analysis and modeling for Task Force Ocean New England Seamounts Experiments'
+      location: 'ONR'
+      start_date: '2025-06'
+      end_date: '2027-06'
+      highlights:
+      - '*PI*: John Colosi; Woods Hole Oceanographic Institution'
+      - '*Co-PI*: **John Ragland**; Woods Hole Oceanographic Institution'
+    - name: Analysis of Kauai Beacon Receptions with OOI hydrophones
+      location: 'ONR'
+      start_date: '2024-07'
+      end_date: '2027-06'
+      summary: 'Role: **Collaborator**'
+      highlights:
+      - '*PI*: Shima Abadi; University of Washington'
+      - '*Collaborator*: **John Ragland**; helped develop project idea and
+        collaborated on the research statement. Grant supported postdoctoral appointment at UW'
     Community Service:
-    - bullet: '**Associate Editor** - [Proceedings of Meetings on Acoustics](https://pubs.aip.org/asa/poma), AIP'
+    - bullet: '**Associate Editor** - [Proceedings of Meetings on Acoustics](https://pubs.aip.org/asa/poma), AIP, *Acoustic Oceanagraphy*'
     - bullet: '**AOPE department representative** - [WHOI postdoctoral association](https://www2.whoi.edu/site/pda/), elected position'
     Invited Talks:
+    - bullet: Advanced Undersea Systems and Technology Group, Lincoln Laboratory, Lexington MA (2026)
+    - bullet: AOPE department, Woods Hole Oceanographic Institution, Woods Hole MA (2026)
     - bullet: MG&G Group, University of Washington, Seattle WA (2024)
     - bullet: Navy Research Laboratory, Ocean Sciences Division, Stennis MS (2023)
     - bullet: MG&G Group, University of Washington, Seattle WA (2023)
@@ -97,6 +123,15 @@ design:
   entries:
     date_and_location_width: 4.15cm
     short_second_row: false
+    # rendercv wraps a whole text/bullet-based section in one block whose
+    # breakability comes from this option, so leaving it false makes long
+    # sections (e.g. Conference Presentations) an unbreakable block that
+    # overflows the page instead of paginating.
+    allow_page_break: true
+  sections:
+    show_time_spans_in: []
+  templates:
+    single_date: YEAR
 locale:
   language: english
 settings:
