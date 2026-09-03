@@ -14,9 +14,9 @@ A few of my projects that I'm most excited about are summarized here, but it doe
 
 ### Simultaneous source localization and ocean acoustic inversion
 
-![PLACEHOLDER](imgs/place_holder.png){style="width: 100%; border-radius: 8px;"}
+<!-- ![PLACEHOLDER](imgs/place_holder.png){style="width: 100%; border-radius: 8px;"} -->
 
-Since its pioneering in the 80s and 90s, ocean acoustic tomography [@munk1995], has required that acoustic sources and receivers be localized with an accuracy down to meters.
+Since it's pioneering in the 80s and 90s, ocean acoustic tomography [@munk1995], has required that acoustic sources and receivers be localized with an accuracy down to meters.
 This accuracy has been required to be able to pin down the millisecond shifts in acoustic arrivals times that are attributed to temperature and salinity changes in the water column.
 Working with an ocean acoustic tomography experiment in the complex environment of the Gulf Stream extension and the New England Seamount chain, I have been able to use Bayesian inversion methods to simultaneously infer the acoustic source / receiver geometry and the ocean state posterior distribution.
 
@@ -26,7 +26,7 @@ A paper describing these results is in preparation and will be submitted to jour
 
 ### Acoustic fluctuations and coherence across the Gulf Stream
 
-![PLACEHOLDER](imgs/place_holder.png){style="width: 100%; border-radius: 8px;"}
+<!-- ![PLACEHOLDER](imgs/place_holder.png){style="width: 100%; border-radius: 8px;"} -->
 
 Fine scale stochastic oceanographic structure - like internal waves and spice - results in acoustic forward scattering, which makes acoustic phase and intensity stochastic as well.
 This creates a spatial and temporal limit to acoustic coherence which in turn has effects on acoustic based technologies like ocean acoustic remote sensing.
@@ -38,6 +38,6 @@ We show, in general, good agreement with theory and observation. However, we als
 
 ### Passive acoustically measuring ocean temperature
 
-![PLACEHOLDER](imgs/place_holder.png){style="width: 100%; border-radius: 8px;"}
+<!-- ![PLACEHOLDER](imgs/place_holder.png){style="width: 100%; border-radius: 8px;"} -->
 
 </section>

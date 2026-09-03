@@ -30,6 +30,20 @@ article {
     margin: 2rem 0;
 }
 
+/* Plain-styled email link */
+.plain-email {
+    color: black;
+    text-decoration: none;
+}
+
+/* Social icon links (LinkedIn, GitHub) */
+.social-icon {
+    font-size: 1.5rem;
+    color: black;
+    vertical-align: middle;
+    margin-right: 0.3rem;
+}
+
 /* Example: Footer styling */
 footer {
     text-align: center;
@@ -51,6 +65,29 @@ header nav a {
 }
 .csl-right-inline {
     display: inline;
+}
+
+/* Selectable text overlay for scanned/OCR'd images (see build/ocr_overlay.py) */
+.ocr-overlay {
+    position: relative;
+    display: inline-block;
+    max-width: 100%;
+}
+.ocr-overlay img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.ocr-text {
+    position: absolute;
+    inset: 0;
+}
+.ocr-word {
+    position: absolute;
+    color: transparent;
+    white-space: pre;
+    overflow: hidden;
+    user-select: text;
 }
 
 /* Stack buttons vertically on narrow screens */
