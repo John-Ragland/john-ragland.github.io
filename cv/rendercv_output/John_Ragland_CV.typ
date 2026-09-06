@@ -6,7 +6,7 @@
   name: "John Ragland",
   title: "John Ragland - CV",
   footer: context { [#emph[John Ragland -- #str(here().page())\/#str(counter(page).final().first())]] },
-  top-note: [ #emph[Last updated in Aug 2026] ],
+  top-note: [ #emph[Last updated in Sept 2026] ],
   locale-catalog-language: "en",
   text-direction: ltr,
   page-size: "us-letter",
@@ -80,8 +80,8 @@
   entries-highlights-space-between-bullet-and-text: 0.5em,
   date: datetime(
     year: 2026,
-    month: 8,
-    day: 30,
+    month: 9,
+    day: 6,
   ),
 )
 
@@ -178,7 +178,7 @@
 
 == Peer Reviewed Publications
 
-- #emph[(in prep) Long range, low frequency source localization across the Gulf Stream front using multiple bottom\/surface bounce paths observed on a large aperture vertical array]  - Hoekstra, Colosi, #strong[Ragland], Bonnel, Park, Dzieciuch, Alford, Bellerjeau, Voet (2026)
+- #emph[(in prep) Long range, low frequency source localization across the Gulf Stream front using multiple bottom\/surface bounce paths observed on a large aperture vertical array]  - Hoekstra, #strong[Ragland], Colosi, Bonnel, Park, Dzieciuch, Alford, Bellerjeau, Voet (2026)
 
 - #emph[(in prep) Simultaneous ocean acoustic inversion and source localization for transmission across the Gulf Stream]  - #strong[Ragland], Colosi, Dzieciuch (2026)
 
@@ -219,6 +219,18 @@
 - #strong[ASA best student paper] (Dec 2022) - Acoustical Society of America: Second place at the ASA Nashville in underwater acoustics technical committee
 
 == Conference Presentations
+
+- #emph[A Bayesian approach to long-range source localization in the complex propagation environment across the Gulf Stream front] (#link("https://doi.org/10.1121/10.0045262")[10.1121\/10.0045262]) - Hoekstra, Bonnel, Colosi, Alford, Bellerjeau, Dzieciuch, Park, #strong[Ragland], Voet (2026) - The Journal of the Acoustical Society of America
+
+- #emph[First steps toward simultaneous Bayesian environmental inversion and source localization for acoustic transmissions across the Gulf Stream front] (#link("https://doi.org/10.1121/10.0045264")[10.1121\/10.0045264]) - #strong[Ragland], Colosi, Hoekstra, Dzieciuch, Park, Alford, Bellerjeau (2026) - 190th Meeting of the Acoustical Society of America
+
+- #emph[Observations of sound speed structure on and adjacent to, a seamount in the Gulf Stream extension region of the North Atlantic Ocean] - Colosi, #strong[Ragland], Torres, Devine, Alford, Voet, Bellerjeau, Miller (2026) - American Geophysical Union, Ocean Sciences Meeting
+
+- #emph[Long-range acoustic fluctuations across the gulf stream front] - #strong[Ragland], Colosi, Dzieciuch, Park (2026) - American Geophysical Union, Ocean Sciences Meeting
+
+- #emph[Long range, low frequency source localization across the Gulf Stream front using multiple bottom\/surface bounce paths observed on a large aperture vertical array: A Bayesian approach] (#link("https://doi.org/10.1121/10.0040221")[10.1121\/10.0040221]) - Hoekstra, Bonnel, Colosi, Alford, Bellerjeau, Dzieciuch, Park, #strong[Ragland], Voet (2025) - 189th Meeting of the Acoustical Society of America
+
+- #emph[Observations of acoustic intensity and phase fluctuations for low-frequency acoustic transmissions through the Gulf Stream] (#link("https://doi.org/10.1121/10.0040674")[10.1121\/10.0040674]) - #strong[Ragland], Colosi, Park, Dzieciuch (2025) - 189th Meeting of the Acoustical Society of America
 
 - #emph[Comparing Kauai Beacon receptions to simulated acoustic propagation] (#link("https://doi.org/10.1121/10.0037361")[10.1121\/10.0037361]) - #strong[Ragland], Durofchalk, Dall'Osto, Abadi, Gemba (2025) - 188th Meeting of the Acoustical Society of America
 

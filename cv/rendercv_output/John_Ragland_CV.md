@@ -63,7 +63,7 @@
 - **AOPE department representative** - [WHOI postdoctoral association](https://www2.whoi.edu/site/pda/), elected position
 
 # Peer Reviewed Publications
-- *(in prep) Long range, low frequency source localization across the Gulf Stream front using multiple bottom/surface bounce paths observed on a large aperture vertical array*  - Hoekstra, Colosi, **Ragland**, Bonnel, Park, Dzieciuch, Alford, Bellerjeau, Voet (2026)
+- *(in prep) Long range, low frequency source localization across the Gulf Stream front using multiple bottom/surface bounce paths observed on a large aperture vertical array*  - Hoekstra, **Ragland**, Colosi, Bonnel, Park, Dzieciuch, Alford, Bellerjeau, Voet (2026)
 
 - *(in prep) Simultaneous ocean acoustic inversion and source localization for transmission across the Gulf Stream*  - **Ragland**, Colosi, Dzieciuch (2026)
 
@@ -102,6 +102,18 @@
 - **ASA best student paper** (Dec 2022) - Acoustical Society of America: Second place at the ASA Nashville in underwater acoustics technical committee
 
 # Conference Presentations
+- *A Bayesian approach to long-range source localization in the complex propagation environment across the Gulf Stream front* ([10.1121/10.0045262](https://doi.org/10.1121/10.0045262)) - Hoekstra, Bonnel, Colosi, Alford, Bellerjeau, Dzieciuch, Park, **Ragland**, Voet (2026) - The Journal of the Acoustical Society of America
+
+- *First steps toward simultaneous Bayesian environmental inversion and source localization for acoustic transmissions across the Gulf Stream front* ([10.1121/10.0045264](https://doi.org/10.1121/10.0045264)) - **Ragland**, Colosi, Hoekstra, Dzieciuch, Park, Alford, Bellerjeau (2026) - 190th Meeting of the Acoustical Society of America
+
+- *Observations of sound speed structure on and adjacent to, a seamount in the Gulf Stream extension region of the North Atlantic Ocean* - Colosi, **Ragland**, Torres, Devine, Alford, Voet, Bellerjeau, Miller (2026) - American Geophysical Union, Ocean Sciences Meeting
+
+- *Long-range acoustic fluctuations across the gulf stream front* - **Ragland**, Colosi, Dzieciuch, Park (2026) - American Geophysical Union, Ocean Sciences Meeting
+
+- *Long range, low frequency source localization across the Gulf Stream front using multiple bottom/surface bounce paths observed on a large aperture vertical array: A Bayesian approach* ([10.1121/10.0040221](https://doi.org/10.1121/10.0040221)) - Hoekstra, Bonnel, Colosi, Alford, Bellerjeau, Dzieciuch, Park, **Ragland**, Voet (2025) - 189th Meeting of the Acoustical Society of America
+
+- *Observations of acoustic intensity and phase fluctuations for low-frequency acoustic transmissions through the Gulf Stream* ([10.1121/10.0040674](https://doi.org/10.1121/10.0040674)) - **Ragland**, Colosi, Park, Dzieciuch (2025) - 189th Meeting of the Acoustical Society of America
+
 - *Comparing Kauai Beacon receptions to simulated acoustic propagation* ([10.1121/10.0037361](https://doi.org/10.1121/10.0037361)) - **Ragland**, Durofchalk, Dall'Osto, Abadi, Gemba (2025) - 188th Meeting of the Acoustical Society of America
 
 - *Analysis of very low frequency wind driven noise at Ocean Observatories Initiative hydrophones* ([10.1121/10.0037493](https://doi.org/10.1121/10.0037493)) - **Ragland**, Phan, Abadi (2025) - 188th Meeting of the Acoustical Society of America
