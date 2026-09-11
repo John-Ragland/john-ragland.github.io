@@ -52,69 +52,59 @@ if __name__ == "__main__":
         except:
             return 0
 
+    def extract_extra_field(data, field):
+        """Read a 'Field: value' line out of a Zotero item's Extra field"""
+        match = re.search(rf'^{field}:\s*(.+)$', data.get('extra', ''), re.MULTILINE | re.IGNORECASE)
+        return match.group(1).strip() if match else ''
+
+    def format_publication(item, status=''):
+        """Format a Zotero item as:
+        (status) Authors (year) *Title*, Journal volume, page-range, doi: <linked doi>
+        """
+        data = item['data']
+        authors = [creator['lastName'] for creator in data['creators'] if creator['creatorType'] == 'author']
+        # Bold any appearances of 'Ragland'
+        authors = [re.sub(r'\bRagland\b', '**Ragland**', author) for author in authors]
+
+        year_int = extract_year_int(data['date'])
+
+        parts = []
+        if status:
+            parts.append(f"({status})")
+        parts.append(f"{', '.join(authors)} ({year_int}) *{data['title']}*")
+        bullet = ' '.join(parts)
+
+        # Preprints/manuscripts have no publicationTitle, so fall back to a
+        # 'Journal: <name>' line in Zotero's Extra field, then the preprint repository.
+        journal = data.get('publicationTitle', '') or extract_extra_field(data, 'Journal') or data.get('repository', '')
+        volume = data.get('volume', '')
+        if journal:
+            bullet += f", {journal}" + (f" {volume}" if volume else "")
+
+        pages = data.get('pages', '')
+        if pages:
+            bullet += f", {pages}"
+
+        doi = data.get('DOI', '')
+        if doi:
+            bullet += f", doi: [{doi}](https://doi.org/{doi})"
+
+        return {'bullet': bullet, '_sort_year': year_int}
+
+    # Item types included in the publications section, with their status prefix
+    publication_statuses = {
+        'journalArticle': '',
+        'preprint': 'in review',
+        'manuscript': 'in prep',
+    }
+
     items = zot.collection_items(publications)
     publications_list = []  # Temporary list to collect and sort
 
     for item in items:
-        if item['data']['itemType'] == 'journalArticle':
-            authors = [creator['lastName'] for creator in item['data']['creators'] if creator['creatorType'] == 'author']
-            # Bold any appearances of 'Ragland'
-            authors = [re.sub(r'\bRagland\b', '**Ragland**', author) for author in authors]
-
-            # Extract year from date as integer
-            date_str = item['data']['date']
-            year_int = extract_year_int(date_str)
-
-            # Format as bullet items
-            title = item['data']['title']
-            authors_str = ', '.join(authors)
-            doi = item['data'].get('DOI', '')
-            doi_link = f"[{doi}](https://doi.org/{doi})" if doi else ""
-
-            publications_list.append({
-                'bullet': f"*{title}* {doi_link} - {authors_str} ({year_int})",
-                '_sort_year': year_int
-            })
-
-        elif item['data']['itemType'] == 'preprint':
-            authors = [creator['lastName'] for creator in item['data']['creators'] if creator['creatorType'] == 'author']
-            # Bold any appearances of 'Ragland'
-            authors = [re.sub(r'\bRagland\b', '**Ragland**', author) for author in authors]
-
-            # Extract year from date as integer
-            date_str = item['data']['date']
-            year_int = extract_year_int(date_str)
-
-            # Format as bullet items (same as journalArticle)
-            title = '(in review) ' + item['data']['title']
-            authors_str = ', '.join(authors)
-            doi = item['data'].get('DOI', '')
-            doi_link = f"[{doi}](https://doi.org/{doi})" if doi else ""
-
-            publications_list.append({
-                'bullet': f"*{title}* {doi_link} - {authors_str} ({year_int})",
-                '_sort_year': year_int
-            })
-
-        elif item['data']['itemType'] == 'manuscript':
-            authors = [creator['lastName'] for creator in item['data']['creators'] if creator['creatorType'] == 'author']
-            # Bold any appearances of 'Ragland'
-            authors = [re.sub(r'\bRagland\b', '**Ragland**', author) for author in authors]
-
-            # Extract year from date as integer
-            date_str = item['data']['date']
-            year_int = extract_year_int(date_str)
-
-            # Format as bullet items (same as journalArticle)
-            title = '(in prep) ' + item['data']['title']
-            authors_str = ', '.join(authors)
-            doi = item['data'].get('DOI', '')
-            doi_link = f"[{doi}](https://doi.org/{doi})" if doi else ""
-
-            publications_list.append({
-                'bullet': f"*{title}* {doi_link} - {authors_str} ({year_int})",
-                '_sort_year': year_int
-            })
+        item_type = item['data']['itemType']
+        if item_type in publication_statuses:
+            publications_list.append(format_publication(item, publication_statuses[item_type]))
 
     # Sort by year (newest first)
     publications_list.sort(key=lambda x: x['_sort_year'], reverse=True)
@@ -141,7 +131,11 @@ if __name__ == "__main__":
             # Format as bullet items (like publications)
             title = item['data']['title']
             authors_str = ', '.join(authors)
-            conference = item['data']['proceedingsTitle']
+            # Zotero stores the meeting under either field depending on the item
+            conference = item['data'].get('conferenceName') or item['data'].get('proceedingsTitle', '')
+            place = item['data'].get('place', '')
+            if place:
+                conference += f", {place}"
             doi = item['data'].get('DOI', '')
             doi_link = f" ([{doi}](https://doi.org/{doi}))" if doi else ""
 

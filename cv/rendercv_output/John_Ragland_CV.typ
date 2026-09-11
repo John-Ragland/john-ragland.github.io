@@ -172,25 +172,25 @@
 
 == Peer Reviewed Publications
 
-- #emph[(in prep) Long range, low frequency source localization across the Gulf Stream front using multiple bottom\/surface bounce paths observed on a large aperture vertical array]  - Hoekstra, #strong[Ragland], Colosi, Bonnel, Park, Dzieciuch, Alford, Bellerjeau, Voet (2026)
+- (in prep) Hoekstra, #strong[Ragland], Colosi, Bonnel, Park, Dzieciuch, Alford, Bellerjeau, Voet (2026) #emph[Long range, low frequency source localization across the Gulf Stream front using multiple bottom\/surface bounce paths observed on a large aperture vertical array], Journal of the Acoustical Society of America
 
-- #emph[(in prep) Simultaneous ocean acoustic inversion and source localization for transmission across the Gulf Stream]  - #strong[Ragland], Colosi, Dzieciuch (2026)
+- (in prep) #strong[Ragland], Colosi, Dzieciuch (2026) #emph[Simultaneous ocean acoustic inversion and source localization for transmission across the Gulf Stream], Journal of the Acoustical Society of America
 
-- #emph[(in review) Analysis of acoustic fluctuations for 150-km, low frequency transmissions across the Gulf Stream in the vicinity of the New England Seamount chain] #link("https://doi.org/10.22541/essoar.15006016/v1")[10.22541\/essoar.15006016\/v1] - #strong[Ragland], Colosi, Hoekstra, Dzieciuch, Alford, Bellerjeau (2026)
+- (in review) #strong[Ragland], Colosi, Hoekstra, Dzieciuch, Alford, Bellerjeau (2026) #emph[Analysis of acoustic fluctuations for 150-km, low frequency transmissions across the Gulf Stream in the vicinity of the New England Seamount chain], Journal of the Acoustical Society of America, doi: #link("https://doi.org/10.22541/essoar.15006016/v1")[10.22541\/essoar.15006016\/v1]
 
-- #emph[How Do Tides Affect Underwater Acoustic Propagation: A collaborative approach to improve internal wave modelling at basin to global scales] #link("https://doi.org/10.5670/oceanog.2025.308")[10.5670\/oceanog.2025.308] - Schönau, Hiron, #strong[Ragland], Raja, Skitka, Solano, Xu, Arbic, Buijsman, Chassignet, Coelho, Helber, Shriver, Summers, Verlinden, Wallcraft (2025)
+- Schönau, Hiron, #strong[Ragland], Raja, Skitka, Solano, Xu, Arbic, Buijsman, Chassignet, Coelho, Helber, Shriver, Summers, Verlinden, Wallcraft (2025) #emph[How Do Tides Affect Underwater Acoustic Propagation: A collaborative approach to improve internal wave modelling at basin to global scales], Oceanography Magazine 38, doi: #link("https://doi.org/10.5670/oceanog.2025.308")[10.5670\/oceanog.2025.308]
 
-- #emph[Characterizing wind-dependent low-frequency ambient sound with ocean observatories initiative hydrophones] #link("https://doi.org/10.1121/10.0039811")[10.1121\/10.0039811] - #strong[Ragland], Abadi (2025)
+- #strong[Ragland], Abadi (2025) #emph[Characterizing wind-dependent low-frequency ambient sound with ocean observatories initiative hydrophones], JASA Express Letters 5, 110801, doi: #link("https://doi.org/10.1121/10.0039811")[10.1121\/10.0039811]
 
-- #emph[Receptions of Kauai Beacon transmissions by ocean observatories initiative hydrophones] #link("https://doi.org/10.1121/10.0038971")[10.1121\/10.0038971] - #strong[Ragland], Abadi, Durofchalk, Dall'Osto, Gemba (2025)
+- #strong[Ragland], Abadi, Durofchalk, Dall'Osto, Gemba (2025) #emph[Receptions of Kauai Beacon transmissions by ocean observatories initiative hydrophones], The Journal of the Acoustical Society of America 158, 1113–1124, doi: #link("https://doi.org/10.1121/10.0038971")[10.1121\/10.0038971]
 
-- #emph[Using Ocean Ambient Sound to Measure Local Integrated Deep Ocean Temperature] #link("https://doi.org/10.1029/2024GL108943")[10.1029\/2024GL108943] - #strong[Ragland], Abadi, Sabra (2024)
+- #strong[Ragland], Abadi, Sabra (2024) #emph[Using Ocean Ambient Sound to Measure Local Integrated Deep Ocean Temperature], Geophysical Research Letters 51, e2024GL108943, doi: #link("https://doi.org/10.1029/2024GL108943")[10.1029\/2024GL108943]
 
-- #emph[Exploring surface source contributions to ocean ambient noise interferometry with airgun shots] #link("https://doi.org/10.1121/10.0015231")[10.1121\/10.0015231] - #strong[Ragland], Abadi (2022)
+- #strong[Ragland], Abadi (2022) #emph[Exploring surface source contributions to ocean ambient noise interferometry with airgun shots], The Journal of the Acoustical Society of America 152, 3069-3077, doi: #link("https://doi.org/10.1121/10.0015231")[10.1121\/10.0015231]
 
-- #emph[An overview of ambient sound using Ocean Observatories Initiative hydrophones] #link("https://doi.org/10.1121/10.0009836")[10.1121\/10.0009836] - #strong[Ragland], Schwock, Munson, Abadi (2022)
+- #strong[Ragland], Schwock, Munson, Abadi (2022) #emph[An overview of ambient sound using Ocean Observatories Initiative hydrophones], The Journal of the Acoustical Society of America 151, 2085-2100, doi: #link("https://doi.org/10.1121/10.0009836")[10.1121\/10.0009836]
 
-- #emph[Long-term noise interferometry analysis in the northeast Pacific Ocean] #link("https://doi.org/10.1121/10.0009232")[10.1121\/10.0009232] - #strong[Ragland], Abadi, Sabra (2022)
+- #strong[Ragland], Abadi, Sabra (2022) #emph[Long-term noise interferometry analysis in the northeast Pacific Ocean], The Journal of the Acoustical Society of America 151, 194-204, doi: #link("https://doi.org/10.1121/10.0009232")[10.1121\/10.0009232]
 
 == Grants and Fellowships
 
@@ -236,9 +236,9 @@
 
 #regular-entry(
   [
-    #strong[Analysis of Kauai Beacon Receptions]
+    #strong[Analysis of Kauai Beacon Receptions with OOI hydrophones]
 
-    #summary[Role: #strong[Collaborator]]
+    - #emph[PI]: Shima Abadi; University of Washington
 
   ],
   [
@@ -248,8 +248,6 @@
 
   ],
   main-column-second-row: [
-    - #emph[PI]: Shima Abadi; University of Washington
-
     - #emph[Collaborator]: #strong[John Ragland]; helped develop project idea and collaborated on the research statement. Grant supported postdoctoral appointment at UW
 
   ],
@@ -309,7 +307,7 @@
 
 == Conference Presentations
 
-- #emph[A Bayesian approach to long-range source localization in the complex propagation environment across the Gulf Stream front] (#link("https://doi.org/10.1121/10.0045262")[10.1121\/10.0045262]) - Hoekstra, Bonnel, Colosi, Alford, Bellerjeau, Dzieciuch, Park, #strong[Ragland], Voet (2026) - The Journal of the Acoustical Society of America
+- #emph[A Bayesian approach to long-range source localization in the complex propagation environment across the Gulf Stream front] (#link("https://doi.org/10.1121/10.0045262")[10.1121\/10.0045262]) - Hoekstra, Bonnel, Colosi, Alford, Bellerjeau, Dzieciuch, Park, #strong[Ragland], Voet (2026) - 190th Meeting of the Acoustical Society of America
 
 - #emph[First steps toward simultaneous Bayesian environmental inversion and source localization for acoustic transmissions across the Gulf Stream front] (#link("https://doi.org/10.1121/10.0045264")[10.1121\/10.0045264]) - #strong[Ragland], Colosi, Hoekstra, Dzieciuch, Park, Alford, Bellerjeau (2026) - 190th Meeting of the Acoustical Society of America
 
@@ -317,44 +315,44 @@
 
 - #emph[Long-range acoustic fluctuations across the gulf stream front] - #strong[Ragland], Colosi, Dzieciuch, Park (2026) - American Geophysical Union, Ocean Sciences Meeting
 
-- #emph[Long range, low frequency source localization across the Gulf Stream front using multiple bottom\/surface bounce paths observed on a large aperture vertical array: A Bayesian approach] (#link("https://doi.org/10.1121/10.0040221")[10.1121\/10.0040221]) - Hoekstra, Bonnel, Colosi, Alford, Bellerjeau, Dzieciuch, Park, #strong[Ragland], Voet (2025) - 189th Meeting of the Acoustical Society of America
+- #emph[Long range, low frequency source localization across the Gulf Stream front using multiple bottom\/surface bounce paths observed on a large aperture vertical array: A Bayesian approach] (#link("https://doi.org/10.1121/10.0040221")[10.1121\/10.0040221]) - Hoekstra, Bonnel, Colosi, Alford, Bellerjeau, Dzieciuch, Park, #strong[Ragland], Voet (2025) - 189th Meeting of the Acoustical Society of America, Honolulu, HI
 
-- #emph[Observations of acoustic intensity and phase fluctuations for low-frequency acoustic transmissions through the Gulf Stream] (#link("https://doi.org/10.1121/10.0040674")[10.1121\/10.0040674]) - #strong[Ragland], Colosi, Park, Dzieciuch (2025) - 189th Meeting of the Acoustical Society of America
+- #emph[Observations of acoustic intensity and phase fluctuations for low-frequency acoustic transmissions through the Gulf Stream] (#link("https://doi.org/10.1121/10.0040674")[10.1121\/10.0040674]) - #strong[Ragland], Colosi, Park, Dzieciuch (2025) - 189th Meeting of the Acoustical Society of America, Honolulu, HI
 
-- #emph[Comparing Kauai Beacon receptions to simulated acoustic propagation] (#link("https://doi.org/10.1121/10.0037361")[10.1121\/10.0037361]) - #strong[Ragland], Durofchalk, Dall'Osto, Abadi, Gemba (2025) - 188th Meeting of the Acoustical Society of America
+- #emph[Comparing Kauai Beacon receptions to simulated acoustic propagation] (#link("https://doi.org/10.1121/10.0037361")[10.1121\/10.0037361]) - #strong[Ragland], Durofchalk, Dall'Osto, Abadi, Gemba (2025) - 188th Meeting of the Acoustical Society of America, New Orleans
 
-- #emph[Analysis of very low frequency wind driven noise at Ocean Observatories Initiative hydrophones] (#link("https://doi.org/10.1121/10.0037493")[10.1121\/10.0037493]) - #strong[Ragland], Phan, Abadi (2025) - 188th Meeting of the Acoustical Society of America
+- #emph[Analysis of very low frequency wind driven noise at Ocean Observatories Initiative hydrophones] (#link("https://doi.org/10.1121/10.0037493")[10.1121\/10.0037493]) - #strong[Ragland], Phan, Abadi (2025) - 188th Meeting of the Acoustical Society of America, New Orleans
 
-- #emph[Kauai Beacon receptions and analysis with open-access hydrophones in the North Pacific Ocean] (#link("https://doi.org/10.1121/10.0026938")[10.1121\/10.0026938]) - #strong[Ragland], Durofchalk, Gemba, Dall'Osto, Abadi (2024) - 186th Meeting of the Acoustical Society of America
+- #emph[Kauai Beacon receptions and analysis with open-access hydrophones in the North Pacific Ocean] (#link("https://doi.org/10.1121/10.0026938")[10.1121\/10.0026938]) - #strong[Ragland], Durofchalk, Gemba, Dall'Osto, Abadi (2024) - 186th Meeting of the Acoustical Society of America, Ottawa, CA
 
-- #emph[Towards acoustic observations of ocean basin temperatures using the Kauai beacon and Ocean Observatories Initiative Hydrophones] - #strong[Ragland], Durofchalk, Abadi, Dall'Osto, Gemba (2024) - Ocean Sciences Meeting 2024
+- #emph[Towards acoustic observations of ocean basin temperatures using the Kauai beacon and Ocean Observatories Initiative Hydrophones] - #strong[Ragland], Durofchalk, Abadi, Dall'Osto, Gemba (2024) - Ocean Sciences Meeting 2024, New Orleans, LA
 
-- #emph[Detecting the Kauai source beacon with ocean observatories innitiative hydrophones] (#link("https://doi.org/10.1121/10.0023175")[10.1121\/10.0023175]) - #strong[Ragland], Durofchalk, Gemba, Abadi (2023) - 185th Meeting of the Acoustical Society of America
+- #emph[Detecting the Kauai source beacon with ocean observatories innitiative hydrophones] (#link("https://doi.org/10.1121/10.0023175")[10.1121\/10.0023175]) - #strong[Ragland], Durofchalk, Gemba, Abadi (2023) - 185th Meeting of the Acoustical Society of America, Sydney, Australia
 
-- #emph[Using ocean ambient sound to sense arrival time fluctuations due to temperature] (#link("https://doi.org/10.1121/10.0023334")[10.1121\/10.0023334]) - #strong[Ragland], Abadi (2023) - 185th Meeting of the Acoustical Society of America
+- #emph[Using ocean ambient sound to sense arrival time fluctuations due to temperature] (#link("https://doi.org/10.1121/10.0023334")[10.1121\/10.0023334]) - #strong[Ragland], Abadi (2023) - 185th Meeting of the Acoustical Society of America, Sydney, Australia
 
-- #emph[Using distributed acoustic sensing for ocean ambient sound analysis] (#link("https://doi.org/10.1121/10.0018176")[10.1121\/10.0018176]) - #strong[Ragland], Douglass, Abadi (2023) - 184th Meeting of the Acoustical Society of America
+- #emph[Using distributed acoustic sensing for ocean ambient sound analysis] (#link("https://doi.org/10.1121/10.0018176")[10.1121\/10.0018176]) - #strong[Ragland], Douglass, Abadi (2023) - Acoustical Society of America, Chicago, IL
 
-- #emph[Towards estimating water column properties using ambient noise interferometry in the deep ocean] - #strong[Ragland], Abadi (2023) - Underwater Acoustics Conference and Exposition
+- #emph[Towards estimating water column properties using ambient noise interferometry in the deep ocean] - #strong[Ragland], Abadi (2023) - Underwater Acoustics Conference and Exposition, Kalamata, Greece
 
-- #emph[Overview of distributed acoustic sensing technology and recently acquired data sets] (#link("https://doi.org/10.1121/10.0018174")[10.1121\/10.0018174]) - Douglass, #strong[Ragland], Abadi (2023) - 184th Meeting of the Acoustical Society of America
+- #emph[Overview of distributed acoustic sensing technology and recently acquired data sets] (#link("https://doi.org/10.1121/10.0018174")[10.1121\/10.0018174]) - Douglass, #strong[Ragland], Abadi (2023) - Acoustical Society of America, Chicago, IL
 
-- #emph[Comparing distributed acoustic sensing data with hydrophone recordings] (#link("https://doi.org/10.1121/10.0018175")[10.1121\/10.0018175]) - Abadi, Douglass, #strong[Ragland] (2023) - 184th Meeting of the Acoustical Society of America
+- #emph[Comparing distributed acoustic sensing data with hydrophone recordings] (#link("https://doi.org/10.1121/10.0018175")[10.1121\/10.0018175]) - Abadi, Douglass, #strong[Ragland] (2023) - Acoustical Society of America, Chicago, IL
 
-- #emph[Long-term ambient noise interferometry in the NE Pacific deep ocean] - #strong[Ragland], Abadi (2022) - Ocean Sciences Meeting 2022
+- #emph[Long-term ambient noise interferometry in the NE Pacific deep ocean] - #strong[Ragland], Abadi (2022) - Ocean Sciences Meeting 2022, Online Meeting
 
-- #emph[Overview of ambient noise research and outreach with OOI hydrophones] - #strong[Ragland], Schwock, Liu, Abadi (2022) - AGU Fall Meeting 2022
+- #emph[Overview of ambient noise research and outreach with OOI hydrophones] - #strong[Ragland], Schwock, Liu, Abadi (2022) - AGU Fall Meeting 2022, Chicago, IL
 
-- #emph[Overview of ocean ambient noise interferometry – Theory and simulation] (#link("https://doi.org/10.1121/10.0016311")[10.1121\/10.0016311]) - #strong[Ragland], Abadi (2022) - 183th Meeting of the Acoustical Society of America
+- #emph[Overview of ocean ambient noise interferometry – Theory and simulation] (#link("https://doi.org/10.1121/10.0016311")[10.1121\/10.0016311]) - #strong[Ragland], Abadi (2022) - Acoustical Society of America, Nashville, TN
 
-- #emph[Exploring surface source distributions for ocean ambient noise interferometry with airgun shots] (#link("https://doi.org/10.1121/10.0011063")[10.1121\/10.0011063]) - #strong[Ragland], Abadi (2022) - 182th Meeting of the Acoustical Society of America
+- #emph[Exploring surface source distributions for ocean ambient noise interferometry with airgun shots] (#link("https://doi.org/10.1121/10.0011063")[10.1121\/10.0011063]) - #strong[Ragland], Abadi (2022) - Acoustical Society of America, Denver, CO
 
-- #emph[OOIPy: A Python toolbox for accessing and analyzing sata from the Ocean Observatories Initiative] (#link("https://doi.org/10.1121/10.0007845")[10.1121\/10.0007845]) - Schwock, #strong[Ragland], Abadi (2021) - 180th Meeting of the Acoustical Society of America
+- #emph[OOIPy: A Python toolbox for accessing and analyzing sata from the Ocean Observatories Initiative] (#link("https://doi.org/10.1121/10.0007845")[10.1121\/10.0007845]) - Schwock, #strong[Ragland], Abadi (2021) - Acoustical Society of America, Seattle, WA
 
-- #emph[An overview of ambient sound using OOI hydrophone network] (#link("https://doi.org/10.1121/10.0007594")[10.1121\/10.0007594]) - #strong[Ragland], Schwock, Munson, Abadi (2021) - 180th Meeting of the Acoustical Society of America
+- #emph[An overview of ambient sound using OOI hydrophone network] (#link("https://doi.org/10.1121/10.0007594")[10.1121\/10.0007594]) - #strong[Ragland], Schwock, Munson, Abadi (2021) - Acoustical Society of America, Seattle, WA
 
-- #emph[Long-term noise interferometry analysis in the northeast Pacific Ocean] (#link("https://doi.org/10.1121/10.0004609")[10.1121\/10.0004609]) - #strong[Ragland], Abadi (2021) - 179th Meeting of the Acoustical Society of America
+- #emph[Long-term noise interferometry analysis in the northeast Pacific Ocean] (#link("https://doi.org/10.1121/10.0004609")[10.1121\/10.0004609]) - #strong[Ragland], Abadi (2021) - Acoustical Society of America, Online Meeting
 
-- #emph[Estimating ocean variables using ambient noise interferometry] (#link("https://doi.org/10.1121/10.0007697")[10.1121\/10.0007697]) - #strong[Ragland], Abadi (2021) - 180th Meeting of the Acoustical Society of America
+- #emph[Estimating ocean variables using ambient noise interferometry] (#link("https://doi.org/10.1121/10.0007697")[10.1121\/10.0007697]) - #strong[Ragland], Abadi (2021) - Acoustical Society of America, Seattle, WA
 
-- #emph[Ship detection from passive underwater acoustic recordings using machine learning] (#link("https://doi.org/10.1121/10.0007848")[10.1121\/10.0007848]) - Alvaro, Schwock, #strong[Ragland], Abadi (2021) - 180th Meeting of the Acoustical Society of America
+- #emph[Ship detection from passive underwater acoustic recordings using machine learning] (#link("https://doi.org/10.1121/10.0007848")[10.1121\/10.0007848]) - Alvaro, Schwock, #strong[Ragland], Abadi (2021) - Acoustical Society of America, Seattle, WA

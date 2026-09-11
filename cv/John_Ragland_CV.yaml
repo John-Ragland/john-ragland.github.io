@@ -45,39 +45,41 @@ cv:
     - bullet: '**Graduate Summer Researcher**, Applied Research in Acoustics, Seattle,
         WA (2022)'
     Peer Reviewed Publications:
-    - bullet: '*(in prep) Long range, low frequency source localization across the
-        Gulf Stream front using multiple bottom/surface bounce paths observed on a
-        large aperture vertical array*  - Hoekstra, **Ragland**, Colosi, Bonnel, Park,
-        Dzieciuch, Alford, Bellerjeau, Voet (2026)'
-    - bullet: '*(in prep) Simultaneous ocean acoustic inversion and source localization
-        for transmission across the Gulf Stream*  - **Ragland**, Colosi, Dzieciuch
-        (2026)'
-    - bullet: '*(in review) Analysis of acoustic fluctuations for 150-km, low frequency
-        transmissions across the Gulf Stream in the vicinity of the New England Seamount
-        chain* [10.22541/essoar.15006016/v1](https://doi.org/10.22541/essoar.15006016/v1)
-        - **Ragland**, Colosi, Hoekstra, Dzieciuch, Alford, Bellerjeau (2026)'
-    - bullet: '*How Do Tides Affect Underwater Acoustic Propagation: A collaborative
-        approach to improve internal wave modelling at basin to global scales* [10.5670/oceanog.2025.308](https://doi.org/10.5670/oceanog.2025.308)
-        - Schönau, Hiron, **Ragland**, Raja, Skitka, Solano, Xu, Arbic, Buijsman,
-        Chassignet, Coelho, Helber, Shriver, Summers, Verlinden, Wallcraft (2025)'
-    - bullet: '*Characterizing wind-dependent low-frequency ambient sound with ocean
-        observatories initiative hydrophones* [10.1121/10.0039811](https://doi.org/10.1121/10.0039811)
-        - **Ragland**, Abadi (2025)'
-    - bullet: '*Receptions of Kauai Beacon transmissions by ocean observatories initiative
-        hydrophones* [10.1121/10.0038971](https://doi.org/10.1121/10.0038971) - **Ragland**,
-        Abadi, Durofchalk, Dall''Osto, Gemba (2025)'
-    - bullet: '*Using Ocean Ambient Sound to Measure Local Integrated Deep Ocean Temperature*
-        [10.1029/2024GL108943](https://doi.org/10.1029/2024GL108943) - **Ragland**,
-        Abadi, Sabra (2024)'
-    - bullet: '*Exploring surface source contributions to ocean ambient noise interferometry
-        with airgun shots* [10.1121/10.0015231](https://doi.org/10.1121/10.0015231)
-        - **Ragland**, Abadi (2022)'
-    - bullet: '*An overview of ambient sound using Ocean Observatories Initiative
-        hydrophones* [10.1121/10.0009836](https://doi.org/10.1121/10.0009836) - **Ragland**,
-        Schwock, Munson, Abadi (2022)'
-    - bullet: '*Long-term noise interferometry analysis in the northeast Pacific Ocean*
-        [10.1121/10.0009232](https://doi.org/10.1121/10.0009232) - **Ragland**, Abadi,
-        Sabra (2022)'
+    - bullet: (in prep) Hoekstra, **Ragland**, Colosi, Bonnel, Park, Dzieciuch, Alford,
+        Bellerjeau, Voet (2026) *Long range, low frequency source localization across
+        the Gulf Stream front using multiple bottom/surface bounce paths observed
+        on a large aperture vertical array*, Journal of the Acoustical Society of
+        America
+    - bullet: (in prep) **Ragland**, Colosi, Dzieciuch (2026) *Simultaneous ocean
+        acoustic inversion and source localization for transmission across the Gulf
+        Stream*, Journal of the Acoustical Society of America
+    - bullet: '(in review) **Ragland**, Colosi, Hoekstra, Dzieciuch, Alford, Bellerjeau
+        (2026) *Analysis of acoustic fluctuations for 150-km, low frequency transmissions
+        across the Gulf Stream in the vicinity of the New England Seamount chain*,
+        Journal of the Acoustical Society of America, doi: [10.22541/essoar.15006016/v1](https://doi.org/10.22541/essoar.15006016/v1)'
+    - bullet: 'Schönau, Hiron, **Ragland**, Raja, Skitka, Solano, Xu, Arbic, Buijsman,
+        Chassignet, Coelho, Helber, Shriver, Summers, Verlinden, Wallcraft (2025)
+        *How Do Tides Affect Underwater Acoustic Propagation: A collaborative approach
+        to improve internal wave modelling at basin to global scales*, Oceanography
+        Magazine 38, doi: [10.5670/oceanog.2025.308](https://doi.org/10.5670/oceanog.2025.308)'
+    - bullet: '**Ragland**, Abadi (2025) *Characterizing wind-dependent low-frequency
+        ambient sound with ocean observatories initiative hydrophones*, JASA Express
+        Letters 5, 110801, doi: [10.1121/10.0039811](https://doi.org/10.1121/10.0039811)'
+    - bullet: '**Ragland**, Abadi, Durofchalk, Dall''Osto, Gemba (2025) *Receptions
+        of Kauai Beacon transmissions by ocean observatories initiative hydrophones*,
+        The Journal of the Acoustical Society of America 158, 1113–1124, doi: [10.1121/10.0038971](https://doi.org/10.1121/10.0038971)'
+    - bullet: '**Ragland**, Abadi, Sabra (2024) *Using Ocean Ambient Sound to Measure
+        Local Integrated Deep Ocean Temperature*, Geophysical Research Letters 51,
+        e2024GL108943, doi: [10.1029/2024GL108943](https://doi.org/10.1029/2024GL108943)'
+    - bullet: '**Ragland**, Abadi (2022) *Exploring surface source contributions to
+        ocean ambient noise interferometry with airgun shots*, The Journal of the
+        Acoustical Society of America 152, 3069-3077, doi: [10.1121/10.0015231](https://doi.org/10.1121/10.0015231)'
+    - bullet: '**Ragland**, Schwock, Munson, Abadi (2022) *An overview of ambient
+        sound using Ocean Observatories Initiative hydrophones*, The Journal of the
+        Acoustical Society of America 151, 2085-2100, doi: [10.1121/10.0009836](https://doi.org/10.1121/10.0009836)'
+    - bullet: '**Ragland**, Abadi, Sabra (2022) *Long-term noise interferometry analysis
+        in the northeast Pacific Ocean*, The Journal of the Acoustical Society of
+        America 151, 194-204, doi: [10.1121/10.0009232](https://doi.org/10.1121/10.0009232)'
     Grants and Fellowships:
     - name: '(in review) Collaborative Research: Global ocean model internal wave
         validation with acoustic propagation'
@@ -94,11 +96,10 @@ cv:
       highlights:
       - '*PI*: John Colosi; Woods Hole Oceanographic Institution'
       - '*Co-PI*: **John Ragland**; Woods Hole Oceanographic Institution'
-    - name: Analysis of Kauai Beacon Receptions
+    - name: Analysis of Kauai Beacon Receptions with OOI hydrophones
       location: ONR
       start_date: 2024-07
       end_date: 2027-06
-      summary: 'Role: **Collaborator**'
       highlights:
       - '*PI*: Shima Abadi; University of Washington'
       - '*Collaborator*: **John Ragland**; helped develop project idea and collaborated
@@ -152,7 +153,7 @@ cv:
     - bullet: '*A Bayesian approach to long-range source localization in the complex
         propagation environment across the Gulf Stream front* ([10.1121/10.0045262](https://doi.org/10.1121/10.0045262))
         - Hoekstra, Bonnel, Colosi, Alford, Bellerjeau, Dzieciuch, Park, **Ragland**,
-        Voet (2026) - The Journal of the Acoustical Society of America'
+        Voet (2026) - 190th Meeting of the Acoustical Society of America'
     - bullet: '*First steps toward simultaneous Bayesian environmental inversion and
         source localization for acoustic transmissions across the Gulf Stream front*
         ([10.1121/10.0045264](https://doi.org/10.1121/10.0045264)) - **Ragland**,
@@ -169,71 +170,75 @@ cv:
         front using multiple bottom/surface bounce paths observed on a large aperture
         vertical array: A Bayesian approach* ([10.1121/10.0040221](https://doi.org/10.1121/10.0040221))
         - Hoekstra, Bonnel, Colosi, Alford, Bellerjeau, Dzieciuch, Park, **Ragland**,
-        Voet (2025) - 189th Meeting of the Acoustical Society of America'
+        Voet (2025) - 189th Meeting of the Acoustical Society of America, Honolulu,
+        HI'
     - bullet: '*Observations of acoustic intensity and phase fluctuations for low-frequency
         acoustic transmissions through the Gulf Stream* ([10.1121/10.0040674](https://doi.org/10.1121/10.0040674))
         - **Ragland**, Colosi, Park, Dzieciuch (2025) - 189th Meeting of the Acoustical
-        Society of America'
+        Society of America, Honolulu, HI'
     - bullet: '*Comparing Kauai Beacon receptions to simulated acoustic propagation*
         ([10.1121/10.0037361](https://doi.org/10.1121/10.0037361)) - **Ragland**,
         Durofchalk, Dall''Osto, Abadi, Gemba (2025) - 188th Meeting of the Acoustical
-        Society of America'
+        Society of America, New Orleans'
     - bullet: '*Analysis of very low frequency wind driven noise at Ocean Observatories
         Initiative hydrophones* ([10.1121/10.0037493](https://doi.org/10.1121/10.0037493))
         - **Ragland**, Phan, Abadi (2025) - 188th Meeting of the Acoustical Society
-        of America'
+        of America, New Orleans'
     - bullet: '*Kauai Beacon receptions and analysis with open-access hydrophones
         in the North Pacific Ocean* ([10.1121/10.0026938](https://doi.org/10.1121/10.0026938))
         - **Ragland**, Durofchalk, Gemba, Dall''Osto, Abadi (2024) - 186th Meeting
-        of the Acoustical Society of America'
+        of the Acoustical Society of America, Ottawa, CA'
     - bullet: '*Towards acoustic observations of ocean basin temperatures using the
         Kauai beacon and Ocean Observatories Initiative Hydrophones* - **Ragland**,
-        Durofchalk, Abadi, Dall''Osto, Gemba (2024) - Ocean Sciences Meeting 2024'
+        Durofchalk, Abadi, Dall''Osto, Gemba (2024) - Ocean Sciences Meeting 2024,
+        New Orleans, LA'
     - bullet: '*Detecting the Kauai source beacon with ocean observatories innitiative
         hydrophones* ([10.1121/10.0023175](https://doi.org/10.1121/10.0023175)) -
         **Ragland**, Durofchalk, Gemba, Abadi (2023) - 185th Meeting of the Acoustical
-        Society of America'
+        Society of America, Sydney, Australia'
     - bullet: '*Using ocean ambient sound to sense arrival time fluctuations due to
         temperature* ([10.1121/10.0023334](https://doi.org/10.1121/10.0023334)) -
-        **Ragland**, Abadi (2023) - 185th Meeting of the Acoustical Society of America'
+        **Ragland**, Abadi (2023) - 185th Meeting of the Acoustical Society of America,
+        Sydney, Australia'
     - bullet: '*Using distributed acoustic sensing for ocean ambient sound analysis*
         ([10.1121/10.0018176](https://doi.org/10.1121/10.0018176)) - **Ragland**,
-        Douglass, Abadi (2023) - 184th Meeting of the Acoustical Society of America'
+        Douglass, Abadi (2023) - Acoustical Society of America, Chicago, IL'
     - bullet: '*Towards estimating water column properties using ambient noise interferometry
         in the deep ocean* - **Ragland**, Abadi (2023) - Underwater Acoustics Conference
-        and Exposition'
+        and Exposition, Kalamata, Greece'
     - bullet: '*Overview of distributed acoustic sensing technology and recently acquired
         data sets* ([10.1121/10.0018174](https://doi.org/10.1121/10.0018174)) - Douglass,
-        **Ragland**, Abadi (2023) - 184th Meeting of the Acoustical Society of America'
+        **Ragland**, Abadi (2023) - Acoustical Society of America, Chicago, IL'
     - bullet: '*Comparing distributed acoustic sensing data with hydrophone recordings*
         ([10.1121/10.0018175](https://doi.org/10.1121/10.0018175)) - Abadi, Douglass,
-        **Ragland** (2023) - 184th Meeting of the Acoustical Society of America'
+        **Ragland** (2023) - Acoustical Society of America, Chicago, IL'
     - bullet: '*Long-term ambient noise interferometry in the NE Pacific deep ocean*
-        - **Ragland**, Abadi (2022) - Ocean Sciences Meeting 2022'
+        - **Ragland**, Abadi (2022) - Ocean Sciences Meeting 2022, Online Meeting'
     - bullet: '*Overview of ambient noise research and outreach with OOI hydrophones*
-        - **Ragland**, Schwock, Liu, Abadi (2022) - AGU Fall Meeting 2022'
+        - **Ragland**, Schwock, Liu, Abadi (2022) - AGU Fall Meeting 2022, Chicago,
+        IL'
     - bullet: '*Overview of ocean ambient noise interferometry – Theory and simulation*
         ([10.1121/10.0016311](https://doi.org/10.1121/10.0016311)) - **Ragland**,
-        Abadi (2022) - 183th Meeting of the Acoustical Society of America'
+        Abadi (2022) - Acoustical Society of America, Nashville, TN'
     - bullet: '*Exploring surface source distributions for ocean ambient noise interferometry
         with airgun shots* ([10.1121/10.0011063](https://doi.org/10.1121/10.0011063))
-        - **Ragland**, Abadi (2022) - 182th Meeting of the Acoustical Society of America'
+        - **Ragland**, Abadi (2022) - Acoustical Society of America, Denver, CO'
     - bullet: '*OOIPy: A Python toolbox for accessing and analyzing sata from the
         Ocean Observatories Initiative* ([10.1121/10.0007845](https://doi.org/10.1121/10.0007845))
-        - Schwock, **Ragland**, Abadi (2021) - 180th Meeting of the Acoustical Society
-        of America'
+        - Schwock, **Ragland**, Abadi (2021) - Acoustical Society of America, Seattle,
+        WA'
     - bullet: '*An overview of ambient sound using OOI hydrophone network* ([10.1121/10.0007594](https://doi.org/10.1121/10.0007594))
-        - **Ragland**, Schwock, Munson, Abadi (2021) - 180th Meeting of the Acoustical
-        Society of America'
+        - **Ragland**, Schwock, Munson, Abadi (2021) - Acoustical Society of America,
+        Seattle, WA'
     - bullet: '*Long-term noise interferometry analysis in the northeast Pacific Ocean*
         ([10.1121/10.0004609](https://doi.org/10.1121/10.0004609)) - **Ragland**,
-        Abadi (2021) - 179th Meeting of the Acoustical Society of America'
+        Abadi (2021) - Acoustical Society of America, Online Meeting'
     - bullet: '*Estimating ocean variables using ambient noise interferometry* ([10.1121/10.0007697](https://doi.org/10.1121/10.0007697))
-        - **Ragland**, Abadi (2021) - 180th Meeting of the Acoustical Society of America'
+        - **Ragland**, Abadi (2021) - Acoustical Society of America, Seattle, WA'
     - bullet: '*Ship detection from passive underwater acoustic recordings using machine
         learning* ([10.1121/10.0007848](https://doi.org/10.1121/10.0007848)) - Alvaro,
-        Schwock, **Ragland**, Abadi (2021) - 180th Meeting of the Acoustical Society
-        of America'
+        Schwock, **Ragland**, Abadi (2021) - Acoustical Society of America, Seattle,
+        WA'
 design:
   theme: classic
   page:
