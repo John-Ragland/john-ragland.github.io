@@ -1,31 +1,35 @@
-name: Update CV from Zotero
+name: Build and deploy site
 
 on:
-  # Run weekly on Sundays at 2 AM UTC
+  # Refresh the CV from Zotero weekly on Sundays at 2 AM UTC
   schedule:
     - cron: '0 2 * * 0'
-  
+
   # Allow manual trigger
   workflow_dispatch:
-  
-  # Run on push to main (but not if commit message contains [skip-cv-update])
+
+  # Rebuild and deploy on every push to main
   push:
     branches: [ main ]
 
+# Allow the workflow to publish to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Let a newer deploy supersede an in-flight one, but never cancel a running deploy
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
 jobs:
-  update-cv:
+  build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    # Skip if the commit message contains [skip-cv-update]
-    if: "!contains(github.event.head_commit.message, '[skip-cv-update]')"
-    
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-    
+
     - name: Set up uv
       uses: astral-sh/setup-uv@v4
       with:
@@ -45,22 +49,21 @@ jobs:
     - name: Build pages
       run: uv run python build/build.py
 
-    - name: Check for changes
-      id: check_changes
-      run: |
-        # Check YAML for changes beyond just the date field
-        YAML_DIFF=$(git diff cv/John_Ragland_CV.yaml | grep "^[+-]" | grep -v "^[+-][+-][+-]" | grep -v "^\(+\|-\)  *date:" | wc -l | tr -d ' ')
-        # Check HTML for any changes
-        HTML_DIFF=$(git diff --quiet cv.html index.html projects.html || echo "1")
-        if [ "$YAML_DIFF" -gt 0 ] || [ "$HTML_DIFF" = "1" ]; then
-          echo "changes=true" >> $GITHUB_OUTPUT
-        fi
+    - name: Stage site
+      run: uv run python build/stage_site.py
 
-    - name: Commit and push if changes
-      if: steps.check_changes.outputs.changes == 'true'
-      run: |
-        git config --local user.email "github-actions[bot]@users.noreply.github.com"
-        git config --local user.name "github-actions[bot]"-cv-update
-        git add cv/John_Ragland_CV.yaml cv/rendercv_output/ cv.html John_Ragland_CV.pdf index.html projects.html
-        git commit -m "chore: Auto-update CV from Zotero [skip ci]"
-        git push
+    - name: Upload Pages artifact
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v4
