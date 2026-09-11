@@ -274,8 +274,9 @@ design:
     show_time_spans_in: []
   templates:
     single_date: YEAR
+    top_note: '*LAST_UPDATED MONTH_NAME YEAR*'
 locale:
   language: english
 settings:
-  current_date: '2026-09-03'
+  current_date: '2026-09-11'
   bold_keywords: []

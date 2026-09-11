@@ -131,6 +131,7 @@ design:
     show_time_spans_in: []
   templates:
     single_date: YEAR
+    top_note: '*LAST_UPDATED MONTH_NAME YEAR*'
 locale:
   language: english
 settings:

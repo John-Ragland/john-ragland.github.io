@@ -6,7 +6,7 @@
   name: "John Ragland",
   title: "John Ragland - CV",
   footer: context { [#emph[John Ragland -- #str(here().page())\/#str(counter(page).final().first())]] },
-  top-note: [ #emph[Last updated in 2026] ],
+  top-note: [ #emph[Last updated in September 2026] ],
   locale-catalog-language: "en",
   text-direction: ltr,
   page-size: "us-letter",
@@ -81,7 +81,7 @@
   date: datetime(
     year: 2026,
     month: 9,
-    day: 3,
+    day: 11,
   ),
 )
 
