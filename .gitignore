@@ -26,7 +26,6 @@ config.yaml
 # published straight to GitHub Pages by CI, never committed.
 # Sources of truth: content/*.md, cv/John_Ragland_CV_base.yaml, templates/
 /index.html
-/projects.html
 /cv.html
 /John_Ragland_CV.pdf
 /cv/John_Ragland_CV.yaml

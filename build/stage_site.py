@@ -12,7 +12,6 @@ SITE = ROOT / "_site"
 
 FILES = [
     "index.html",
-    "projects.html",
     "cv.html",
     "John_Ragland_CV.pdf",
     "style.css",
@@ -20,7 +19,7 @@ FILES = [
 ]
 
 DIRS = [
-    "imgs",
+    "media",
 ]
 
 if SITE.exists():

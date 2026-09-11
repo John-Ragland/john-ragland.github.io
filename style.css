@@ -66,3 +66,53 @@ header nav a {
         text-align: center;
     }
 }
+
+/* Side-by-side media row. Pandoc wraps the inner elements in a <p>, so the
+   flex container is that paragraph rather than the wrapping div. */
+.media-row > p {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: flex-start;
+    margin: 0;
+}
+.media-row img,
+.media-row video {
+    flex: 1 1 300px;
+    min-width: 0;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+/* The demo clip is portrait; cap its height so it doesn't tower over the
+   landscape photo beside it. */
+.media-row video {
+    flex: 0 1 auto;
+    width: auto;
+    max-width: 100%;
+    max-height: 420px;
+}
+
+/* Project logo floated alongside the project description */
+.project-logo {
+    float: right;
+    width: 180px;
+    max-width: 40%;
+    margin: 0 0 1rem 1.5rem;
+}
+
+/* Project headings clear the floated logo above them */
+#projects h3 {
+    clear: both;
+}
+
+/* Too narrow to wrap text beside the logo — center it on its own line */
+@media (max-width: 600px) {
+    .project-logo {
+        float: none;
+        display: block;
+        width: 180px;
+        max-width: 60%;
+        margin: 0 auto 1rem;
+    }
+}

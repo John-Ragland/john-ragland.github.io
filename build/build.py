@@ -10,7 +10,6 @@ BIB = ROOT / "refs.bib"
 
 PAGES = {
     "index.md": "index.html",
-    "projects.md": "projects.html",
 }
 
 

@@ -207,7 +207,7 @@ def create_cv_html():
         </p>
         <nav>
             <a href="index.html#research">Research</a>
-            <a href="projects.html">Project Highlights</a>
+            <a href="index.html#projects">Project Highlights</a>
             <a href="cv.html">CV</a>
         </nav>
     </header>
