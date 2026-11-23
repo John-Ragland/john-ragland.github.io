@@ -118,19 +118,9 @@ header nav a {
 }
 
 /* Typewritten contact card: scanned image with an invisible, selectable
-   text layer drawn on top (see content/index.md). */
-.typewriter-card svg {
-    display: block;
-    width: 100%;
-    max-width: 440px;
-    height: auto;
-    margin: 1rem 0;
-}
-.typewriter-card text {
-    font-family: "Courier New", Courier, monospace;
-    font-size: 64px;
-    fill: transparent;
-}
+   text layer drawn on top. Size, fill and font are set inline in
+   content/index.md so the card renders correctly even with a stale
+   cached stylesheet. */
 .typewriter-card a {
     cursor: pointer;
 }

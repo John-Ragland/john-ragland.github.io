@@ -12,14 +12,16 @@ root: ""
      OCR layer over the scan (coordinates in image pixels, 1471x436), so the
      contact info stays selectable, searchable, and screen-reader friendly. -->
 <div class="typewriter-card">
-<svg viewBox="0 0 1471 436" role="group" aria-label="Contact information">
+<svg viewBox="0 0 1471 436" style="display: block; width: 100%; max-width: 300px; height: auto; margin: 1rem 0;" role="group" aria-label="Contact information">
 <image href="media/typewriter/contact_info.jpeg" width="1471" height="436" aria-hidden="true"/>
+<g fill="transparent" fill-opacity="0" font-family="Courier New, Courier, monospace" font-size="64">
 <text x="6" y="61" textLength="469" lengthAdjust="spacingAndGlyphs">John Ragland</text>
 <text x="8" y="133" textLength="762" lengthAdjust="spacingAndGlyphs">Postdoctoral Fellow</text>
 <text x="8" y="201" textLength="1452" lengthAdjust="spacingAndGlyphs">Woods Hole Oceanographic Institution</text>
 <text x="4" y="269" textLength="930" lengthAdjust="spacingAndGlyphs">210A Bigelow Laboratory</text>
 <text x="6" y="337" textLength="187" lengthAdjust="spacingAndGlyphs">MS 11</text>
 <a href="mailto:john.ragland@whoi.edu"><text x="11" y="405" textLength="959" lengthAdjust="spacingAndGlyphs">john.ragland(at)whoi.edu</text></a>
+</g>
 </svg>
 </div>
 
