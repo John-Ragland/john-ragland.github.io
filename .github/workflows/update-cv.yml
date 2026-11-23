@@ -67,3 +67,16 @@ jobs:
     - name: Deploy to GitHub Pages
       id: deployment
       uses: actions/deploy-pages@v4
+
+  # GitHub disables scheduled workflows after 60 days without repo activity.
+  # Re-enabling the workflow via the API resets that timer without a commit.
+  keepalive:
+    if: github.event_name == 'schedule'
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+    steps:
+    - name: Keep scheduled workflow alive
+      run: gh api -X PUT "repos/${{ github.repository }}/actions/workflows/update-cv.yml/enable"
+      env:
+        GH_TOKEN: ${{ github.token }}
