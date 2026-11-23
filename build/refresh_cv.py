@@ -57,6 +57,16 @@ if __name__ == "__main__":
         match = re.search(rf'^{field}:\s*(.+)$', data.get('extra', ''), re.MULTILINE | re.IGNORECASE)
         return match.group(1).strip() if match else ''
 
+    # 'Key: value' lines in Zotero's Extra field that hold metadata, not blurb text
+    EXTRA_KEYS = ('Journal',)
+
+    def extract_blurb(data):
+        """Return the free-text contribution blurb from a Zotero item's Extra field,
+        with metadata lines (see EXTRA_KEYS) removed"""
+        key_line = re.compile(rf'^({"|".join(EXTRA_KEYS)}):', re.IGNORECASE)
+        lines = [line.strip() for line in data.get('extra', '').splitlines()]
+        return ' '.join(line for line in lines if line and not key_line.match(line))
+
     def format_publication(item, status=''):
         """Format a Zotero item as:
         (status) Authors (year) *Title*, Journal volume, page-range, doi: <linked doi>
@@ -89,7 +99,17 @@ if __name__ == "__main__":
         if doi:
             bullet += f", doi: [{doi}](https://doi.org/{doi})"
 
-        return {'bullet': bullet, '_sort_year': year_int}
+        entry = {'bullet': bullet}
+
+        # Contribution blurb for papers where Ragland isn't first author;
+        # rendered by the BulletEntry template overrides in cv/classic/ and cv/markdown/
+        first_author = next((c.get('lastName', '') for c in data['creators'] if c['creatorType'] == 'author'), '')
+        blurb = extract_blurb(data)
+        if blurb and first_author != 'Ragland':
+            entry['blurb'] = blurb
+
+        entry['_sort_year'] = year_int
+        return entry
 
     # Item types included in the publications section, with their status prefix
     publication_statuses = {

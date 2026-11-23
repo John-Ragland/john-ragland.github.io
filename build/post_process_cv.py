@@ -190,6 +190,14 @@ def create_cv_html():
             line-height: 1.5;
         }}
 
+        /* contribution blurb under a publication (cv/markdown/entries/BulletEntry.j2.md) */
+        .cv-blurb {{
+            display: block;
+            margin: 0.15em 0 0 1.5rem;
+            font-style: italic;
+            color: #444;
+        }}
+
         .cv-section li {{
             margin-bottom: 0.3em;
         }}
