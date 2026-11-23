@@ -116,3 +116,27 @@ header nav a {
         margin: 0 auto 1rem;
     }
 }
+
+/* Typewritten contact card: scanned image with an invisible, selectable
+   text layer drawn on top (see content/index.md). */
+.typewriter-card svg {
+    display: block;
+    width: 100%;
+    max-width: 440px;
+    height: auto;
+    margin: 1rem 0;
+}
+.typewriter-card text {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 64px;
+    fill: transparent;
+}
+.typewriter-card a {
+    cursor: pointer;
+}
+/* Simple.css follows the OS theme; flip the scan so it isn't a white box. */
+@media (prefers-color-scheme: dark) {
+    .typewriter-card image {
+        filter: invert(1);
+    }
+}

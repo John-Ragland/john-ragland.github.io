@@ -8,14 +8,20 @@ root: ""
 
 <img src="media/profile_picture.jpeg" alt="John Ragland profile photo" style="max-width: 200px; border-radius: 8px;">
 
-<p>
-<b>John Ragland</b><br>
-Postdoctoral Fellow<br>
-Woods Hole Oceanographic Institution<br>
-210A Bigelow Laboratory<br>
-MS #11<br>
-<a href="mailto:john.ragland@whoi.edu">john.ragland@whoi.edu</a>
-</p>
+<!-- Typewritten contact card. The <text> elements are an invisible, hand-placed
+     OCR layer over the scan (coordinates in image pixels, 1471x436), so the
+     contact info stays selectable, searchable, and screen-reader friendly. -->
+<div class="typewriter-card">
+<svg viewBox="0 0 1471 436" role="group" aria-label="Contact information">
+<image href="media/typewriter/contact_info.jpeg" width="1471" height="436" aria-hidden="true"/>
+<text x="6" y="61" textLength="469" lengthAdjust="spacingAndGlyphs">John Ragland</text>
+<text x="8" y="133" textLength="762" lengthAdjust="spacingAndGlyphs">Postdoctoral Fellow</text>
+<text x="8" y="201" textLength="1452" lengthAdjust="spacingAndGlyphs">Woods Hole Oceanographic Institution</text>
+<text x="4" y="269" textLength="930" lengthAdjust="spacingAndGlyphs">210A Bigelow Laboratory</text>
+<text x="6" y="337" textLength="187" lengthAdjust="spacingAndGlyphs">MS 11</text>
+<a href="mailto:john.ragland@whoi.edu"><text x="11" y="405" textLength="959" lengthAdjust="spacingAndGlyphs">john.ragland(at)whoi.edu</text></a>
+</svg>
+</div>
 
 Hi! I'm a postdoctoral fellow at Woods Hole Oceanographic Institution.
 I'm working to develop tools to observe the ocean with sound.
