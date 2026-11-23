@@ -41,7 +41,7 @@ There has been significant work in the field of acoustic remote sensing for many
 
 ## Project Highlights
 
-### Simultaneous localization and environment inversion using relative arrival-time differences
+### Simultaneous localization and environment inversion using relative arrival-time differences {#joint-inversion}
 In the classical formulation of ocean acoustic tomography [@munk1995], acoustic arrival times are measured between a source and receiver. This arrival time is the integrated sound speed slowness along the path that the ray takes through the ocean. In order to be able to isolate the part of the arrival-time fluctuations due to temperature or salinity fluctuations, the exact motion of the mooring needs to be removed. This has previously been done with advanced systems that can localize individual elements of an acoustic array in 3D down to the accuracy of 1 meter.
 
 Unfortunately, this high level of location accuracy eliminates the possibility of using either sources of opportunity or AUVs, where the location of the receiver or source is not fully known.
@@ -51,28 +51,28 @@ This removes the constraint of needing to know the exact 3D location of a source
 We successfully use our method to localize a source, and invert for the environment information for acoustic transmissions that transect the Gulf Stream.
 These are preliminary results and a paper reporting these findings is currently in preparation. Check back soon to see if there's a pre-print available!
 
-### Acoustic Fluctuations due to stochastic, small-scale oceanographic structure
+### Acoustic Fluctuations due to stochastic, small-scale oceanographic structure {#n23_fluctuations}
 I am working to understand how sound propagates through stochastic, small-scale ocean structure --- like internal waves, or spice. In a recent pre-print that is under review, we quantify the acoustic fluctuations of intensity, phase, and the vertical coherence of acoustic propagation directly across the Gulf Stream. This is the first time that wave propagation through random media theories have been applied to the case of large range dependence (such as the Gulf Stream front) [@ragland2026a].
 
-### Ocean basin acoustic propagation for measuring ocean temperature
+### Ocean basin acoustic propagation for measuring ocean temperature {#KB}
 The Kauai Beacon is an active source that began transmitting in March of 2023. We study receptions at single hydrophones that are part of the OOI network, making first steps necessary to leverage existing passive acoustic monitoring infrastructure to measure ocean basin heat content. This figure shows the arrivals over the first year of regular transmissions at one of the OOI hydrophones [@ragland2025a].
 
 [![Kauai_Beacon](media/paper_figures/AXCC1_KB_receptions.png){style="width: 100%; border-radius: 8px;"}](https://doi.org/10.1121/10.0038971)
 
-### OOIPY
+### OOIPY {#ooipy}
 
 <a href="https://github.com/Ocean-Data-Lab/ooipy"><img src="media/ooipy/OOIPY_Logo.png" alt="OOIPY logo" class="project-logo"></a>
 
 To accomplish the work that I've done with OOI hydrophones, you need to be able to pull years of broadband hydrophone data off of the [Ocean Observatories Initiative](https://oceanobservatories.org/) raw data server - which isn't something that is possible with the standard OOI API. [OOIPY](https://github.com/Ocean-Data-Lab/ooipy) is an open source (MIT licensed) Python package that I helped write and maintain that handles this: it takes care of locating and downloading the raw hydrophone records, stitching them into contiguous time series, and provides tools for the analysis that usually comes next, like spectrograms and power spectral density estimates. The package is on PyPI and documented at [ooipy.readthedocs.io](https://ooipy.readthedocs.io/en/latest/). I have several other open source projects that I have built and maintain as well, like [pygenray](https://pygenray.readthedocs.io/en/latest/) (a purely python, jit compiled acoustic ray tracer), and [xrsignal](https://xrsignal.readthedocs.io/en/latest/?badge=latest) (a mirror of the scipy signal module for use with xarray data objects). To learn more, you should check out my [GitHub](https://github.com/John-Ragland).
 
 
-### Using ambient sound to measure ocean temperature
+### Using ambient sound to measure ocean temperature {#noise-interferometry}
 You can use coherent ambient sound to passively illuminate acoustic propagation between two hydrophones. From measured arrival times, which from a ray perspective represent the integrated sound speed slowness along the ray path, you can get integrated perturbations of ocean temperature. We demonstrate this capability with open access hydrophones that are part of the [Ocean Observatories Initiative](https://oceanobservatories.org/), comparing against temperature estimated from HYCOM ocean model output and sparse ARGO profiles. Check out the paper for more details [@ragland2024].
 
 [![Ambient_NI_Temperature](media/paper_figures/inversion_601.png){style="width: 100%; border-radius: 8px;"}](https://doi.org/10.1029/2024GL108943)
 
 
-### Real-time Vacuum Tube Modelling in a guitar effects pedal
+### Real-time Vacuum Tube Modelling in a guitar effects pedal {#tube-amp-pedal}
 This one isn't related to my current research efforts, but for my Master's thesis I designed and built a guitar effects pedal that implements a real-time spice simulation of a vacuum tube pre-amp and tone stack circuits, accurately emulating the sounds of vacuum tube distortion. This project was super fun and was what originally inspired me to continue on to get a PhD and start a career in research. I designed and implemented the algorithm, but I also designed and built the circuit board itself, which was a CD audio (44.1 kHz, 16-bit) ADC → DSP → DAC system. I go into a lot more detail in my [master's thesis](https://etd.auburn.edu//handle/10415/7112) [@ragland2020].
 
 <div class="media-row">
