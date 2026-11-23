@@ -48,6 +48,35 @@ def create_simple_cv_content(cv_body):
         cv_body,
     )
 
+    # Turn each normal entry (e.g. Grants and Fellowships), which rendercv emits
+    # as "<h2><strong>Title</strong></h2><p>Location</p><p>Date</p><ul>...</ul>",
+    # into a single bullet "**Title**, Location (Date)" with its highlights as a
+    # nested list, so it reads like the other bulleted sections instead of a
+    # full-size SimpleCSS h2 followed by loose paragraphs. The PDF keeps its
+    # own two-column layout. The date paragraph is optional (in-review items
+    # have none) and must contain a year so a summary is never mistaken for it.
+    def entry_to_bullet(m):
+        title, location, dates, highlights = m.groups()
+        text = f'<strong>{title}</strong>'
+        if location:
+            text += f', {location}'
+        if dates:
+            text += f' ({dates})'
+        sub = f'<ul>{highlights}</ul>' if highlights else ''
+        return f'<ul class="cv-entry-list"><li>{text}{sub}</li></ul>'
+
+    cv_body = re.sub(
+        r'<h2><strong>(.*?)</strong></h2>'
+        r'\s*<p>([^<]*)</p>'
+        r'(?:\s*<p>([^<]*\d{4}[^<]*)</p>)?'
+        r'(?:\s*<ul>(.*?)</ul>)?',
+        entry_to_bullet,
+        cv_body,
+        flags=re.DOTALL,
+    )
+    # Merge consecutive single-item lists into one list per section
+    cv_body = re.sub(r'</li></ul>\s*<ul class="cv-entry-list">', '</li>\n', cv_body)
+
     return cv_body
 
 def create_cv_html():
@@ -142,6 +171,16 @@ def create_cv_html():
         .cv-entry-header .cv-date {{
             flex: 0 0 auto;
             color: #555;
+        }}
+
+        /* normal entries (grants): nested role list sits tight under its bullet */
+        .cv-section li > ul {{
+            margin-top: 0.15em;
+            margin-bottom: 0;
+        }}
+
+        .cv-section li > ul > li {{
+            margin-bottom: 0;
         }}
 
         .cv-section ul {{
